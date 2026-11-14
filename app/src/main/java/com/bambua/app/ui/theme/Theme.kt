@@ -23,44 +23,45 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import com.bambua.app.data.ThemeMode
 
-/* Paleta própria "gelo" usada quando as cores do papel de parede (Material You) estão desligadas
- * ou o aparelho é anterior ao Android 12. */
+/* Paleta própria Bambua: primário azul profundo #0A2540, secundário verde bambú #1FA36B,
+ * terciário orquídea #6A4C93, alerta âmbar #F2A900. Usada quando as cores do papel de parede
+ * (Material You) estão desligadas ou o aparelho é anterior ao Android 12. */
 private val LightColors = lightColorScheme(
-    primary = Color(0xFF00677F), onPrimary = Color(0xFFFFFFFF),
-    primaryContainer = Color(0xFFB8EAFF), onPrimaryContainer = Color(0xFF001F28),
-    secondary = Color(0xFF4C626B), onSecondary = Color(0xFFFFFFFF),
-    secondaryContainer = Color(0xFFCFE6F1), onSecondaryContainer = Color(0xFF071E26),
-    tertiary = Color(0xFF5B5B7E), onTertiary = Color(0xFFFFFFFF),
-    tertiaryContainer = Color(0xFFE1DFFF), onTertiaryContainer = Color(0xFF181837),
-    error = Color(0xFFBA1A1A), onError = Color(0xFFFFFFFF),
-    errorContainer = Color(0xFFFFDAD6), onErrorContainer = Color(0xFF410002),
-    background = Color(0xFFF6FAFD), onBackground = Color(0xFF171C1F),
-    surface = Color(0xFFF6FAFD), onSurface = Color(0xFF171C1F),
-    surfaceVariant = Color(0xFFDBE4E8), onSurfaceVariant = Color(0xFF40484C),
-    outline = Color(0xFF70787D), outlineVariant = Color(0xFFBFC8CC),
-    inverseSurface = Color(0xFF2C3134), inverseOnSurface = Color(0xFFEDF1F4), inversePrimary = Color(0xFF5FD4FD),
-    surfaceContainerLowest = Color(0xFFFFFFFF), surfaceContainerLow = Color(0xFFF0F4F7),
-    surfaceContainer = Color(0xFFEAEEF1), surfaceContainerHigh = Color(0xFFE4E9EC),
-    surfaceContainerHighest = Color(0xFFDFE3E6),
+    primary = Color(0xFF0A2540), onPrimary = Color(0xFFFFFFFF),
+    primaryContainer = Color(0xFFCFDFF2), onPrimaryContainer = Color(0xFF0A2540),
+    secondary = Color(0xFF1FA36B), onSecondary = Color(0xFFFFFFFF),
+    secondaryContainer = Color(0xFFBDF2D6), onSecondaryContainer = Color(0xFF00391E),
+    tertiary = Color(0xFF6A4C93), onTertiary = Color(0xFFFFFFFF),
+    tertiaryContainer = Color(0xFFEADDFF), onTertiaryContainer = Color(0xFF221444),
+    error = Color(0xFFF2A900), onError = Color(0xFF4A3400),
+    errorContainer = Color(0xFFFFE08D), onErrorContainer = Color(0xFF4A3400),
+    background = Color(0xFFF7F9FC), onBackground = Color(0xFF191C20),
+    surface = Color(0xFFF7F9FC), onSurface = Color(0xFF191C20),
+    surfaceVariant = Color(0xFFDFE4EC), onSurfaceVariant = Color(0xFF43474E),
+    outline = Color(0xFF74777F), outlineVariant = Color(0xFFC4C7CF),
+    inverseSurface = Color(0xFF2D3035), inverseOnSurface = Color(0xFFEFF0F4), inversePrimary = Color(0xFFA6C8F5),
+    surfaceContainerLowest = Color(0xFFFFFFFF), surfaceContainerLow = Color(0xFFF1F3F7),
+    surfaceContainer = Color(0xFFEBEDF2), surfaceContainerHigh = Color(0xFFE5E8EC),
+    surfaceContainerHighest = Color(0xFFDFE2E6),
 )
 
 private val DarkColors = darkColorScheme(
-    primary = Color(0xFF5FD4FD), onPrimary = Color(0xFF003543),
-    primaryContainer = Color(0xFF004D61), onPrimaryContainer = Color(0xFFB8EAFF),
-    secondary = Color(0xFFB3CAD4), onSecondary = Color(0xFF1E333C),
-    secondaryContainer = Color(0xFF354A53), onSecondaryContainer = Color(0xFFCFE6F1),
-    tertiary = Color(0xFFC3C3EB), onTertiary = Color(0xFF2D2D4D),
-    tertiaryContainer = Color(0xFF434465), onTertiaryContainer = Color(0xFFE1DFFF),
-    error = Color(0xFFFFB4AB), onError = Color(0xFF690005),
-    errorContainer = Color(0xFF93000A), onErrorContainer = Color(0xFFFFDAD6),
-    background = Color(0xFF0F1417), onBackground = Color(0xFFDFE3E6),
-    surface = Color(0xFF0F1417), onSurface = Color(0xFFDFE3E6),
-    surfaceVariant = Color(0xFF40484C), onSurfaceVariant = Color(0xFFBFC8CC),
-    outline = Color(0xFF8A9296), outlineVariant = Color(0xFF40484C),
-    inverseSurface = Color(0xFFDFE3E6), inverseOnSurface = Color(0xFF2C3134), inversePrimary = Color(0xFF00677F),
-    surfaceContainerLowest = Color(0xFF0A0F11), surfaceContainerLow = Color(0xFF171C1F),
-    surfaceContainer = Color(0xFF1B2023), surfaceContainerHigh = Color(0xFF262B2E),
-    surfaceContainerHighest = Color(0xFF303538),
+    primary = Color(0xFFA6C8F5), onPrimary = Color(0xFF0A2540),
+    primaryContainer = Color(0xFF27476E), onPrimaryContainer = Color(0xFFCFDFF2),
+    secondary = Color(0xFF7FD9A9), onSecondary = Color(0xFF00391F),
+    secondaryContainer = Color(0xFF00522B), onSecondaryContainer = Color(0xFFBDF2D6),
+    tertiary = Color(0xFFD3BBFF), onTertiary = Color(0xFF381E5C),
+    tertiaryContainer = Color(0xFF503574), onTertiaryContainer = Color(0xFFEADDFF),
+    error = Color(0xFFF2A900), onError = Color(0xFF4A3400),
+    errorContainer = Color(0xFF6E4A00), onErrorContainer = Color(0xFFFFDEAB),
+    background = Color(0xFF111417), onBackground = Color(0xFFE1E2E6),
+    surface = Color(0xFF111417), onSurface = Color(0xFFE1E2E6),
+    surfaceVariant = Color(0xFF43474E), onSurfaceVariant = Color(0xFFC4C7CF),
+    outline = Color(0xFF8E9199), outlineVariant = Color(0xFF43474E),
+    inverseSurface = Color(0xFFE1E2E6), inverseOnSurface = Color(0xFF2D3035), inversePrimary = Color(0xFF0A2540),
+    surfaceContainerLowest = Color(0xFF0C0E11), surfaceContainerLow = Color(0xFF191C20),
+    surfaceContainer = Color(0xFF1D2024), surfaceContainerHigh = Color(0xFF282A2F),
+    surfaceContainerHighest = Color(0xFF33353A),
 )
 
 /** Cores de significado fixo (entrada = verde, saída = vermelho, atenção = âmbar), sempre com bom contraste. */
@@ -79,16 +80,16 @@ data class BambuaColors(
 )
 
 private val LightExt = BambuaColors(
-    income = Color(0xFF1B6D2F), incomeContainer = Color(0xFFB6F2BB), onIncomeContainer = Color(0xFF002109),
+    income = Color(0xFF1FA36B), incomeContainer = Color(0xFFBDF2D6), onIncomeContainer = Color(0xFF00391E),
     expense = Color(0xFFB3261E), expenseContainer = Color(0xFFFFDAD6), onExpenseContainer = Color(0xFF410002),
-    warning = Color(0xFF8A5100), warningContainer = Color(0xFFFFDCBE), onWarningContainer = Color(0xFF2C1600),
+    warning = Color(0xFF8A5100), warningContainer = Color(0xFFFFE3B3), onWarningContainer = Color(0xFF3A2500),
     isDark = false,
 )
 
 private val DarkExt = BambuaColors(
-    income = Color(0xFF8BD893), incomeContainer = Color(0xFF00531C), onIncomeContainer = Color(0xFFB6F2BB),
+    income = Color(0xFF8FDDB2), incomeContainer = Color(0xFF00522B), onIncomeContainer = Color(0xFFBDF2D6),
     expense = Color(0xFFFFB4AB), expenseContainer = Color(0xFF93000A), onExpenseContainer = Color(0xFFFFDAD6),
-    warning = Color(0xFFFFB870), warningContainer = Color(0xFF693C00), onWarningContainer = Color(0xFFFFDCBE),
+    warning = Color(0xFFFFC94D), warningContainer = Color(0xFF6E4A00), onWarningContainer = Color(0xFFFFDEAB),
     isDark = true,
 )
 
