@@ -13,11 +13,11 @@ val keystoreProps = Properties().apply {
 }
 
 android {
-    namespace = "io.github.h3yk0.cryo"
+    namespace = "com.bambua.app"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "io.github.h3yk0.cryo"
+        applicationId = "com.bambua.app"
         minSdk = 26
         targetSdk = 36
         versionCode = 5
@@ -59,7 +59,7 @@ android {
         buildConfig = true
     }
 
-    // Android 13+: o Cryo aparece na tela "Idioma do app" do sistema com as 10 línguas (RF-LNG-02).
+    // Android 13+: o Bambua aparece na tela "Idioma do app" do sistema com as 10 línguas (RF-LNG-02).
     androidResources {
         generateLocaleConfig = true
     }
@@ -72,9 +72,9 @@ android {
             it.systemProperty("roborazzi.output.dir", rootProject.file("screenshots").absolutePath)
             it.systemProperty("robolectric.pixelCopyRenderMode", "hardware")
             // Imagens da página do F-Droid: ./gradlew testDebugUnitTest --tests '*StoreAssetsTest' -PstoreAssets=true
-            it.systemProperty("cryo.storeAssets", (project.findProperty("storeAssets") ?: "false").toString())
+            it.systemProperty("bambua.storeAssets", (project.findProperty("storeAssets") ?: "false").toString())
             // Quadros das animações do passeio, para montar GIFs: ./gradlew testDebugUnitTest --tests '*TourTest' -PtourGif=true
-            it.systemProperty("cryo.tourGif", (project.findProperty("tourGif") ?: "false").toString())
+            it.systemProperty("bambua.tourGif", (project.findProperty("tourGif") ?: "false").toString())
             it.maxHeapSize = "1536m"
         }
     }

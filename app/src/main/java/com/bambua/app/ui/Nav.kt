@@ -1,0 +1,352 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Hanry Franco
+package com.bambua.app.ui
+
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.expandVertically
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.shrinkVertically
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.rounded.ReceiptLong
+import androidx.compose.material.icons.automirrored.rounded.EventNote
+import androidx.compose.material.icons.rounded.Home
+import androidx.compose.material.icons.rounded.Insights
+import androidx.compose.material3.Icon
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarDuration
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
+import androidx.compose.material3.SnackbarResult
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.staticCompositionLocalOf
+import androidx.annotation.StringRes
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
+import com.bambua.app.R
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.NavHostController
+import androidx.navigation.NavType
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.navArgument
+import com.bambua.app.data.db.CategoryKind
+import com.bambua.app.data.db.TxType
+import com.bambua.app.ui.components.LocalContainer
+import com.bambua.app.ui.components.Motion
+import com.bambua.app.ui.screens.AccountDetailScreen
+import com.bambua.app.ui.screens.AccountEditorScreen
+import com.bambua.app.ui.screens.AutoBackupScreen
+import com.bambua.app.ui.screens.BillEditorScreen
+import com.bambua.app.ui.screens.CardDetailScreen
+import com.bambua.app.ui.screens.CardEditorScreen
+import com.bambua.app.ui.screens.CategoriesScreen
+import com.bambua.app.ui.screens.CategoryEditorScreen
+import com.bambua.app.ui.screens.DebtDetailScreen
+import com.bambua.app.ui.screens.DebtEditorScreen
+import com.bambua.app.ui.screens.DebtsScreen
+import com.bambua.app.ui.screens.DevScreen
+import com.bambua.app.ui.screens.ImportReportScreen
+import com.bambua.app.ui.screens.ImportScreen
+import com.bambua.app.ui.screens.TestModeStrip
+import com.bambua.app.ui.screens.GoalEditorScreen
+import com.bambua.app.ui.screens.GoalsArchiveScreen
+import com.bambua.app.ui.screens.WalletArchiveScreen
+import com.bambua.app.ui.screens.HomeScreen
+import com.bambua.app.ui.screens.InsightsScreen
+import com.bambua.app.ui.screens.InvestmentDetailScreen
+import com.bambua.app.ui.screens.InvestmentEditorScreen
+import com.bambua.app.ui.screens.PlanScreen
+import com.bambua.app.ui.screens.SettingsScreen
+import com.bambua.app.ui.screens.TourScreen
+import com.bambua.app.ui.screens.TransactionsScreen
+import com.bambua.app.ui.screens.WalletScreen
+import com.bambua.app.ui.tx.TxEditorScreen
+
+object Routes {
+    const val HOME = "home"
+    const val TXS = "txs?category={category}"
+    const val PLAN = "plan?tab={tab}"
+    const val WALLET = "wallet"
+    const val INSIGHTS = "insights"
+    const val TX_NEW = "tx/new?type={type}&account={account}&card={card}"
+    const val TX_EDIT = "tx/edit/{id}"
+    const val ACCOUNT = "account/{id}"
+    const val ACCOUNT_EDIT = "account/edit/{id}"
+    const val CARD = "card/{id}"
+    const val CARD_EDIT = "card/edit/{id}"
+    const val INVESTMENT = "investment/{id}"
+    const val INVESTMENT_EDIT = "investment/edit/{id}"
+    const val GOAL_EDIT = "goal/edit/{id}"
+    const val GOALS_ARCHIVE = "goals/archive"
+    const val BILL_EDIT = "bill/edit/{id}?kind={kind}"
+    const val DEBTS = "debts"
+    const val DEBT = "debt/{id}"
+    const val DEBT_EDIT = "debt/edit/{id}"
+    const val WALLET_ARCHIVE = "wallet/archive"
+    const val SETTINGS = "settings"
+    const val AUTO_BACKUP = "settings/backup"
+    const val IMPORT = "import?account={account}&card={card}"
+    const val IMPORT_REPORT = "import/report"
+    const val DEV = "settings/dev"
+    const val CATEGORIES = "categories"
+    const val CATEGORY_EDIT = "category/edit/{id}?kind={kind}"
+    const val TOUR = "tour"
+
+    fun txs(category: Long = 0) = "txs?category=$category"
+    fun plan(tab: Int = 0) = "plan?tab=$tab"
+    fun txNew(type: TxType = TxType.EXPENSE, account: Long = 0, card: Long = 0) = "tx/new?type=${type.name}&account=$account&card=$card"
+    fun txEdit(id: Long) = "tx/edit/$id"
+    fun account(id: Long) = "account/$id"
+    fun accountEdit(id: Long = 0) = "account/edit/$id"
+    fun card(id: Long) = "card/$id"
+    fun cardEdit(id: Long = 0) = "card/edit/$id"
+    fun investment(id: Long) = "investment/$id"
+    fun investmentEdit(id: Long = 0) = "investment/edit/$id"
+    fun goalEdit(id: Long = 0) = "goal/edit/$id"
+    fun billEdit(id: Long = 0, kind: CategoryKind = CategoryKind.EXPENSE) = "bill/edit/$id?kind=${kind.name}"
+    fun debt(id: Long) = "debt/$id"
+    fun debtEdit(id: Long = 0) = "debt/edit/$id"
+    fun categoryEdit(id: Long = 0, kind: CategoryKind = CategoryKind.EXPENSE) = "category/edit/$id?kind=${kind.name}"
+    fun import(account: Long = 0, card: Long = 0) = "import?account=$account&card=$card"
+}
+
+class Navigator(private val nav: NavHostController) {
+    fun go(route: String) = nav.navigate(route) { launchSingleTop = true }
+    fun back() { nav.popBackStack() }
+    /** Troca de aba pela barra inferior (lembra onde a pessoa estava). */
+    fun tab(route: String) = nav.navigate(route) {
+        popUpTo(nav.graph.findStartDestination().id) { saveState = true }
+        launchSingleTop = true
+        restoreState = true
+    }
+
+    /** Abre uma aba já num ponto específico (ex.: Planejar > Metas), sem restaurar o estado antigo. */
+    fun open(route: String) = nav.navigate(route) {
+        popUpTo(nav.graph.findStartDestination().id) { saveState = true }
+        launchSingleTop = true
+    }
+
+    /** Escolhe sozinho: rotas de aba abrem como aba; o resto empilha uma tela nova. */
+    fun smart(route: String) = if (route.startsWith("plan") || route.startsWith("txs")) open(route) else go(route)
+}
+
+val LocalNav = staticCompositionLocalOf<Navigator> { error("Navigator ausente") }
+
+private data class TabItem(val route: String, val pattern: String, @StringRes val label: Int, val icon: ImageVector)
+
+/**
+ * RF-INI-14: 4 abas. A Carteira (contas, cartões, investimentos, dívidas) fica no Início, e a Carteira completa abre por lá.
+ */
+private val tabs = listOf(
+    TabItem(Routes.HOME, Routes.HOME, R.string.tab_home, Icons.Rounded.Home),
+    TabItem(Routes.txs(), Routes.TXS, R.string.tab_transactions, Icons.AutoMirrored.Rounded.ReceiptLong),
+    TabItem(Routes.plan(), Routes.PLAN, R.string.tab_plan, Icons.AutoMirrored.Rounded.EventNote),
+    TabItem(Routes.INSIGHTS, Routes.INSIGHTS, R.string.tab_insights, Icons.Rounded.Insights),
+)
+
+/** DS-MOV-03: entre duas abas a troca é "fade through"; o resto desliza no eixo X (DS-MOV-02). */
+private fun isTab(route: String?) = tabs.any { it.pattern == route }
+
+@Composable
+fun BambuaRoot(openOnStart: String?) {
+    val nav = rememberNavController()
+    val navigator = remember(nav) { Navigator(nav) }
+    val c = LocalContainer.current
+    val snackbar = remember { SnackbarHostState() }
+    val entry by nav.currentBackStackEntryAsState()
+    val currentPattern = entry?.destination?.route
+    // Sem rota ainda = tela inicial (evita a barra "piscar" ao abrir o app)
+    val showBar = currentPattern == null || tabs.any { it.pattern == currentPattern }
+
+    LaunchedEffect(Unit) {
+        c.messages.collect { m ->
+            val r = snackbar.showSnackbar(
+                m.text, actionLabel = m.actionLabel, withDismissAction = m.actionLabel == null,
+                duration = if (m.actionLabel != null) SnackbarDuration.Long else SnackbarDuration.Short,
+            )
+            if (r == SnackbarResult.ActionPerformed) m.action?.let { c.launch { it() } }
+        }
+    }
+    // Uma vez só: o app sai da tela enquanto está bloqueado e, ao desbloquear, volta para onde a pessoa estava, e não
+    // de novo para a tela do aviso.
+    var opened by rememberSaveable { mutableStateOf(false) }
+    LaunchedEffect(openOnStart) {
+        if (opened) return@LaunchedEffect
+        opened = true
+        when (openOnStart) {
+            "bills" -> navigator.open(Routes.plan(1))
+            "debts" -> navigator.go(Routes.DEBTS)
+            "backup" -> navigator.go(Routes.AUTO_BACKUP)
+        }
+    }
+
+    androidx.compose.runtime.CompositionLocalProvider(LocalNav provides navigator) {
+        Scaffold(
+            snackbarHost = { SnackbarHost(snackbar) },
+            bottomBar = {
+                // DS-MOV-04: a barra some e volta deslizando, junto com a troca de tela.
+                AnimatedVisibility(
+                    showBar,
+                    enter = expandVertically(tween(Motion.MEDIUM, easing = Motion.EmphasizedDecelerate), expandFrom = Alignment.Top) +
+                        fadeIn(tween(Motion.MEDIUM)),
+                    exit = shrinkVertically(tween(Motion.MEDIUM, easing = Motion.EmphasizedAccelerate), shrinkTowards = Alignment.Top) +
+                        fadeOut(tween(Motion.SHORT)),
+                ) {
+                    Column {
+                        // Modo de teste (modo desenvolvedor): sempre à vista nas abas, para ninguém confundir com os dados de verdade.
+                        if (c.sandbox) TestModeStrip()
+                        NavigationBar {
+                            tabs.forEach { t ->
+                                NavigationBarItem(
+                                    selected = currentPattern == t.pattern,
+                                    onClick = { navigator.tab(t.route) },
+                                    icon = { Icon(t.icon, null) },
+                                    label = { Text(stringResource(t.label), maxLines = 1) },
+                                )
+                            }
+                        }
+                    }
+                }
+            },
+        ) { pad ->
+            NavHost(
+                navController = nav,
+                startDestination = Routes.HOME,
+                modifier = Modifier.padding(bottom = pad.calculateBottomPadding()),
+                enterTransition = {
+                    if (isTab(initialState.destination.route) && isTab(targetState.destination.route)) Motion.tabEnter() else Motion.forwardEnter()
+                },
+                exitTransition = {
+                    if (isTab(initialState.destination.route) && isTab(targetState.destination.route)) Motion.tabExit() else Motion.forwardExit()
+                },
+                popEnterTransition = {
+                    if (isTab(initialState.destination.route) && isTab(targetState.destination.route)) Motion.tabEnter() else Motion.backEnter()
+                },
+                popExitTransition = {
+                    if (isTab(initialState.destination.route) && isTab(targetState.destination.route)) Motion.tabExit() else Motion.backExit()
+                },
+            ) {
+                composable(Routes.HOME) { HomeScreen() }
+                composable(
+                    Routes.TXS,
+                    arguments = listOf(navArgument("category") { type = NavType.LongType; defaultValue = 0L }),
+                ) { e -> TransactionsScreen(categoryFilter = e.arguments?.getLong("category")?.takeIf { it > 0 }) }
+                composable(
+                    Routes.PLAN,
+                    arguments = listOf(navArgument("tab") { type = NavType.IntType; defaultValue = 0 }),
+                ) { e -> PlanScreen(initialTab = e.arguments?.getInt("tab") ?: 0) }
+                composable(Routes.WALLET) { WalletScreen() }
+                composable(Routes.INSIGHTS) { InsightsScreen() }
+                composable(
+                    Routes.TX_NEW,
+                    arguments = listOf(
+                        navArgument("type") { type = NavType.StringType; defaultValue = TxType.EXPENSE.name },
+                        navArgument("account") { type = NavType.LongType; defaultValue = 0L },
+                        navArgument("card") { type = NavType.LongType; defaultValue = 0L },
+                    ),
+                ) { e ->
+                    val a = e.arguments
+                    TxEditorScreen(
+                        txId = null,
+                        initialType = runCatching { TxType.valueOf(a?.getString("type") ?: "") }.getOrDefault(TxType.EXPENSE),
+                        presetAccountId = a?.getLong("account")?.takeIf { it > 0 },
+                        presetCardId = a?.getLong("card")?.takeIf { it > 0 },
+                        onDone = navigator::back,
+                    )
+                }
+                composable(Routes.TX_EDIT, arguments = listOf(navArgument("id") { type = NavType.LongType })) { e ->
+                    TxEditorScreen(e.arguments!!.getLong("id"), TxType.EXPENSE, null, null, onDone = navigator::back)
+                }
+                composable(Routes.ACCOUNT, arguments = listOf(navArgument("id") { type = NavType.LongType })) { e ->
+                    AccountDetailScreen(e.arguments!!.getLong("id"))
+                }
+                composable(Routes.ACCOUNT_EDIT, arguments = listOf(navArgument("id") { type = NavType.LongType })) { e ->
+                    AccountEditorScreen(e.arguments!!.getLong("id").takeIf { it > 0 })
+                }
+                composable(Routes.CARD, arguments = listOf(navArgument("id") { type = NavType.LongType })) { e ->
+                    CardDetailScreen(e.arguments!!.getLong("id"))
+                }
+                composable(Routes.CARD_EDIT, arguments = listOf(navArgument("id") { type = NavType.LongType })) { e ->
+                    CardEditorScreen(e.arguments!!.getLong("id").takeIf { it > 0 })
+                }
+                composable(Routes.INVESTMENT, arguments = listOf(navArgument("id") { type = NavType.LongType })) { e ->
+                    InvestmentDetailScreen(e.arguments!!.getLong("id"))
+                }
+                composable(Routes.INVESTMENT_EDIT, arguments = listOf(navArgument("id") { type = NavType.LongType })) { e ->
+                    InvestmentEditorScreen(e.arguments!!.getLong("id").takeIf { it > 0 })
+                }
+                composable(Routes.GOAL_EDIT, arguments = listOf(navArgument("id") { type = NavType.LongType })) { e ->
+                    GoalEditorScreen(e.arguments!!.getLong("id").takeIf { it > 0 })
+                }
+                composable(
+                    Routes.BILL_EDIT,
+                    arguments = listOf(
+                        navArgument("id") { type = NavType.LongType },
+                        navArgument("kind") { type = NavType.StringType; defaultValue = CategoryKind.EXPENSE.name },
+                    ),
+                ) { e ->
+                    BillEditorScreen(
+                        e.arguments!!.getLong("id").takeIf { it > 0 },
+                        runCatching { CategoryKind.valueOf(e.arguments?.getString("kind") ?: "") }.getOrDefault(CategoryKind.EXPENSE),
+                    )
+                }
+                composable(Routes.GOALS_ARCHIVE) { GoalsArchiveScreen() }
+                composable(Routes.DEBTS) { DebtsScreen() }
+                composable(Routes.DEBT, arguments = listOf(navArgument("id") { type = NavType.LongType })) { e ->
+                    DebtDetailScreen(e.arguments!!.getLong("id"))
+                }
+                composable(Routes.DEBT_EDIT, arguments = listOf(navArgument("id") { type = NavType.LongType })) { e ->
+                    DebtEditorScreen(e.arguments!!.getLong("id").takeIf { it > 0 })
+                }
+                composable(Routes.WALLET_ARCHIVE) { WalletArchiveScreen() }
+                composable(Routes.SETTINGS) { SettingsScreen() }
+                composable(Routes.AUTO_BACKUP) { AutoBackupScreen() }
+                composable(
+                    Routes.IMPORT,
+                    arguments = listOf(
+                        navArgument("account") { type = NavType.LongType; defaultValue = 0L },
+                        navArgument("card") { type = NavType.LongType; defaultValue = 0L },
+                    ),
+                ) { e ->
+                    ImportScreen(
+                        presetAccountId = e.arguments?.getLong("account")?.takeIf { it > 0 },
+                        presetCardId = e.arguments?.getLong("card")?.takeIf { it > 0 },
+                    )
+                }
+                composable(Routes.IMPORT_REPORT) { ImportReportScreen() }
+                composable(Routes.DEV) { DevScreen() }
+                composable(Routes.CATEGORIES) { CategoriesScreen() }
+                composable(Routes.TOUR) { TourScreen() }
+                composable(
+                    Routes.CATEGORY_EDIT,
+                    arguments = listOf(
+                        navArgument("id") { type = NavType.LongType },
+                        navArgument("kind") { type = NavType.StringType; defaultValue = CategoryKind.EXPENSE.name },
+                    ),
+                ) { e ->
+                    CategoryEditorScreen(
+                        e.arguments!!.getLong("id").takeIf { it > 0 },
+                        runCatching { CategoryKind.valueOf(e.arguments?.getString("kind") ?: "") }.getOrDefault(CategoryKind.EXPENSE),
+                    )
+                }
+            }
+        }
+    }
+}

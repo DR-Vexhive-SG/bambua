@@ -2,6 +2,20 @@
 
 **English** · [Português](docs/CHANGELOG.pt-BR.md)
 
+## 0.1.0-bambua — fork Bambua Base
+
+Fork de Cryo 1.4 renombrado a **Bambua** (marca, package `com.bambua.app`, tema visual e ícono
+propios). Nuevo en este fork:
+
+- **Onboarding con consentimiento** (Ley 1581 de habeas data): aviso de datos locales y
+  consentimiento explícito antes de usar la app, con toggle de "tono colombiano" (cercano-neutral
+  por defecto).
+- **Export CSV formato Coach** (`Fecha;Tipo;Descripción;Categoría;Cuenta;Destino;Tarjeta;Cuota;Importe;Nota;Deuda`):
+  UTF-8 sin BOM, decimales con coma, transferencias en dos filas (Egreso origen + Ingreso destino).
+- **Pantalla Saldito** (placeholder de UI, sin lógica ni red) y **Acerca de** con licencia,
+  atribución y aviso de no-asesoría.
+- La base funcional es la de Cryo 1.4 (ver abajo); sus cambios siguen válidos en este fork.
+
 ## 1.4 — 10 languages, currencies and a new look
 
 - **10 languages**: Brazilian Portuguese, English, Spanish, French, German, Italian, Japanese, Korean, Chinese (simplified) and Hindi. Cryo follows your phone's language (English if it is not one of the 10), and you can switch right away in Settings › Language and currency

@@ -1,0 +1,174 @@
+// SPDX-License-Identifier: AGPL-3.0-or-later
+// Copyright (C) 2026 Hanry Franco
+package com.bambua.app.ui.tx
+
+import com.bambua.app.R
+import com.bambua.app.domain.Res
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.imePadding
+import androidx.compose.foundation.layout.navigationBarsPadding
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Check
+import androidx.compose.material.icons.rounded.Delete
+import androidx.compose.material3.AlertDialog
+import androidx.compose.material3.Button
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.saveable.rememberSaveable
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
+import androidx.compose.foundation.layout.Box
+import com.bambua.app.data.db.TxType
+import com.bambua.app.ui.components.BambuaTopBar
+import com.bambua.app.ui.components.LocalContainer
+import com.bambua.app.ui.components.LocalSettings
+import com.bambua.app.ui.components.Source
+import com.bambua.app.ui.components.rememberLedger
+
+@Composable
+fun LoadingBox() {
+    Box(Modifier.fillMaxSize(), contentAlignment = Alignment.Center) { CircularProgressIndicator() }
+}
+
+/** Tela completa de lançamento (novo ou edição). */
+@Composable
+fun TxEditorScreen(
+    txId: Long?,
+    initialType: TxType,
+    presetAccountId: Long?,
+    presetCardId: Long?,
+    onDone: () -> Unit,
+) {
+    val l = rememberLedger() ?: return LoadingBox()
+    val c = LocalContainer.current
+    val settings = LocalSettings.current
+    val draft = remember(txId) {
+        val o = txId?.let { id -> l.s.txs.firstOrNull { it.id == id } }
+        if (o != null) {
+            TxDraft.fromTx(o)
+        } else {
+            val acc = presetAccountId ?: settings.defaultAccountId?.takeIf { l.account[it]?.archived == false }
+                ?: l.activeAccounts.firstOrNull()?.id
+            TxDraft(
+                type = initialType, date = l.today,
+                source = presetCardId?.let { Source.Card(it) } ?: acc?.let { Source.Acc(it) },
+            )
+        }
+    }
+    var askDelete by rememberSaveable { mutableStateOf(false) }
+
+    Scaffold(
+        topBar = {
+            BambuaTopBar(
+                title = if (draft.isEditing) Res.s(R.string.tx_editar_lancamento) else Res.s(R.string.tx_novo_lancamento),
+                onBack = onDone,
+                actions = {
+                    if (draft.isEditing) IconButton(onClick = { askDelete = true }) { Icon(Icons.Rounded.Delete, Res.s(R.string.wallet_apagar)) }
+                },
+            )
+        },
+        bottomBar = {
+            Surface(tonalElevation = 3.dp) {
+                Column(Modifier.fillMaxWidth().navigationBarsPadding().imePadding().padding(16.dp)) {
+                    val problem = draft.problem()
+                    if (problem != null) {
+                        Text(problem, color = MaterialTheme.colorScheme.error, style = MaterialTheme.typography.bodyMedium)
+                        Spacer(Modifier.height(8.dp))
+                    }
+                    Button(
+                        onClick = {
+                            c.launch {
+                                val r = saveDraft(draft, c.repo, l)
+                                c.message(r.alert ?: r.summary, Res.s(R.string.wallet_desfazer)) { r.undo() }
+                            }
+                            onDone()
+                        },
+                        enabled = problem == null,
+                        modifier = Modifier.fillMaxWidth().height(56.dp),
+                    ) {
+                        Icon(Icons.Rounded.Check, null)
+                        Spacer(Modifier.width(8.dp))
+                        Text(if (draft.isEditing) Res.s(R.string.tx_salvar_alteracoes) else Res.s(R.string.wallet_salvar))
+                    }
+                }
+            }
+        },
+        contentWindowInsets = WindowInsets(0, 0, 0, 0),
+    ) { pad ->
+        Column(
+            Modifier
+                .padding(pad)
+                .fillMaxSize()
+                .verticalScroll(rememberScrollState())
+                .padding(horizontal = 20.dp, vertical = 12.dp),
+        ) {
+            TxForm(draft, l, compact = false, autoFocusAmount = !draft.isEditing)
+            Spacer(Modifier.height(24.dp))
+        }
+    }
+
+    if (askDelete) {
+        val o = draft.original!!
+        val group = o.installmentGroup?.let { g -> l.s.txs.filter { it.installmentGroup == g } }.orEmpty()
+        AlertDialog(
+            onDismissRequest = { askDelete = false },
+            title = { Text(Res.s(R.string.tx_apagar_lancamento)) },
+            text = {
+                Text(
+                    when {
+                        group.size > 1 -> Res.s(R.string.tx_esta_parcela_voce_pode, o.installmentNumber, o.installmentTotal)
+                        o.billId != null -> Res.s(R.string.tx_ele_esta_ligado_conta)
+                        else -> Res.s(R.string.tx_voce_podera_desfazer_logo)
+                    },
+                )
+            },
+            confirmButton = {
+                TextButton(onClick = {
+                    askDelete = false
+                    c.launch {
+                        c.repo.deleteTx(o, wholeGroup = group.size > 1)
+                        c.message(if (group.size > 1) Res.s(R.string.tx_compra_parcelada_apagada) else Res.s(R.string.tx_lancamento_apagado), Res.s(R.string.wallet_desfazer)) {
+                            c.repo.restore(if (group.size > 1) group else listOf(o))
+                        }
+                    }
+                    onDone()
+                }) { Text(if (group.size > 1) Res.s(R.string.tx_apagar_todas) else Res.s(R.string.wallet_apagar)) }
+            },
+            dismissButton = {
+                if (group.size > 1) {
+                    TextButton(onClick = {
+                        askDelete = false
+                        c.launch {
+                            c.repo.deleteTx(o)
+                            c.message(Res.s(R.string.tx_parcela_apagada), Res.s(R.string.wallet_desfazer)) { c.repo.restore(listOf(o)) }
+                        }
+                        onDone()
+                    }) { Text(Res.s(R.string.tx_so_esta)) }
+                } else {
+                    TextButton(onClick = { askDelete = false }) { Text(Res.s(R.string.wallet_cancelar)) }
+                }
+            },
+        )
+    }
+}

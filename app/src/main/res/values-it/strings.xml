@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Textos do Cryo em italiano (PRD: RF-LNG-01, TXT-09). Mesmas chaves e marcadores de values/strings.xml
+    Textos do Bambua em italiano (PRD: RF-LNG-01, TXT-09). Mesmas chaves e marcadores de values/strings.xml
     (a base, em português do Brasil); PrdConformanceTest confere.
 -->
 <resources>
@@ -56,8 +56,8 @@
     <string name="home_goals">Obiettivi e salvadanai</string>
     <string name="goal_progress">%1$s di %2$s</string>
     <string name="home_recent">Ultimi movimenti</string>
-    <string name="home_empty_hint">Inizia dalla registrazione rapida: tocca il microfono e di\', per esempio, “pranzo 25 con bancomat”. Cryo capisce l\'importo, la categoria e il conto. Tu controlli e salvi.</string>
-    <string name="home_insights">Cryo ha notato</string>
+    <string name="home_empty_hint">Inizia dalla registrazione rapida: tocca il microfono e di\', per esempio, “pranzo 25 con bancomat”. Bambua capisce l\'importo, la categoria e il conto. Tu controlli e salvi.</string>
+    <string name="home_insights">Bambua ha notato</string>
     <string name="month_in">Entrate</string>
     <string name="month_out">Uscite</string>
     <string name="month_end">Fine mese</string>
@@ -277,7 +277,7 @@
     <string name="debt_proxima">Prossima: %1$s</string>
     <string name="debt_organize_suas_dividas">Organizza i tuoi debiti</string>
     <string name="debt_cadastre_emprestimos_financiamentos_acordos">Registra prestiti, finanziamenti, rateizzazioni o soldi che devi a qualcuno.\u0020</string>
-    <string name="debt_cryo_mostra_quanto_falta">Cryo mostra quanto manca, ti ricorda le scadenze e ti dice quando sarai libero.</string>
+    <string name="debt_bambua_mostra_quanto_falta">Bambua mostra quanto manca, ti ricorda le scadenze e ti dice quando sarai libero.</string>
     <string name="debt_cadastrar_divida">Registra debito</string>
     <string name="debt_aberto">Aperti</string>
     <string name="debt_nenhuma_divida_aberto_muito">Nessun debito aperto. Ottimo!</string>
@@ -435,7 +435,7 @@
     <string name="plan_restam_cerca_por_dia">Restano %1$s · circa %2$s al giorno</string>
     <string name="plan_voce_passou_total_planejado">Hai superato il totale pianificato di %1$s</string>
     <string name="plan_defina_limites_por_categoria">Imposta limiti per categoria</string>
-    <string name="plan_cryo_avisa_quando_voce" formatted="false">Cryo ti avvisa quando arrivi all\'80% e quando superi il limite.</string>
+    <string name="plan_bambua_avisa_quando_voce" formatted="false">Bambua ti avvisa quando arrivi all\'80% e quando superi il limite.</string>
     <string name="plan_sugestoes_pela_sua_media">Suggerimenti in base alla tua spesa media</string>
     <string name="plan_orcamento_salvo">Budget salvato</string>
     <string name="plan_orcamento_removido">Budget rimosso</string>
@@ -448,7 +448,7 @@
     <string name="plan_salvar_orcamento">Salva budget</string>
     <string name="plan_remover_orcamento">Rimuovi budget</string>
     <string name="plan_nenhuma_conta_fixa">Nessuna spesa fissa</string>
-    <string name="plan_cadastre_aluguel_internet_assinaturas">Registra affitto, internet, abbonamenti e anche lo stipendio. Cryo ti ricorda le scadenze e le usa nella previsione del mese.</string>
+    <string name="plan_cadastre_aluguel_internet_assinaturas">Registra affitto, internet, abbonamenti e anche lo stipendio. Bambua ti ricorda le scadenze e le usa nella previsione del mese.</string>
     <string name="plan_pagas">%1$s di %2$s pagate</string>
     <string name="plan_parcelas_dividas">Rate dei debiti</string>
     <string name="plan_recebidos">%1$s di %2$s ricevute</string>
@@ -488,7 +488,7 @@
     <string name="plan_apagar">Eliminare %1$s?</string>
     <string name="plan_conta_fixa_apagada">Spesa fissa eliminata</string>
     <string name="plan_crie_sua_primeira_meta">Crea il tuo primo obiettivo</string>
-    <string name="plan_viagem_reserva_emergencia_celular">Un viaggio, un fondo di emergenza, un telefono nuovo... Imposta l\'importo e la scadenza, e Cryo ti dice quanto mettere da parte al mese.</string>
+    <string name="plan_viagem_reserva_emergencia_celular">Un viaggio, un fondo di emergenza, un telefono nuovo... Imposta l\'importo e la scadenza, e Bambua ti dice quanto mettere da parte al mese.</string>
     <string name="plan_nenhuma_meta_ativa">Nessun obiettivo attivo</string>
     <string name="plan_suas_metas_arquivadas_continuam">I tuoi obiettivi archiviati restano nell\'archivio, qui sotto. Crea un nuovo obiettivo quando vuoi.</string>
     <string name="plan_guardado_metas">Messo da parte negli obiettivi</string>
@@ -604,10 +604,10 @@
     <string name="locale_language_title">Lingua</string>
     <string name="locale_language_device">Dal telefono</string>
     <string name="locale_currency_title">Valuta</string>
-    <string name="locale_currency_hint">Tutti gli importi di Cryo vengono mostrati in questa valuta.</string>
+    <string name="locale_currency_hint">Tutti gli importi di Bambua vengono mostrati in questa valuta.</string>
     <string name="locale_currency_device">Dal paese del telefono</string>
     <string name="locale_currency_confirm_title">Cambiare valuta?</string>
-    <string name="locale_currency_confirm_text">Gli importi già registrati mantengono gli stessi numeri: cambiano solo il simbolo e il modo di scriverli. Cryo non converte tra valute, perché funziona senza internet e non ha i tassi di cambio.</string>
+    <string name="locale_currency_confirm_text">Gli importi già registrati mantengono gli stessi numeri: cambiano solo il simbolo e il modo di scriverli. Bambua non converte tra valute, perché funziona senza internet e non ha i tassi di cambio.</string>
     <string name="locale_currency_confirm_button">Cambia valuta</string>
     <string name="settings_hide_values_hint">Mostra %1$s al posto dei numeri</string>
     <plurals name="category_keywords">
@@ -632,7 +632,7 @@
     <string name="settings_automatico">Automatico</string>
     <string name="settings_cores_papel_parede_material">Colori dello sfondo (Material You)</string>
     <string name="settings_app_combina_com_cores">L\'app si abbina ai colori del tuo telefono</string>
-    <string name="settings_cores_papel_parede_precisam">I colori dello sfondo richiedono Android 12 o più recente. Viene usata la palette di Cryo.</string>
+    <string name="settings_cores_papel_parede_precisam">I colori dello sfondo richiedono Android 12 o più recente. Viene usata la palette di Bambua.</string>
     <string name="settings_privacidade_seguranca">Privacy e sicurezza</string>
     <string name="settings_bloquear_com_digital_ou">Blocca con impronta o codice</string>
     <string name="settings_cadastre_digital_rosto_ou">Imposta prima un\'impronta, il volto o un blocco schermo in Android</string>
@@ -664,13 +664,13 @@
     <string name="settings_dados_teste_arquivos_exemplo">Dati di prova, file di esempio e report</string>
     <string name="settings_usando_dados_teste_arquivos">Dati di prova attivi · file di esempio e report</string>
     <string name="settings_sobre">Informazioni</string>
-    <string name="settings_github_com_h3yk0_cryo">github.com/H3yK0/cryo · suggerimenti e segnalazioni sono benvenuti</string>
+    <string name="settings_github_com_h3yk0_bambua">github.com/H3yK0/cryo · suggerimenti e segnalazioni sono benvenuti</string>
     <string name="settings_codigo_fonte">Codice sorgente</string>
     <string name="settings_gnu_agpl_v3_ou">GNU AGPL v3 o successiva · software libero</string>
     <string name="settings_licenca">Licenza</string>
     <string name="settings_modo_desenvolvedor_ja_esta">La modalità sviluppatore è già attiva</string>
     <string name="settings_modo_desenvolvedor_ligado">Modalità sviluppatore attiva</string>
-    <string name="settings_cryo">Cryo %1$s</string>
+    <string name="settings_bambua">Bambua %1$s</string>
     <string name="settings_mais_toques_para_modo">Ancora %1$s tocchi per la modalità sviluppatore</string>
     <string name="settings_mais_toque_para_modo">Ancora 1 tocco per la modalità sviluppatore</string>
     <string name="settings_organizacao_financeira_com_registro">Gestione delle spese con registrazione vocale, previsione del mese e flusso del denaro. Funziona senza internet, senza pubblicità e senza tracciamento.</string>
@@ -690,17 +690,17 @@
     <string name="settings_nova_categoria">Nuova categoria</string>
     <string name="settings_palavras_chave_registro_rapido">Parole chiave della registrazione rapida</string>
     <string name="settings_ex_padaria_lanche_cafe">Es.: panetteria, merenda, caffè</string>
-    <string name="settings_quando_voce_digitar_ou">Quando scrivi o dici una di queste parole, Cryo sceglie questa categoria. Separale con una virgola.</string>
+    <string name="settings_quando_voce_digitar_ou">Quando scrivi o dici una di queste parole, Bambua sceglie questa categoria. Separale con una virgola.</string>
     <string name="settings_se_ela_ja_foi">Se è già stata usata, verrà solo archiviata per non scombinare lo storico.</string>
     <string name="settings_apagar_categoria">Eliminare la categoria?</string>
     <string name="settings_categoria_arquivada">Categoria archiviata</string>
     <string name="settings_categoria_apagada">Categoria eliminata</string>
-    <string name="onboarding_bem_vindo_ao_cryo">Benvenuto in Cryo</string>
-    <string name="onboarding_seu_dinheiro_claro_como">I tuoi soldi, chiari come il ghiaccio.</string>
+    <string name="onboarding_bem_vindo_ao_bambua">Benvenuto in Bambua</string>
+    <string name="onboarding_seu_dinheiro_claro_como">I tuoi soldi, chiari e in ordine.</string>
     <string name="onboarding_saiba_como_mes_vai">Scopri come finirà il mese</string>
     <string name="onboarding_seus_dados_sao_seus">I tuoi dati sono tuoi</string>
     <string name="onboarding_como_quer_ser_chamado">Come vuoi essere chiamato? (facoltativo)</string>
-    <string name="onboarding_ja_uso_cryo_restaurar">Uso già Cryo: ripristina un backup</string>
+    <string name="onboarding_ja_uso_bambua_restaurar">Uso già Bambua: ripristina un backup</string>
     <string name="onboarding_sua_conta_principal">Il tuo conto principale</string>
     <string name="onboarding_onde_fica_maior_parte">Dove tieni la maggior parte dei tuoi soldi? Può essere la banca o un portafoglio digitale.</string>
     <string name="onboarding_ex_nubank_caixa_inter">Es.: Intesa Sanpaolo, UniCredit, Fineco</string>
@@ -709,25 +709,25 @@
     <string name="onboarding_cria_carteira_para_gastos">Crea un “Portafoglio” per le spese in contanti</string>
     <string name="onboarding_tambem_uso_dinheiro_vivo">Uso anche i contanti</string>
     <string name="onboarding_cartao_credito">Carta di credito</string>
-    <string name="onboarding_com_cartao_cadastrado_cryo">Con la carta registrata, Cryo divide gli acquisti per estratto conto e si occupa delle rate al posto tuo.</string>
+    <string name="onboarding_com_cartao_cadastrado_bambua">Con la carta registrata, Bambua divide gli acquisti per estratto conto e si occupa delle rate al posto tuo.</string>
     <string name="onboarding_uso_cartao_credito">Uso la carta di credito</string>
     <string name="onboarding_ex_nubank">Es.: Visa</string>
     <string name="onboarding_para_ver_essas_datas">Trovi queste date nell\'app della tua banca. Puoi cambiarle dopo.</string>
     <string name="onboarding_tudo_pronto">Tutto pronto!</string>
     <string name="onboarding_tela_inicial_toque_microfone">Nella schermata iniziale, tocca il microfono e di\' una spesa della tua giornata.</string>
     <string name="onboarding_experimente_registro_rapido">Prova la registrazione rapida</string>
-    <string name="onboarding_cadastre_suas_contas_fixas">Registra le tue spese fisse in Pianifica e Cryo ti avvisa prima della scadenza.</string>
+    <string name="onboarding_cadastre_suas_contas_fixas">Registra le tue spese fisse in Pianifica e Bambua ti avvisa prima della scadenza.</string>
     <string name="onboarding_lembretes_contas">Promemoria delle spese</string>
     <string name="onboarding_permitir_notificacoes">Consenti le notifiche</string>
     <string name="onboarding_voltar">Indietro</string>
     <string name="onboarding_comecar">Inizia</string>
     <string name="onboarding_pular">Salta</string>
-    <string name="onboarding_ir_para_cryo">Vai a Cryo</string>
+    <string name="onboarding_ir_para_bambua">Vai a Bambua</string>
     <string name="onboarding_continuar">Continua</string>
     <string name="onboarding_restaurar_este_backup">Ripristinare questo backup?</string>
-    <string name="onboarding_dados_arquivo_entram_cryo">%1$s · %2$s. I dati del file entrano in Cryo e la presentazione finisce qui.</string>
+    <string name="onboarding_dados_arquivo_entram_bambua">%1$s · %2$s. I dati del file entrano in Bambua e la presentazione finisce qui.</string>
     <string name="onboarding_trocar">Cambia</string>
-    <string name="onboarding_cryo_bloqueado">Cryo bloccato</string>
+    <string name="onboarding_bambua_bloqueado">Bambua bloccato</string>
     <string name="onboarding_use_sua_digital_rosto">Usa l\'impronta, il volto o il codice del telefono.</string>
     <string name="onboarding_desbloquear">Sblocca</string>
     <string name="backup_hoje">oggi alle %1$s</string>
@@ -740,28 +740,28 @@
     <string name="backup_primeiro_ainda_vai_ser">%1$s · il primo non è ancora stato fatto</string>
     <string name="backup_nao_consegui_concluir_agora">Non sono riuscito a finire adesso. Riprova.</string>
     <string name="backup_nao_deu_para_usar">Non è stato possibile usare quella cartella. Provane un\'altra.</string>
-    <string name="backup_essa_nuvem_nao_deixa">Questo cloud non permette a Cryo di aggiornare il file dopo. Prova un altro cloud o usa una cartella del telefono.</string>
+    <string name="backup_essa_nuvem_nao_deixa">Questo cloud non permette a Bambua di aggiornare il file dopo. Prova un altro cloud o usa una cartella del telefono.</string>
     <string name="backup_este_celular_nao_tem">Questo telefono non ha il selettore di file di Android.</string>
     <string name="backup_sem_permissao_aviso_nao">Senza autorizzazione, l\'avviso non compare. Puoi concederla nelle impostazioni di Android.</string>
     <string name="backup_copia_tudo_sem_voce">Una copia di tutto, senza doverci pensare</string>
-    <string name="backup_cryo_salva_seus_dados">Cryo salva i tuoi dati da solo, in una cartella del telefono, nel cloud o in entrambi. Resta senza accesso a internet: a caricare il file nel cloud è l\'app del cloud stesso.</string>
+    <string name="backup_bambua_salva_seus_dados">Bambua salva i tuoi dati da solo, in una cartella del telefono, nel cloud o in entrambi. Resta senza accesso a internet: a caricare il file nel cloud è l\'app del cloud stesso.</string>
     <string name="backup_fazer_backup_automatico">Fai il backup automatico</string>
     <string name="backup_escolha_abaixo_onde_guardar">Scegli qui sotto dove salvare</string>
     <string name="backup_segundo_plano_mesmo_com">In background, anche con l\'app chiusa</string>
-    <string name="backup_toque_aqui_permita_notificacoes">Tocca qui e consenti le notifiche, così Cryo ti avvisa se un backup non viene salvato.</string>
+    <string name="backup_toque_aqui_permita_notificacoes">Tocca qui e consenti le notifiche, così Bambua ti avvisa se un backup non viene salvato.</string>
     <string name="backup_com_que_frequencia">Con che frequenza</string>
-    <string name="backup_se_nada_mudou_desde">Se non è cambiato niente dall\'ultimo backup, Cryo non salva un\'altra copia uguale.</string>
+    <string name="backup_se_nada_mudou_desde">Se non è cambiato niente dall\'ultimo backup, Bambua non salva un\'altra copia uguale.</string>
     <string name="backup_celular">Sul telefono</string>
     <string name="backup_nuvem_2">Nel cloud</string>
     <string name="backup_fazer_backup_agora">Fai il backup adesso</string>
     <string name="backup_salvando">Salvataggio...</string>
-    <string name="backup_para_voltar_backup_use">Per tornare a un backup, usa Impostazioni › Ripristina backup e scegli il file. Se il telefono risparmia batteria in modo rigido, il backup può tardare un po\'; aprire Cryo fa anche il backup in ritardo.</string>
+    <string name="backup_para_voltar_backup_use">Per tornare a un backup, usa Impostazioni › Ripristina backup e scegli il file. Se il telefono risparmia batteria in modo rigido, il backup può tardare un po\'; aprire Bambua fa anche il backup in ritardo.</string>
     <string name="backup_nao_consegui_restaurar_esse">Non sono riuscito a ripristinare questo backup. Non è stato cambiato niente.</string>
     <string name="backup_usar_este_lugar">Usare questa posizione?</string>
     <string name="backup_se_continuar_ele_sera">%1$s Se continui, verrà sostituito con i dati di questo telefono.</string>
     <string name="backup_substituir">Sostituisci</string>
     <string name="backup_nenhuma_pasta_escolhida">Nessuna cartella scelta</string>
-    <string name="backup_guarde_proprio_celular_ou">Salva sul telefono stesso o in una cartella sincronizzata da un\'app cloud. Suggerimento: nella schermata che si apre, crea una cartella chiamata Cryo (per esempio dentro Documents) e tocca \"Usa questa cartella\".</string>
+    <string name="backup_guarde_proprio_celular_ou">Salva sul telefono stesso o in una cartella sincronizzata da un\'app cloud. Suggerimento: nella schermata che si apre, crea una cartella chiamata Bambua (per esempio dentro Documents) e tocca \"Usa questa cartella\".</string>
     <string name="backup_escolher_pasta">Scegli cartella</string>
     <string name="backup_como_guardar">Come salvare</string>
     <string name="backup_fica_so_copia_mais">Resta solo la copia più recente, nel file %1$s</string>
@@ -779,7 +779,7 @@
     <string name="backup_tela_que_abrir_toque">Nella schermata che si apre, tocca ☰ e scegli il cloud.</string>
     <string name="backup_escolha_pasta_toque_salvar">Scegli la cartella e tocca Salva.</string>
     <string name="backup_escolher_nuvem">Scegli nel cloud</string>
-    <string name="backup_cada_backup_cryo_atualiza">A ogni backup, Cryo aggiorna questo stesso file. Il caricamento via internet lo fa l\'app del cloud.</string>
+    <string name="backup_cada_backup_bambua_atualiza">A ogni backup, Bambua aggiorna questo stesso file. Il caricamento via internet lo fa l\'app del cloud.</string>
     <string name="backup_parar_usar">Smetti di usare</string>
     <string name="backup_nao_salvou">%1$s non salvato: %2$s</string>
     <string name="backup_nada_mudou_desde_entao">\u0020· niente è cambiato da allora</string>
@@ -790,7 +790,7 @@
     <string name="backup_ja_existe_backup_aqui">Qui c\'è già un backup</string>
     <string name="backup_este_arquivo">Questo file</string>
     <string name="backup_esta_pasta">Questa cartella</string>
-    <string name="backup_ja_tem_backup_cryo">\u0020contiene già un backup di Cryo, con dati diversi da quelli di questo telefono.</string>
+    <string name="backup_ja_tem_backup_bambua">\u0020contiene già un backup di Bambua, con dati diversi da quelli di questo telefono.</string>
     <string name="backup_salvo">\u0020· salvato %1$s</string>
     <string name="backup_backup">Nel backup</string>
     <string name="backup_neste_celular_agora">Su questo telefono adesso</string>
@@ -807,7 +807,7 @@
     <string name="backup_nada_para_salvar_agora">Niente da salvare adesso</string>
     <string name="backup_nuvem">nel cloud</string>
     <string name="backup_pasta">nella cartella</string>
-    <string name="backup_backup_restaurado_daqui_para">Backup ripristinato. D\'ora in poi, Cryo salva %1$s.</string>
+    <string name="backup_backup_restaurado_daqui_para">Backup ripristinato. D\'ora in poi, Bambua salva %1$s.</string>
     <string name="backup_pronto_agora_backup_fica">Fatto! Ora il backup va sempre nel file %1$s.</string>
     <string name="backup_pronto_primeiro_backup_ja">Fatto! Il primo backup è già %1$s.</string>
     <string name="backup_lugar_escolhido_primeiro_backup">Posizione scelta. Il primo backup parte quando avrai registrato qualcosa.</string>
@@ -892,7 +892,7 @@
     <string name="chart_dia_gastou">Giorno %1$s: hai speso %2$s</string>
     <string name="chart_menos">Meno</string>
     <string name="chart_mais">Più</string>
-    <string name="lock_desbloquear_cryo">Sblocca Cryo</string>
+    <string name="lock_desbloquear_bambua">Sblocca Bambua</string>
     <string name="lock_use_sua_digital_rosto">Usa l\'impronta, il volto o il codice del telefono</string>
     <string name="chart_flow_a11y">Flusso del denaro. Entrate: %1$s. Uscite: %2$s</string>
     <plurals name="import_button">
@@ -900,8 +900,8 @@
         <item quantity="other">Importa %d movimenti</item>
     </plurals>
     <plurals name="import_selected_duplicates">
-        <item quantity="one">%d riga selezionata sembra già in Cryo e sarà duplicata se entra.</item>
-        <item quantity="other">%d righe selezionate sembrano già in Cryo e saranno duplicate se entrano.</item>
+        <item quantity="one">%d riga selezionata sembra già in Bambua e sarà duplicata se entra.</item>
+        <item quantity="other">%d righe selezionate sembrano già in Bambua e saranno duplicate se entrano.</item>
     </plurals>
     <plurals name="import_flag_imported">
         <item quantity="one">%d già importato</item>
@@ -922,8 +922,8 @@
         <item quantity="other">%d pagamenti dell\'estratto conto selezionati entreranno come accrediti sulla carta, senza uscire da nessun conto. Se sono usciti da un tuo conto, tocca ogni riga e scegli il conto.</item>
     </plurals>
     <plurals name="import_unpaired_account">
-        <item quantity="one">%d pagamento di estratto conto selezionato entrerà come spesa normale. Se gli acquisti di quella carta sono già in Cryo, la spesa conta due volte: tocca la riga e scegli la carta.</item>
-        <item quantity="other">%d pagamenti di estratto conto selezionati entreranno come spese normali. Se gli acquisti di quelle carte sono già in Cryo, la spesa conta due volte: tocca ogni riga e scegli la carta.</item>
+        <item quantity="one">%d pagamento di estratto conto selezionato entrerà come spesa normale. Se gli acquisti di quella carta sono già in Bambua, la spesa conta due volte: tocca la riga e scegli la carta.</item>
+        <item quantity="other">%d pagamenti di estratto conto selezionati entreranno come spese normali. Se gli acquisti di quelle carte sono già in Bambua, la spesa conta due volte: tocca ogni riga e scegli la carta.</item>
     </plurals>
     <plurals name="import_done_title">
         <item quantity="one">%d movimento importato</item>
@@ -943,11 +943,11 @@
     <string name="import_continuar_conferindo">Continua la verifica</string>
     <string name="import_escolher_arquivo">Scegli file</string>
     <string name="import_traga_movimentacoes_seu_banco">Porta qui i movimenti della tua banca</string>
-    <string name="import_baixe_extrato_app_ou">Scarica l\'estratto conto dall\'app o dal sito della banca e scegli il file qui. Prima che qualcosa entri in Cryo, controlli l\'elenco: quello che è già registrato resta fuori.</string>
+    <string name="import_baixe_extrato_app_ou">Scarica l\'estratto conto dall\'app o dal sito della banca e scegli il file qui. Prima che qualcosa entri in Bambua, controlli l\'elenco: quello che è già registrato resta fuori.</string>
     <string name="import_ver_relatorio_leitura">Vedi il report di lettura</string>
-    <string name="import_formatos_que_cryo_le">Formati che Cryo legge</string>
-    <string name="import_melhor_valores_exatos_cryo">Il migliore: importi esatti, e Cryo riconosce quello che è già stato importato.</string>
-    <string name="import_funciona_com_quase_todos">Funziona con quasi tutte le banche. Se le colonne non sono chiare, Cryo chiede.</string>
+    <string name="import_formatos_que_bambua_le">Formati che Bambua legge</string>
+    <string name="import_melhor_valores_exatos_bambua">Il migliore: importi esatti, e Bambua riconosce quello che è già stato importato.</string>
+    <string name="import_funciona_com_quase_todos">Funziona con quasi tutte le banche. Se le colonne non sono chiare, Bambua chiede.</string>
     <string name="import_csv_ou_planilha_xlsx">CSV o foglio di calcolo (XLSX)</string>
     <string name="import_lido_pelo_texto_arquivo">Letto dal testo del file. Controlla bene l\'elenco.</string>
     <string name="import_este_celular_nao_consegue">Questo telefono non riesce a leggere il testo dei PDF. Usa OFX, CSV o XLSX.</string>
@@ -966,10 +966,10 @@
     <string name="import_senha_pdf">Password del PDF</string>
     <string name="import_mostrar_senha">Mostra password</string>
     <string name="import_esconder_senha">Nascondi password</string>
-    <string name="import_senha_so_abre_arquivo">La password apre il file solo adesso, qui sul telefono. Cryo non la conserva.</string>
+    <string name="import_senha_so_abre_arquivo">La password apre il file solo adesso, qui sul telefono. Bambua non la conserva.</string>
     <string name="import_escolher_outro_arquivo">Scegli un altro file</string>
     <string name="import_escolher_colunas">Scegli le colonne</string>
-    <string name="import_cryo_nao_teve_certeza">Cryo non è sicuro di dove si trovi ogni informazione in questo file. Tocca la colonna giusta per ciascuna.</string>
+    <string name="import_bambua_nao_teve_certeza">Bambua non è sicuro di dove si trovi ogni informazione in questo file. Tocca la colonna giusta per ciascuna.</string>
     <string name="import_comeco_arquivo">Inizio del file</string>
     <string name="import_entradas_saidas">Entrate e uscite</string>
     <string name="import_coluna">Una colonna</string>
@@ -986,7 +986,7 @@
     <string name="import_importando">Importazione...</string>
     <string name="import_marque_que_quer_importar">Seleziona cosa vuoi importare</string>
     <string name="import_para_onde_vao">Dove vanno</string>
-    <string name="import_compras_vieram_com_valor">Gli acquisti sono arrivati con importo positivo, quindi Cryo ha già invertito i segni. Se non è così: menu › Inverti entrate e uscite.</string>
+    <string name="import_compras_vieram_com_valor">Gli acquisti sono arrivati con importo positivo, quindi Bambua ha già invertito i segni. Se non è così: menu › Inverti entrate e uscite.</string>
     <string name="import_arquivo">Nel file: %1$s</string>
     <string name="import_qual_fatura">In quale estratto conto</string>
     <string name="import_pela_data_cada_compra">In base alla data di ogni acquisto</string>
@@ -1011,17 +1011,17 @@
     <string name="import_importar_esta_movimentacao">Importa questo movimento</string>
     <string name="import_pronto">Fatto</string>
     <string name="import_esta_movimentacao_ja_veio">Questo movimento è già arrivato in un\'importazione precedente. Se lo importi di nuovo, sarà duplicato.</string>
-    <string name="import_parece_com_que_ja">Assomiglia a “%1$s”, del %2$s (%3$s), già in Cryo%4$s.</string>
-    <string name="import_parece_com_algo_que">Assomiglia a qualcosa che è già in Cryo.</string>
-    <string name="import_parece_pagamento_fatura_cryo">Sembra il pagamento dell\'estratto conto. In Cryo esce da un conto ed entra nella carta: di\' da quale conto è uscito. Se hai già registrato questo pagamento, lascia questa riga deselezionata.</string>
+    <string name="import_parece_com_que_ja">Assomiglia a “%1$s”, del %2$s (%3$s), già in Bambua%4$s.</string>
+    <string name="import_parece_com_algo_que">Assomiglia a qualcosa che è già in Bambua.</string>
+    <string name="import_parece_pagamento_fatura_bambua">Sembra il pagamento dell\'estratto conto. In Bambua esce da un conto ed entra nella carta: di\' da quale conto è uscito. Se hai già registrato questo pagamento, lascia questa riga deselezionata.</string>
     <string name="import_parece_pagamento_fatura_cartao">Sembra il pagamento dell\'estratto conto di una carta. Perché la spesa non conti due volte (gli acquisti sono già sulla carta), registralo come pagamento della carta. Se hai già registrato questo pagamento, lascia questa riga deselezionata.</string>
     <string name="import_conta">sul conto %1$s</string>
     <string name="import_cartao">sulla carta %1$s</string>
     <string name="import_importar_extrato">Importa estratto conto</string>
     <string name="import_importacao_desfeita">Importazione annullata</string>
-    <string name="import_nada_deste_arquivo_ficou">Niente di questo file è rimasto in Cryo.</string>
+    <string name="import_nada_deste_arquivo_ficou">Niente di questo file è rimasto in Bambua.</string>
     <string name="import_saldo_fim_extrato">Saldo alla fine dell\'estratto conto</string>
-    <string name="import_saldo_cryo_agora">Saldo in Cryo adesso</string>
+    <string name="import_saldo_bambua_agora">Saldo in Bambua adesso</string>
     <string name="import_estao_diferentes_pode_ser">Sono diversi: forse qualcosa è rimasto deselezionato nella verifica o è successo prima del periodo del file, oppure il saldo iniziale del conto va corretto (modifica il conto in Portafoglio).</string>
     <string name="import_ver_conta">Vedi il conto</string>
     <string name="import_ver_cartao">Vedi la carta</string>
@@ -1030,18 +1030,18 @@
     <string name="import_relatorio_leitura">Report di lettura</string>
     <string name="import_nao_consegui_abrir_esse">Non sono riuscito ad aprire questo file. Prova a scaricarlo di nuovo o scegline un altro.</string>
     <string name="import_arquivo_grande_demais_mais">Il file è troppo grande (oltre 20 MB). Chiedi alla banca un periodo più breve.</string>
-    <string name="import_este_extrato_exemplo_cryo">Questo è un estratto conto di esempio di Cryo (inventato). Si può importare solo in modalità di prova.</string>
+    <string name="import_este_extrato_exemplo_bambua">Questo è un estratto conto di esempio di Bambua (inventato). Si può importare solo in modalità di prova.</string>
     <string name="import_nenhuma_movimentacao_encontrada">Nessun movimento trovato</string>
     <string name="import_com_essas_colunas_nenhuma">Con queste colonne, nessuna riga è diventata un movimento. Controlla quale colonna ha la data e quale l\'importo.</string>
     <string name="import_nao_encontrei_movimentacoes_nesse">Non ho trovato movimenti in questo file.</string>
-    <string name="import_cryo_pediu_para_escolher">Cryo ha chiesto di scegliere le colonne</string>
+    <string name="import_bambua_pediu_para_escolher">Bambua ha chiesto di scegliere le colonne</string>
     <string name="import_crie_conta_ou_cartao">Crea un conto o una carta in Portafoglio prima di importare.</string>
     <string name="import_nao_consegui_importar_nada">Importazione non riuscita. Non è stato salvato niente.</string>
     <string name="import_nao_consegui_desfazer_tente">Non sono riuscito ad annullare. Riprova.</string>
     <string name="dev_nao_consegui_preparar_modo">Non sono riuscito a preparare la modalità di prova. Riprova.</string>
     <string name="dev_nao_deu_certo_tente">Non ha funzionato. Riprova.</string>
     <string name="dev_nao_consegui_salvar_arquivos">Non sono riuscito a salvare i file in quella cartella</string>
-    <string name="dev_ferramentas_para_testar_cryo">Strumenti per provare Cryo e aiutare a migliorare la lettura degli estratti conto, senza toccare i tuoi dati reali.</string>
+    <string name="dev_ferramentas_para_testar_bambua">Strumenti per provare Bambua e aiutare a migliorare la lettura degli estratti conto, senza toccare i tuoi dati reali.</string>
     <string name="dev_modo_teste">Modalità di prova</string>
     <string name="dev_usar_dados_teste_2">Usa dati di prova</string>
     <string name="dev_telas_passam_usar_outro">Le schermate passano a un altro database, con dati di esempio. I tuoi dati restano salvati così come sono finché non torni.</string>
@@ -1061,7 +1061,7 @@
     <string name="dev_modo_teste_aceita_tambem">In modalità di prova, accetta anche il JSON di prova</string>
     <string name="dev_formatos_json_teste_como">Formati, JSON di prova e come inviare un estratto conto anonimo</string>
     <string name="dev_este_celular">Questo telefono</string>
-    <string name="dev_versao_cryo">Versione di Cryo</string>
+    <string name="dev_versao_bambua">Versione di Bambua</string>
     <string name="dev_api">%1$s (API %2$s)</string>
     <string name="dev_android">Android</string>
     <string name="dev_indisponivel_neste_android">non disponibile su questo Android</string>
@@ -1072,7 +1072,7 @@
     <string name="dev_desligar_modo_desenvolvedor">Disattiva la modalità sviluppatore</string>
     <string name="dev_modo_desenvolvedor_desligado">Modalità sviluppatore disattivata</string>
     <string name="dev_usar_dados_teste">Usare dati di prova?</string>
-    <string name="dev_cryo_vai_mostrar_dados">Cryo mostrerà dati di esempio in un database separato. I tuoi dati restano salvati, senza alcuna modifica, e tornano quando esci dalla modalità di prova (dalla barra in fondo allo schermo o da qui).</string>
+    <string name="dev_bambua_vai_mostrar_dados">Bambua mostrerà dati di esempio in un database separato. I tuoi dati restano salvati, senza alcuna modifica, e tornano quando esci dalla modalità di prova (dalla barra in fondo allo schermo o da qui).</string>
     <string name="dev_entrar_modo_teste">Entra in modalità di prova</string>
     <string name="dev_tudo_que_esta_modo">Tutto ciò che è nella modalità di prova viene cancellato e sostituito dagli esempi. I tuoi dati reali non cambiano.</string>
     <string name="dev_recriar_dados_exemplo">Ricreare i dati di esempio?</string>
@@ -1086,14 +1086,14 @@
     <string name="dev_compartilhar_relatorio">Condividi report</string>
     <string name="dev_nenhum_app_para_compartilhar">Nessuna app per condividere</string>
     <string name="dev_nao_consegui_compartilhar_relatorio">Non sono riuscito a condividere il report</string>
-    <string name="dev_relatorio_cryo">Report di Cryo</string>
+    <string name="dev_relatorio_bambua">Report di Bambua</string>
     <string name="dev_relatorio_copiado">Report copiato</string>
     <string name="dev_nao_consegui_copiar_relatorio">Non sono riuscito a copiare il report</string>
     <string name="dev_nenhuma_leitura_ainda">Ancora nessuna lettura</string>
-    <string name="dev_importe_extrato_volte_aqui">Importa un estratto conto e torna qui per vedere come Cryo ha letto il file, riga per riga.</string>
+    <string name="dev_importe_extrato_volte_aqui">Importa un estratto conto e torna qui per vedere come Bambua ha letto il file, riga per riga.</string>
     <string name="dev_completo">Completo</string>
     <string name="dev_anonimo">Anonimo</string>
-    <string name="dev_letras_viram_x_numeros">Le lettere diventano x e i numeri 9, ma la forma di ogni riga resta uguale. È questa la versione che aiuta a correggere la lettura: inviala in una issue sul GitHub di Cryo.</string>
+    <string name="dev_letras_viram_x_numeros">Le lettere diventano x e i numeri 9, ma la forma di ogni riga resta uguale. È questa la versione che aiuta a correggere la lettura: inviala in una issue sul GitHub di Bambua.</string>
     <string name="dev_esta_versao_tem_suas">Questa versione contiene i tuoi movimenti reali. Non pubblicarla da nessuna parte.</string>
     <string name="dev_copiar">Copia</string>
     <string name="dev_compartilhar">Condividi</string>
@@ -1145,7 +1145,7 @@
     <string name="reminder_toque_para_marcar_como">%1$s · tocca per segnarla come pagata</string>
     <string name="backup_avisa_quando_backup_automatico">Avvisa quando il backup automatico non riesce a salvare o ha bisogno di te</string>
     <string name="backup_backup_automatico_falhou">Il backup automatico %1$s non è riuscito</string>
-    <string name="backup_cryo_protegeu_seu_backup">Cryo ha protetto il tuo backup %1$s</string>
+    <string name="backup_bambua_protegeu_seu_backup">Bambua ha protetto il tuo backup %1$s</string>
     <string name="backup_sha_256">SHA-256</string>
     <string name="backup_nao_foi_possivel_abrir">Impossibile aprire il file</string>
     <string name="backup_pasta_indisponivel">Cartella non disponibile</string>
@@ -1154,7 +1154,7 @@
     <string name="backup_nao_foi_possivel_apagar">Impossibile eliminare</string>
     <string name="backup_arquivo">il file</string>
     <string name="backup_pasta_3">la cartella</string>
-    <string name="backup_cryo_perdeu_permissao_para">Cryo ha perso l\'autorizzazione a usare %1$s. Sceglilo di nuovo.</string>
+    <string name="backup_bambua_perdeu_permissao_para">Bambua ha perso l\'autorizzazione a usare %1$s. Sceglilo di nuovo.</string>
     <string name="backup_arquivo_nao_existe_mais">Il file non esiste più. Sceglilo di nuovo.</string>
     <string name="backup_pasta_nao_existe_mais">La cartella non esiste più. Scegline un\'altra.</string>
     <string name="backup_nao_consegui_gravar_sem">Non sono riuscito a scrivere (spazio esaurito o il cloud non ha risposto). Riproverò più tardi.</string>
@@ -1178,7 +1178,7 @@
     <string name="importer_arquivo_grande_demais_para">Il file è troppo grande per questo telefono.</string>
     <string name="importer_nao_consegui_ler_esse">Non sono riuscito a leggere questo file.</string>
     <string name="importer_arquivo_esta_vazio">Il file è vuoto.</string>
-    <string name="importer_este_arquivo_backup_cryo">Questo file è un backup di Cryo. Per usarlo, vai in Impostazioni › Ripristina backup.</string>
+    <string name="importer_este_arquivo_backup_bambua">Questo file è un backup di Bambua. Per usarlo, vai in Impostazioni › Ripristina backup.</string>
     <string name="importer_esse_arquivo_nao_parece">Questo file non sembra un estratto conto. Usa OFX, CSV, foglio di calcolo (XLSX) o PDF della banca.</string>
     <string name="importer_tabela_html_excel_muitos">Tabella HTML (l\'\"Excel\" di molte banche)</string>
     <string name="importer_esse_arquivo_pagina_internet">Questo file è una pagina web senza tabella di movimenti. Chiedi alla banca l\'estratto conto in OFX, CSV o XLSX.</string>
@@ -1198,19 +1198,19 @@
     <string name="importer_formato_ofx">Formato OFX\u0020</string>
     <string name="importer_extrato_conta">Estratto conto</string>
     <string name="importer_extrato_cartao_credito">Estratto conto della carta di credito</string>
-    <string name="importer_para_ler_pdf_cryo">Per leggere i PDF, Cryo ha bisogno di un Android più recente. Chiedi alla banca l\'estratto conto in OFX, CSV o foglio di calcolo (XLSX).</string>
+    <string name="importer_para_ler_pdf_bambua">Per leggere i PDF, Bambua ha bisogno di un Android più recente. Chiedi alla banca l\'estratto conto in OFX, CSV o foglio di calcolo (XLSX).</string>
     <string name="importer_nao_consegui_abrir_esse">Non sono riuscito ad aprire questo PDF. Potrebbe essere danneggiato.</string>
-    <string name="importer_essa_planilha_nao_tem">Questo foglio di calcolo non ha schede che Cryo possa leggere.</string>
+    <string name="importer_essa_planilha_nao_tem">Questo foglio di calcolo non ha schede che Bambua possa leggere.</string>
     <string name="importer_essa_planilha_grande_demais">Questo foglio di calcolo è troppo grande.</string>
     <string name="importer_nao_consegui_abrir_essa">Non sono riuscito ad aprire questo foglio di calcolo. Potrebbe essere danneggiato.</string>
     <string name="importer_json_precisa_ter_lista">Il JSON deve contenere l\'elenco \"transactions\".</string>
-    <string name="importer_esse_json_nao_esta">Questo JSON non è nel formato di prova di Cryo.</string>
+    <string name="importer_esse_json_nao_esta">Questo JSON non è nel formato di prova di Bambua.</string>
     <string name="importer_esse_json_versao_mais">Questo JSON è di una versione più recente del formato di prova.</string>
     <string name="importer_nao_objeto">non è un oggetto</string>
     <string name="importer_date_ausente_ou_invalida">\"date\" mancante o non valida (usa 2026-10-01)</string>
     <string name="importer_amount_ausente_ou_invalido">\"amount\" mancante o non valido</string>
-    <string name="importer_formato_testes_cryo_versao">Formato di prova di Cryo, versione %1$s</string>
-    <string name="importer_nao_encontrei_texto_nesse">Non ho trovato testo in questo PDF. Se è una foto o una scansione, Cryo non riesce a leggerlo.</string>
+    <string name="importer_formato_testes_bambua_versao">Formato di prova di Bambua, versione %1$s</string>
+    <string name="importer_nao_encontrei_texto_nesse">Non ho trovato testo in questo PDF. Se è una foto o una scansione, Bambua non riesce a leggerlo.</string>
     <string name="importer_sem_data_antes">senza data prima</string>
     <string name="importer_valor_sem_descricao">importo senza descrizione</string>
     <string name="importer_linha_saldo_total_ou">riga di saldo, totale o riepilogo</string>
@@ -1237,7 +1237,7 @@
     <string name="importer_mes_antes_do_dia">Date con il mese prima del giorno (come negli USA)</string>
     <string name="importer_centavos_depois_virgula">Centesimi dopo la virgola</string>
     <string name="importer_parcela">\u0020- Rata %1$s/%2$s</string>
-    <string name="report_relatorio_leitura_extrato_cryo">Report di lettura dell\'estratto conto · Cryo %1$s</string>
+    <string name="report_relatorio_leitura_extrato_bambua">Report di lettura dell\'estratto conto · Bambua %1$s</string>
     <string name="report_gerado">Generato il %1$s</string>
     <string name="report_versao_anonima_letras_viram">Versione anonima: le lettere diventano x e i numeri 9; la forma di ogni riga resta uguale.</string>
     <string name="report_arquivo_2">File: %1$s (%2$s)</string>
@@ -1387,27 +1387,27 @@
     <string name="tx_pagamento_divida_registrado">Pagamento di %1$s registrato sul debito</string>
     <string name="tx_ex_almoco">Es.: Pranzo</string>
     <string name="backup_invalid_file">Il file non è un backup valido.</string>
-    <string name="backup_not_cryo_file">Questo file non è un backup di Cryo.</string>
-    <string name="backup_newer_version">Questo backup è di una versione più recente di Cryo. Aggiorna l\'app.</string>
-    <string name="backup_err_foreign">Questa cartella ha già un file cryo-backup.json che non è stato fatto da questo telefono. Per non eliminarlo, Cryo non l\'ha sostituito. Tocca Cambia cartella e scegli questa stessa cartella per decidere cosa fare, oppure scegli Conserva più copie.</string>
-    <string name="backup_err_changed_folder">Il file cryo-backup.json della cartella è stato modificato da un altro telefono o app dopo l\'ultimo backup. Per non eliminare quella versione, Cryo non l\'ha sostituito. Tocca Cambia cartella e scegli questa stessa cartella per decidere cosa fare.</string>
-    <string name="backup_err_changed_cloud">Il file nel cloud è stato modificato da un altro telefono o app dopo l\'ultimo backup. Per non eliminare quella versione, Cryo non l\'ha sostituito. Tocca Cambia e scegli lo stesso file per decidere cosa fare.</string>
+    <string name="backup_not_bambua_file">Questo file non è un backup di Bambua.</string>
+    <string name="backup_newer_version">Questo backup è di una versione più recente di Bambua. Aggiorna l\'app.</string>
+    <string name="backup_err_foreign">Questa cartella ha già un file bambua-backup.json che non è stato fatto da questo telefono. Per non eliminarlo, Bambua non l\'ha sostituito. Tocca Cambia cartella e scegli questa stessa cartella per decidere cosa fare, oppure scegli Conserva più copie.</string>
+    <string name="backup_err_changed_folder">Il file bambua-backup.json della cartella è stato modificato da un altro telefono o app dopo l\'ultimo backup. Per non eliminare quella versione, Bambua non l\'ha sostituito. Tocca Cambia cartella e scegli questa stessa cartella per decidere cosa fare.</string>
+    <string name="backup_err_changed_cloud">Il file nel cloud è stato modificato da un altro telefono o app dopo l\'ultimo backup. Per non eliminare quella versione, Bambua non l\'ha sostituito. Tocca Cambia e scegli lo stesso file per decidere cosa fare.</string>
     <string name="backup_err_cant_read">Non sono riuscito a leggere il backup già presente in quella posizione (il cloud potrebbe essere offline).</string>
-    <string name="backup_err_newer">Il backup già presente in quella posizione è di una versione più recente di Cryo.</string>
+    <string name="backup_err_newer">Il backup già presente in quella posizione è di una versione più recente di Bambua.</string>
     <string name="backup_err_damaged">Il backup già presente in quella posizione sembra danneggiato.</string>
-    <string name="backup_err_not_cryo">Questa cartella ha già un file cryo-backup.json che non è un backup di Cryo.</string>
+    <string name="backup_err_not_bambua">Questa cartella ha già un file bambua-backup.json che non è un backup di Bambua.</string>
     <string name="backup_err_cant_open_folder">Non sono riuscito ad aprire quella cartella. Riprova o scegline un\'altra.</string>
-    <string name="backup_err_read_data">Non sono riuscito a leggere i dati di Cryo adesso. Riproverò più tardi.</string>
+    <string name="backup_err_read_data">Non sono riuscito a leggere i dati di Bambua adesso. Riproverò più tardi.</string>
     <string name="backup_err_cant_check">Non sono riuscito ad aprire il file per controllarlo prima di scrivere (il cloud potrebbe essere offline, o è stato eliminato). Riproverò più tardi; se continua così, scegli di nuovo la posizione.</string>
 
-    <!-- Como usar o Cryo (RF-TOUR) -->
-    <string name="tour_how_to_use">Come usare Cryo</string>
+    <!-- Como usar o Bambua (RF-TOUR) -->
+    <string name="tour_how_to_use">Come usare Bambua</string>
     <string name="tour_how_to_use_sub">Un giro veloce dell\'app, con animazioni</string>
     <string name="tour_1_title">Registra in pochi secondi</string>
-    <string name="tour_1_text">Scrivi o parla a modo tuo. Cryo capisce l\'importo, la categoria e il conto: tu controlli e salvi.</string>
+    <string name="tour_1_text">Scrivi o parla a modo tuo. Bambua capisce l\'importo, la categoria e il conto: tu controlli e salvi.</string>
     <string name="tour_1_phrase">pranzo %1$s con bancomat</string>
     <string name="tour_1_lunch">Pranzo</string>
-    <string name="tour_2_text">Al ritmo delle tue spese, Cryo mostra quanto dovrebbe restare a fine mese e quanto puoi spendere al giorno.</string>
+    <string name="tour_2_text">Al ritmo delle tue spese, Bambua mostra quanto dovrebbe restare a fine mese e quanto puoi spendere al giorno.</string>
     <string name="tour_2_per_day">Puoi spendere %1$s al giorno</string>
     <string name="tour_3_title">Carte e rate senza sorprese</string>
     <string name="tour_3_text">Hai comprato a rate? Ogni rata finisce nell\'estratto conto giusto e vedi quanto resta del plafond.</string>

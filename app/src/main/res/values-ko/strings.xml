@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Textos do Cryo em coreano (PRD: RF-LNG-01, TXT-09). Mesmas chaves e marcadores de values/strings.xml
+    Textos do Bambua em coreano (PRD: RF-LNG-01, TXT-09). Mesmas chaves e marcadores de values/strings.xml
     (a base, em português do Brasil); PrdConformanceTest confere.
 -->
 <resources>
@@ -53,8 +53,8 @@
     <string name="home_goals">목표와 저금통</string>
     <string name="goal_progress">%1$s / %2$s</string>
     <string name="home_recent">최근 내역</string>
-    <string name="home_empty_hint">빠른 기록부터 시작해 보세요. 마이크를 누르고, 예를 들어 “점심 12000원 카드로”라고 말해 보세요. Cryo가 금액, 카테고리, 계좌를 알아듣습니다. 확인하고 저장만 하면 됩니다.</string>
-    <string name="home_insights">Cryo가 알려 드려요</string>
+    <string name="home_empty_hint">빠른 기록부터 시작해 보세요. 마이크를 누르고, 예를 들어 “점심 12000원 카드로”라고 말해 보세요. Bambua가 금액, 카테고리, 계좌를 알아듣습니다. 확인하고 저장만 하면 됩니다.</string>
+    <string name="home_insights">Bambua가 알려 드려요</string>
     <string name="month_in">들어온 돈</string>
     <string name="month_out">나간 돈</string>
     <string name="month_end">월말</string>
@@ -266,7 +266,7 @@
     <string name="debt_proxima">다음: %1$s</string>
     <string name="debt_organize_suas_dividas">빚을 정리해 보세요</string>
     <string name="debt_cadastre_emprestimos_financiamentos_acordos">대출, 할부 금융, 상환 약정, 누군가에게 빌린 돈을 등록하세요.\u0020</string>
-    <string name="debt_cryo_mostra_quanto_falta">Cryo가 남은 금액을 보여 주고, 상환일을 알려 주고, 언제 다 갚는지 알려 드려요.</string>
+    <string name="debt_bambua_mostra_quanto_falta">Bambua가 남은 금액을 보여 주고, 상환일을 알려 주고, 언제 다 갚는지 알려 드려요.</string>
     <string name="debt_cadastrar_divida">빚 등록</string>
     <string name="debt_aberto">상환 중</string>
     <string name="debt_nenhuma_divida_aberto_muito">갚고 있는 빚이 없어요. 잘하셨어요!</string>
@@ -424,7 +424,7 @@
     <string name="plan_restam_cerca_por_dia">%1$s 남음 · 하루 약 %2$s</string>
     <string name="plan_voce_passou_total_planejado">예산 합계를 %1$s 넘었어요</string>
     <string name="plan_defina_limites_por_categoria">카테고리별 한도를 정해 보세요</string>
-    <string name="plan_cryo_avisa_quando_voce" formatted="false">80%에 도달했을 때와 한도를 넘었을 때 Cryo가 알려 드려요.</string>
+    <string name="plan_bambua_avisa_quando_voce" formatted="false">80%에 도달했을 때와 한도를 넘었을 때 Bambua가 알려 드려요.</string>
     <string name="plan_sugestoes_pela_sua_media">평소 지출을 바탕으로 한 제안</string>
     <string name="plan_orcamento_salvo">예산을 저장했어요</string>
     <string name="plan_orcamento_removido">예산을 삭제했어요</string>
@@ -437,7 +437,7 @@
     <string name="plan_salvar_orcamento">예산 저장</string>
     <string name="plan_remover_orcamento">예산 삭제</string>
     <string name="plan_nenhuma_conta_fixa">고정 지출이 없어요</string>
-    <string name="plan_cadastre_aluguel_internet_assinaturas">월세, 인터넷, 구독, 월급도 등록하세요. Cryo가 기한을 알려 주고 이번 달 예측에 반영해요.</string>
+    <string name="plan_cadastre_aluguel_internet_assinaturas">월세, 인터넷, 구독, 월급도 등록하세요. Bambua가 기한을 알려 주고 이번 달 예측에 반영해요.</string>
     <string name="plan_pagas">%2$s건 중 %1$s건 결제</string>
     <string name="plan_parcelas_dividas">빚 상환</string>
     <string name="plan_recebidos">%2$s건 중 %1$s건 받음</string>
@@ -477,7 +477,7 @@
     <string name="plan_apagar">%1$s을(를) 삭제할까요?</string>
     <string name="plan_conta_fixa_apagada">고정 지출을 삭제했어요</string>
     <string name="plan_crie_sua_primeira_meta">첫 목표를 만들어 보세요</string>
-    <string name="plan_viagem_reserva_emergencia_celular">여행, 비상금, 새 휴대폰… 금액과 기한을 정하면 매달 얼마씩 모아야 하는지 Cryo가 알려 드려요.</string>
+    <string name="plan_viagem_reserva_emergencia_celular">여행, 비상금, 새 휴대폰… 금액과 기한을 정하면 매달 얼마씩 모아야 하는지 Bambua가 알려 드려요.</string>
     <string name="plan_nenhuma_meta_ativa">진행 중인 목표가 없어요</string>
     <string name="plan_suas_metas_arquivadas_continuam">보관한 목표는 바로 아래 보관함에 남아 있어요. 언제든 새 목표를 만들 수 있어요.</string>
     <string name="plan_guardado_metas">목표에 모은 돈</string>
@@ -591,10 +591,10 @@
     <string name="locale_language_title">언어</string>
     <string name="locale_language_device">휴대폰 설정</string>
     <string name="locale_currency_title">통화</string>
-    <string name="locale_currency_hint">Cryo의 모든 금액이 이 통화로 표시돼요.</string>
+    <string name="locale_currency_hint">Bambua의 모든 금액이 이 통화로 표시돼요.</string>
     <string name="locale_currency_device">휴대폰 국가 설정</string>
     <string name="locale_currency_confirm_title">통화를 바꿀까요?</string>
-    <string name="locale_currency_confirm_text">이미 기록한 금액의 숫자는 그대로이고, 기호와 표기 방식만 바뀌어요. Cryo는 인터넷 없이 작동해 환율이 없으므로 통화를 환산하지 않아요.</string>
+    <string name="locale_currency_confirm_text">이미 기록한 금액의 숫자는 그대로이고, 기호와 표기 방식만 바뀌어요. Bambua는 인터넷 없이 작동해 환율이 없으므로 통화를 환산하지 않아요.</string>
     <string name="locale_currency_confirm_button">통화 바꾸기</string>
     <string name="settings_hide_values_hint">숫자 대신 %1$s을(를) 보여 줘요</string>
     <plurals name="category_keywords">
@@ -618,7 +618,7 @@
     <string name="settings_automatico">자동</string>
     <string name="settings_cores_papel_parede_material">배경화면 색상 (Material You)</string>
     <string name="settings_app_combina_com_cores">앱이 휴대폰 색상에 맞춰져요</string>
-    <string name="settings_cores_papel_parede_precisam">배경화면 색상은 Android 12 이상이 필요해요. Cryo 색상을 사용하고 있어요.</string>
+    <string name="settings_cores_papel_parede_precisam">배경화면 색상은 Android 12 이상이 필요해요. Bambua 색상을 사용하고 있어요.</string>
     <string name="settings_privacidade_seguranca">개인정보와 보안</string>
     <string name="settings_bloquear_com_digital_ou">지문이나 비밀번호로 잠금</string>
     <string name="settings_cadastre_digital_rosto_ou">먼저 Android에서 지문, 얼굴 또는 화면 잠금을 설정하세요</string>
@@ -650,13 +650,13 @@
     <string name="settings_dados_teste_arquivos_exemplo">테스트 데이터, 예시 파일, 보고서</string>
     <string name="settings_usando_dados_teste_arquivos">테스트 데이터 사용 중 · 예시 파일과 보고서</string>
     <string name="settings_sobre">정보</string>
-    <string name="settings_github_com_h3yk0_cryo">github.com/H3yK0/cryo · 제안과 문제 제보를 환영해요</string>
+    <string name="settings_github_com_h3yk0_bambua">github.com/H3yK0/cryo · 제안과 문제 제보를 환영해요</string>
     <string name="settings_codigo_fonte">소스 코드</string>
     <string name="settings_gnu_agpl_v3_ou">GNU AGPL v3 이상 · 자유 소프트웨어</string>
     <string name="settings_licenca">라이선스</string>
     <string name="settings_modo_desenvolvedor_ja_esta">개발자 모드가 이미 켜져 있어요</string>
     <string name="settings_modo_desenvolvedor_ligado">개발자 모드를 켰어요</string>
-    <string name="settings_cryo">Cryo %1$s</string>
+    <string name="settings_bambua">Bambua %1$s</string>
     <string name="settings_mais_toques_para_modo">개발자 모드까지 %1$s번 더 누르세요</string>
     <string name="settings_mais_toque_para_modo">개발자 모드까지 1번 더 누르세요</string>
     <string name="settings_organizacao_financeira_com_registro">음성으로 기록하는 가계부. 이번 달 예측과 돈의 흐름을 보여 줘요. 인터넷 없이, 광고 없이, 추적 없이 작동해요.</string>
@@ -676,17 +676,17 @@
     <string name="settings_nova_categoria">새 카테고리</string>
     <string name="settings_palavras_chave_registro_rapido">빠른 기록 키워드</string>
     <string name="settings_ex_padaria_lanche_cafe">예: 빵집, 간식, 커피</string>
-    <string name="settings_quando_voce_digitar_ou">이 단어를 입력하거나 말하면 Cryo가 이 카테고리를 골라요. 쉼표로 구분하세요.</string>
+    <string name="settings_quando_voce_digitar_ou">이 단어를 입력하거나 말하면 Bambua가 이 카테고리를 골라요. 쉼표로 구분하세요.</string>
     <string name="settings_se_ela_ja_foi">이미 사용한 카테고리라면 기록이 흐트러지지 않도록 보관만 돼요.</string>
     <string name="settings_apagar_categoria">카테고리를 삭제할까요?</string>
     <string name="settings_categoria_arquivada">카테고리를 보관했어요</string>
     <string name="settings_categoria_apagada">카테고리를 삭제했어요</string>
-    <string name="onboarding_bem_vindo_ao_cryo">Cryo에 오신 걸 환영해요</string>
-    <string name="onboarding_seu_dinheiro_claro_como">내 돈을 얼음처럼 투명하게.</string>
+    <string name="onboarding_bem_vindo_ao_bambua">Bambua에 오신 걸 환영해요</string>
+    <string name="onboarding_seu_dinheiro_claro_como">내 돈을 한눈에 투명하게.</string>
     <string name="onboarding_saiba_como_mes_vai">이번 달이 어떻게 끝날지 알아보세요</string>
     <string name="onboarding_seus_dados_sao_seus">내 데이터는 내 것</string>
     <string name="onboarding_como_quer_ser_chamado">뭐라고 불러 드릴까요? (선택)</string>
-    <string name="onboarding_ja_uso_cryo_restaurar">Cryo를 써 봤어요: 백업 복원</string>
+    <string name="onboarding_ja_uso_bambua_restaurar">Bambua를 써 봤어요: 백업 복원</string>
     <string name="onboarding_sua_conta_principal">주 계좌</string>
     <string name="onboarding_onde_fica_maior_parte">돈이 가장 많이 있는 곳은 어디인가요? 은행도 간편결제 지갑도 괜찮아요.</string>
     <string name="onboarding_ex_nubank_caixa_inter">예: 국민은행, 카카오뱅크, 토스뱅크</string>
@@ -695,25 +695,25 @@
     <string name="onboarding_cria_carteira_para_gastos">현금 지출용 “지갑”을 만들어요</string>
     <string name="onboarding_tambem_uso_dinheiro_vivo">현금도 써요</string>
     <string name="onboarding_cartao_credito">신용카드</string>
-    <string name="onboarding_com_cartao_cadastrado_cryo">카드를 등록하면 Cryo가 사용 내역을 청구별로 나누고 할부도 챙겨 드려요.</string>
+    <string name="onboarding_com_cartao_cadastrado_bambua">카드를 등록하면 Bambua가 사용 내역을 청구별로 나누고 할부도 챙겨 드려요.</string>
     <string name="onboarding_uso_cartao_credito">신용카드를 써요</string>
     <string name="onboarding_ex_nubank">예: 신한카드</string>
     <string name="onboarding_para_ver_essas_datas">이 날짜는 카드사 앱에서 확인할 수 있어요. 나중에 바꿀 수 있어요.</string>
     <string name="onboarding_tudo_pronto">준비 완료!</string>
     <string name="onboarding_tela_inicial_toque_microfone">홈 화면에서 마이크를 누르고 오늘 쓴 돈을 말해 보세요.</string>
     <string name="onboarding_experimente_registro_rapido">빠른 기록을 써 보세요</string>
-    <string name="onboarding_cadastre_suas_contas_fixas">계획에서 고정 지출을 등록하면 기한 전에 Cryo가 알려 드려요.</string>
+    <string name="onboarding_cadastre_suas_contas_fixas">계획에서 고정 지출을 등록하면 기한 전에 Bambua가 알려 드려요.</string>
     <string name="onboarding_lembretes_contas">고정 지출 알림</string>
     <string name="onboarding_permitir_notificacoes">알림 허용</string>
     <string name="onboarding_voltar">뒤로</string>
     <string name="onboarding_comecar">시작하기</string>
     <string name="onboarding_pular">건너뛰기</string>
-    <string name="onboarding_ir_para_cryo">Cryo로 가기</string>
+    <string name="onboarding_ir_para_bambua">Bambua로 가기</string>
     <string name="onboarding_continuar">계속</string>
     <string name="onboarding_restaurar_este_backup">이 백업을 복원할까요?</string>
-    <string name="onboarding_dados_arquivo_entram_cryo">%1$s · %2$s. 파일의 데이터가 Cryo에 들어오고 소개는 여기서 끝나요.</string>
+    <string name="onboarding_dados_arquivo_entram_bambua">%1$s · %2$s. 파일의 데이터가 Bambua에 들어오고 소개는 여기서 끝나요.</string>
     <string name="onboarding_trocar">변경</string>
-    <string name="onboarding_cryo_bloqueado">Cryo가 잠겨 있어요</string>
+    <string name="onboarding_bambua_bloqueado">Bambua가 잠겨 있어요</string>
     <string name="onboarding_use_sua_digital_rosto">지문, 얼굴 또는 휴대폰 비밀번호를 사용하세요.</string>
     <string name="onboarding_desbloquear">잠금 해제</string>
     <string name="backup_hoje">오늘 %1$s</string>
@@ -726,28 +726,28 @@
     <string name="backup_primeiro_ainda_vai_ser">%1$s · 첫 백업은 아직이에요</string>
     <string name="backup_nao_consegui_concluir_agora">지금은 끝내지 못했어요. 다시 시도하세요.</string>
     <string name="backup_nao_deu_para_usar">이 폴더는 사용할 수 없어요. 다른 폴더를 골라 주세요.</string>
-    <string name="backup_essa_nuvem_nao_deixa">이 클라우드는 Cryo가 나중에 파일을 업데이트하지 못하게 해요. 다른 클라우드나 휴대폰 폴더를 사용하세요.</string>
+    <string name="backup_essa_nuvem_nao_deixa">이 클라우드는 Bambua가 나중에 파일을 업데이트하지 못하게 해요. 다른 클라우드나 휴대폰 폴더를 사용하세요.</string>
     <string name="backup_este_celular_nao_tem">이 휴대폰에는 Android 파일 선택기가 없어요.</string>
     <string name="backup_sem_permissao_aviso_nao">권한이 없으면 알림이 나오지 않아요. Android 설정에서 허용할 수 있어요.</string>
     <string name="backup_copia_tudo_sem_voce">기억하지 않아도 모든 걸 복사해요</string>
-    <string name="backup_cryo_salva_seus_dados">Cryo가 휴대폰 폴더, 클라우드, 또는 둘 다에 데이터를 알아서 저장해요. Cryo는 여전히 인터넷에 연결되지 않아요. 클라우드로 올리는 건 클라우드 앱이 해요.</string>
+    <string name="backup_bambua_salva_seus_dados">Bambua가 휴대폰 폴더, 클라우드, 또는 둘 다에 데이터를 알아서 저장해요. Bambua는 여전히 인터넷에 연결되지 않아요. 클라우드로 올리는 건 클라우드 앱이 해요.</string>
     <string name="backup_fazer_backup_automatico">자동 백업하기</string>
     <string name="backup_escolha_abaixo_onde_guardar">아래에서 저장할 곳을 고르세요</string>
     <string name="backup_segundo_plano_mesmo_com">앱을 닫아도 백그라운드에서</string>
-    <string name="backup_toque_aqui_permita_notificacoes">여기를 눌러 알림을 허용하면, 백업이 저장되지 않았을 때 Cryo가 알려 드려요.</string>
+    <string name="backup_toque_aqui_permita_notificacoes">여기를 눌러 알림을 허용하면, 백업이 저장되지 않았을 때 Bambua가 알려 드려요.</string>
     <string name="backup_com_que_frequencia">얼마나 자주</string>
     <string name="backup_se_nada_mudou_desde">마지막 백업 이후 바뀐 게 없으면 같은 사본을 또 만들지 않아요.</string>
     <string name="backup_celular">휴대폰</string>
     <string name="backup_nuvem_2">클라우드</string>
     <string name="backup_fazer_backup_agora">지금 백업</string>
     <string name="backup_salvando">저장 중...</string>
-    <string name="backup_para_voltar_backup_use">백업으로 되돌리려면 설정 › 백업 복원에서 파일을 고르세요. 휴대폰이 배터리를 강하게 아끼면 백업이 조금 늦을 수 있어요. Cryo를 열면 늦은 백업도 진행돼요.</string>
+    <string name="backup_para_voltar_backup_use">백업으로 되돌리려면 설정 › 백업 복원에서 파일을 고르세요. 휴대폰이 배터리를 강하게 아끼면 백업이 조금 늦을 수 있어요. Bambua를 열면 늦은 백업도 진행돼요.</string>
     <string name="backup_nao_consegui_restaurar_esse">이 백업을 복원하지 못했어요. 아무것도 바뀌지 않았어요.</string>
     <string name="backup_usar_este_lugar">이 위치를 사용할까요?</string>
     <string name="backup_se_continuar_ele_sera">%1$s 계속하면 이 휴대폰의 데이터로 바뀌어요.</string>
     <string name="backup_substituir">바꾸기</string>
     <string name="backup_nenhuma_pasta_escolhida">선택한 폴더가 없어요</string>
-    <string name="backup_guarde_proprio_celular_ou">휴대폰 자체나 클라우드 앱이 동기화하는 폴더에 저장하세요. 팁: 열린 화면에서 Cryo라는 폴더를 만들고(예: Documents 안) \"이 폴더 사용\"을 누르세요.</string>
+    <string name="backup_guarde_proprio_celular_ou">휴대폰 자체나 클라우드 앱이 동기화하는 폴더에 저장하세요. 팁: 열린 화면에서 Bambua라는 폴더를 만들고(예: Documents 안) \"이 폴더 사용\"을 누르세요.</string>
     <string name="backup_escolher_pasta">폴더 선택</string>
     <string name="backup_como_guardar">저장 방식</string>
     <string name="backup_fica_so_copia_mais">가장 최근 사본만 %1$s 파일에 남겨요</string>
@@ -765,7 +765,7 @@
     <string name="backup_tela_que_abrir_toque">열린 화면에서 ☰을 누르고 클라우드를 고르세요.</string>
     <string name="backup_escolha_pasta_toque_salvar">폴더를 고르고 저장을 누르세요.</string>
     <string name="backup_escolher_nuvem">클라우드에서 선택</string>
-    <string name="backup_cada_backup_cryo_atualiza">백업할 때마다 Cryo가 이 파일을 업데이트해요. 인터넷 전송은 클라우드 앱이 해요.</string>
+    <string name="backup_cada_backup_bambua_atualiza">백업할 때마다 Bambua가 이 파일을 업데이트해요. 인터넷 전송은 클라우드 앱이 해요.</string>
     <string name="backup_parar_usar">사용 중지</string>
     <string name="backup_nao_salvou">%1$s 저장 안 됨: %2$s</string>
     <string name="backup_nada_mudou_desde_entao">\u0020· 그 이후 변경 없음</string>
@@ -776,7 +776,7 @@
     <string name="backup_ja_existe_backup_aqui">여기에 이미 백업이 있어요</string>
     <string name="backup_este_arquivo">이 파일</string>
     <string name="backup_esta_pasta">이 폴더</string>
-    <string name="backup_ja_tem_backup_cryo">\u0020에는 이 휴대폰과 다른 데이터의 Cryo 백업이 이미 있어요.</string>
+    <string name="backup_ja_tem_backup_bambua">\u0020에는 이 휴대폰과 다른 데이터의 Bambua 백업이 이미 있어요.</string>
     <string name="backup_salvo">\u0020· %1$s 저장</string>
     <string name="backup_backup">백업</string>
     <string name="backup_neste_celular_agora">지금 이 휴대폰</string>
@@ -793,7 +793,7 @@
     <string name="backup_nada_para_salvar_agora">지금은 저장할 게 없어요</string>
     <string name="backup_nuvem">클라우드에</string>
     <string name="backup_pasta">폴더에</string>
-    <string name="backup_backup_restaurado_daqui_para">백업을 복원했어요. 앞으로 Cryo가 %1$s 저장해요.</string>
+    <string name="backup_backup_restaurado_daqui_para">백업을 복원했어요. 앞으로 Bambua가 %1$s 저장해요.</string>
     <string name="backup_pronto_agora_backup_fica">완료! 이제 백업은 항상 %1$s 파일에 저장돼요.</string>
     <string name="backup_pronto_primeiro_backup_ja">완료! 첫 백업이 이미 %1$s 저장됐어요.</string>
     <string name="backup_lugar_escolhido_primeiro_backup">저장 위치를 골랐어요. 무언가를 등록하면 첫 백업이 만들어져요.</string>
@@ -878,14 +878,14 @@
     <string name="chart_dia_gastou">%1$s일: %2$s 씀</string>
     <string name="chart_menos">적음</string>
     <string name="chart_mais">많음</string>
-    <string name="lock_desbloquear_cryo">Cryo 잠금 해제</string>
+    <string name="lock_desbloquear_bambua">Bambua 잠금 해제</string>
     <string name="lock_use_sua_digital_rosto">지문, 얼굴 또는 휴대폰 비밀번호를 사용하세요</string>
     <string name="chart_flow_a11y">돈의 흐름. 들어온 돈: %1$s. 나간 돈: %2$s</string>
     <plurals name="import_button">
         <item quantity="other">내역 %d건 가져오기</item>
     </plurals>
     <plurals name="import_selected_duplicates">
-        <item quantity="other">선택한 %d건은 이미 Cryo에 있는 것 같아요. 가져오면 중복돼요.</item>
+        <item quantity="other">선택한 %d건은 이미 Bambua에 있는 것 같아요. 가져오면 중복돼요.</item>
     </plurals>
     <plurals name="import_flag_imported">
         <item quantity="other">%d건 이미 가져옴</item>
@@ -902,7 +902,7 @@
         <item quantity="other">선택한 카드값 결제 %d건은 어느 계좌에서도 나가지 않고 카드 입금으로 들어가요. 내 계좌에서 나간 거라면 각 줄을 눌러 계좌를 고르세요.</item>
     </plurals>
     <plurals name="import_unpaired_account">
-        <item quantity="other">선택한 카드값 결제 %d건은 일반 지출로 들어가요. 그 카드의 사용 내역이 이미 Cryo에 있다면 지출이 두 번 계산돼요. 각 줄을 눌러 카드를 고르세요.</item>
+        <item quantity="other">선택한 카드값 결제 %d건은 일반 지출로 들어가요. 그 카드의 사용 내역이 이미 Bambua에 있다면 지출이 두 번 계산돼요. 각 줄을 눌러 카드를 고르세요.</item>
     </plurals>
     <plurals name="import_done_title">
         <item quantity="other">내역 %d건을 가져왔어요</item>
@@ -919,11 +919,11 @@
     <string name="import_continuar_conferindo">계속 확인하기</string>
     <string name="import_escolher_arquivo">파일 선택</string>
     <string name="import_traga_movimentacoes_seu_banco">은행 거래내역을 가져오세요</string>
-    <string name="import_baixe_extrato_app_ou">은행 앱이나 사이트에서 거래내역을 내려받고 여기서 파일을 고르세요. Cryo에 들어가기 전에 목록을 확인할 수 있고, 이미 기록한 것은 빠져요.</string>
+    <string name="import_baixe_extrato_app_ou">은행 앱이나 사이트에서 거래내역을 내려받고 여기서 파일을 고르세요. Bambua에 들어가기 전에 목록을 확인할 수 있고, 이미 기록한 것은 빠져요.</string>
     <string name="import_ver_relatorio_leitura">읽기 보고서 보기</string>
-    <string name="import_formatos_que_cryo_le">Cryo가 읽는 형식</string>
-    <string name="import_melhor_valores_exatos_cryo">가장 좋아요: 금액이 정확하고, 이미 가져온 것도 Cryo가 알아봐요.</string>
-    <string name="import_funciona_com_quase_todos">거의 모든 은행에서 돼요. 열이 분명하지 않으면 Cryo가 물어봐요.</string>
+    <string name="import_formatos_que_bambua_le">Bambua가 읽는 형식</string>
+    <string name="import_melhor_valores_exatos_bambua">가장 좋아요: 금액이 정확하고, 이미 가져온 것도 Bambua가 알아봐요.</string>
+    <string name="import_funciona_com_quase_todos">거의 모든 은행에서 돼요. 열이 분명하지 않으면 Bambua가 물어봐요.</string>
     <string name="import_csv_ou_planilha_xlsx">CSV 또는 스프레드시트 (XLSX)</string>
     <string name="import_lido_pelo_texto_arquivo">파일의 글자를 읽어요. 목록을 꼼꼼히 확인하세요.</string>
     <string name="import_este_celular_nao_consegue">이 휴대폰은 PDF의 글자를 읽지 못해요. OFX, CSV, XLSX를 사용하세요.</string>
@@ -942,10 +942,10 @@
     <string name="import_senha_pdf">PDF 비밀번호</string>
     <string name="import_mostrar_senha">비밀번호 보기</string>
     <string name="import_esconder_senha">비밀번호 숨기기</string>
-    <string name="import_senha_so_abre_arquivo">비밀번호는 지금 이 휴대폰에서 파일을 여는 데만 써요. Cryo는 저장하지 않아요.</string>
+    <string name="import_senha_so_abre_arquivo">비밀번호는 지금 이 휴대폰에서 파일을 여는 데만 써요. Bambua는 저장하지 않아요.</string>
     <string name="import_escolher_outro_arquivo">다른 파일 선택</string>
     <string name="import_escolher_colunas">열 선택</string>
-    <string name="import_cryo_nao_teve_certeza">Cryo가 이 파일에서 각 정보가 어디 있는지 확실하지 않아요. 각각 맞는 열을 눌러 주세요.</string>
+    <string name="import_bambua_nao_teve_certeza">Bambua가 이 파일에서 각 정보가 어디 있는지 확실하지 않아요. 각각 맞는 열을 눌러 주세요.</string>
     <string name="import_comeco_arquivo">파일 앞부분</string>
     <string name="import_entradas_saidas">입금과 출금</string>
     <string name="import_coluna">한 열</string>
@@ -962,7 +962,7 @@
     <string name="import_importando">가져오는 중...</string>
     <string name="import_marque_que_quer_importar">가져올 항목을 선택하세요</string>
     <string name="import_para_onde_vao">들어갈 곳</string>
-    <string name="import_compras_vieram_com_valor">결제가 양수 금액으로 와서 Cryo가 부호를 바꿨어요. 아니라면: 메뉴 › 입금과 출금 바꾸기.</string>
+    <string name="import_compras_vieram_com_valor">결제가 양수 금액으로 와서 Bambua가 부호를 바꿨어요. 아니라면: 메뉴 › 입금과 출금 바꾸기.</string>
     <string name="import_arquivo">파일: %1$s</string>
     <string name="import_qual_fatura">어느 청구에 넣을까요</string>
     <string name="import_pela_data_cada_compra">각 결제 날짜에 따라</string>
@@ -987,17 +987,17 @@
     <string name="import_importar_esta_movimentacao">이 내역 가져오기</string>
     <string name="import_pronto">완료</string>
     <string name="import_esta_movimentacao_ja_veio">이 내역은 이전 가져오기에서 이미 들어왔어요. 다시 가져오면 중복돼요.</string>
-    <string name="import_parece_com_que_ja">이미 Cryo에 있는 %2$s의 “%1$s”(%3$s)과 비슷해요%4$s.</string>
-    <string name="import_parece_com_algo_que">이미 Cryo에 있는 것과 비슷해요.</string>
-    <string name="import_parece_pagamento_fatura_cryo">카드 대금 결제 같아요. Cryo에서는 계좌에서 나가 카드로 들어가니 어느 계좌에서 나갔는지 고르세요. 이미 이 결제를 기록했다면 이 줄은 선택하지 마세요.</string>
+    <string name="import_parece_com_que_ja">이미 Bambua에 있는 %2$s의 “%1$s”(%3$s)과 비슷해요%4$s.</string>
+    <string name="import_parece_com_algo_que">이미 Bambua에 있는 것과 비슷해요.</string>
+    <string name="import_parece_pagamento_fatura_bambua">카드 대금 결제 같아요. Bambua에서는 계좌에서 나가 카드로 들어가니 어느 계좌에서 나갔는지 고르세요. 이미 이 결제를 기록했다면 이 줄은 선택하지 마세요.</string>
     <string name="import_parece_pagamento_fatura_cartao">신용카드 대금 결제 같아요. 지출이 두 번 계산되지 않도록(사용 내역은 이미 카드에 있어요) 카드 결제로 기록하세요. 이미 이 결제를 기록했다면 이 줄은 선택하지 마세요.</string>
     <string name="import_conta">%1$s 계좌에</string>
     <string name="import_cartao">%1$s 카드에</string>
     <string name="import_importar_extrato">거래내역 가져오기</string>
     <string name="import_importacao_desfeita">가져오기를 취소했어요</string>
-    <string name="import_nada_deste_arquivo_ficou">이 파일에서 Cryo에 남은 것이 없어요.</string>
+    <string name="import_nada_deste_arquivo_ficou">이 파일에서 Bambua에 남은 것이 없어요.</string>
     <string name="import_saldo_fim_extrato">거래내역 마지막 잔액</string>
-    <string name="import_saldo_cryo_agora">지금 Cryo의 잔액</string>
+    <string name="import_saldo_bambua_agora">지금 Bambua의 잔액</string>
     <string name="import_estao_diferentes_pode_ser">서로 달라요. 확인할 때 선택하지 않은 항목이 있거나 파일 기간 이전의 일이 있을 수 있어요. 또는 계좌의 시작 잔액을 조정해야 해요(지갑에서 계좌 편집).</string>
     <string name="import_ver_conta">계좌 보기</string>
     <string name="import_ver_cartao">카드 보기</string>
@@ -1006,18 +1006,18 @@
     <string name="import_relatorio_leitura">읽기 보고서</string>
     <string name="import_nao_consegui_abrir_esse">이 파일을 열지 못했어요. 다시 내려받거나 다른 파일을 고르세요.</string>
     <string name="import_arquivo_grande_demais_mais">파일이 너무 커요(20MB 초과). 은행에 더 짧은 기간을 요청하세요.</string>
-    <string name="import_este_extrato_exemplo_cryo">Cryo의 예시 거래내역(가상)이에요. 테스트 모드에서만 가져올 수 있어요.</string>
+    <string name="import_este_extrato_exemplo_bambua">Bambua의 예시 거래내역(가상)이에요. 테스트 모드에서만 가져올 수 있어요.</string>
     <string name="import_nenhuma_movimentacao_encontrada">내역을 찾지 못했어요</string>
     <string name="import_com_essas_colunas_nenhuma">이 열 선택으로는 내역이 된 줄이 없어요. 날짜와 금액이 어느 열에 있는지 확인하세요.</string>
     <string name="import_nao_encontrei_movimentacoes_nesse">이 파일에서 내역을 찾지 못했어요.</string>
-    <string name="import_cryo_pediu_para_escolher">Cryo가 열을 골라 달라고 했어요</string>
+    <string name="import_bambua_pediu_para_escolher">Bambua가 열을 골라 달라고 했어요</string>
     <string name="import_crie_conta_ou_cartao">가져오기 전에 지갑에서 계좌나 카드를 만드세요.</string>
     <string name="import_nao_consegui_importar_nada">가져오지 못했어요. 아무것도 저장하지 않았어요.</string>
     <string name="import_nao_consegui_desfazer_tente">취소하지 못했어요. 다시 시도하세요.</string>
     <string name="dev_nao_consegui_preparar_modo">테스트 모드를 준비하지 못했어요. 다시 시도하세요.</string>
     <string name="dev_nao_deu_certo_tente">잘 안 됐어요. 다시 시도하세요.</string>
     <string name="dev_nao_consegui_salvar_arquivos">이 폴더에 파일을 저장하지 못했어요</string>
-    <string name="dev_ferramentas_para_testar_cryo">실제 데이터는 건드리지 않고 Cryo를 테스트하고 거래내역 읽기를 개선하는 도구예요.</string>
+    <string name="dev_ferramentas_para_testar_bambua">실제 데이터는 건드리지 않고 Bambua를 테스트하고 거래내역 읽기를 개선하는 도구예요.</string>
     <string name="dev_modo_teste">테스트 모드</string>
     <string name="dev_usar_dados_teste_2">테스트 데이터 사용</string>
     <string name="dev_telas_passam_usar_outro">화면이 예시 데이터가 든 다른 데이터베이스를 사용해요. 내 데이터는 돌아올 때까지 그대로 저장돼요.</string>
@@ -1037,7 +1037,7 @@
     <string name="dev_modo_teste_aceita_tambem">테스트 모드에서는 테스트용 JSON도 받아요</string>
     <string name="dev_formatos_json_teste_como">형식, 테스트용 JSON, 익명 거래내역 보내는 법</string>
     <string name="dev_este_celular">이 휴대폰</string>
-    <string name="dev_versao_cryo">Cryo 버전</string>
+    <string name="dev_versao_bambua">Bambua 버전</string>
     <string name="dev_api">%1$s (API %2$s)</string>
     <string name="dev_android">Android</string>
     <string name="dev_indisponivel_neste_android">이 Android에서는 사용할 수 없음</string>
@@ -1048,7 +1048,7 @@
     <string name="dev_desligar_modo_desenvolvedor">개발자 모드 끄기</string>
     <string name="dev_modo_desenvolvedor_desligado">개발자 모드를 껐어요</string>
     <string name="dev_usar_dados_teste">테스트 데이터를 사용할까요?</string>
-    <string name="dev_cryo_vai_mostrar_dados">Cryo가 별도 데이터베이스에서 예시 데이터를 보여 줘요. 내 데이터는 바뀌지 않고 저장되며, 테스트 모드를 끝내면 돌아와요(화면 아래 띠나 여기에서).</string>
+    <string name="dev_bambua_vai_mostrar_dados">Bambua가 별도 데이터베이스에서 예시 데이터를 보여 줘요. 내 데이터는 바뀌지 않고 저장되며, 테스트 모드를 끝내면 돌아와요(화면 아래 띠나 여기에서).</string>
     <string name="dev_entrar_modo_teste">테스트 모드 시작</string>
     <string name="dev_tudo_que_esta_modo">테스트 모드의 내용은 모두 지워지고 예시로 바뀌어요. 실제 데이터는 바뀌지 않아요.</string>
     <string name="dev_recriar_dados_exemplo">예시 데이터를 다시 만들까요?</string>
@@ -1062,14 +1062,14 @@
     <string name="dev_compartilhar_relatorio">보고서 공유</string>
     <string name="dev_nenhum_app_para_compartilhar">공유할 앱이 없어요</string>
     <string name="dev_nao_consegui_compartilhar_relatorio">보고서를 공유하지 못했어요</string>
-    <string name="dev_relatorio_cryo">Cryo 보고서</string>
+    <string name="dev_relatorio_bambua">Bambua 보고서</string>
     <string name="dev_relatorio_copiado">보고서를 복사했어요</string>
     <string name="dev_nao_consegui_copiar_relatorio">보고서를 복사하지 못했어요</string>
     <string name="dev_nenhuma_leitura_ainda">아직 읽은 기록이 없어요</string>
-    <string name="dev_importe_extrato_volte_aqui">거래내역을 가져온 뒤 여기로 돌아오면 Cryo가 파일을 한 줄씩 어떻게 읽었는지 볼 수 있어요.</string>
+    <string name="dev_importe_extrato_volte_aqui">거래내역을 가져온 뒤 여기로 돌아오면 Bambua가 파일을 한 줄씩 어떻게 읽었는지 볼 수 있어요.</string>
     <string name="dev_completo">전체</string>
     <string name="dev_anonimo">익명</string>
-    <string name="dev_letras_viram_x_numeros">글자는 x, 숫자는 9로 바뀌지만 각 줄의 형태는 그대로예요. 읽기를 고치는 데 도움이 되는 건 이 버전이에요. Cryo GitHub의 이슈로 보내 주세요.</string>
+    <string name="dev_letras_viram_x_numeros">글자는 x, 숫자는 9로 바뀌지만 각 줄의 형태는 그대로예요. 읽기를 고치는 데 도움이 되는 건 이 버전이에요. Bambua GitHub의 이슈로 보내 주세요.</string>
     <string name="dev_esta_versao_tem_suas">이 버전에는 실제 내역이 들어 있어요. 어디에도 올리지 마세요.</string>
     <string name="dev_copiar">복사</string>
     <string name="dev_compartilhar">공유</string>
@@ -1119,7 +1119,7 @@
     <string name="reminder_toque_para_marcar_como">%1$s · 눌러서 결제함으로 표시</string>
     <string name="backup_avisa_quando_backup_automatico">자동 백업이 저장하지 못하거나 확인이 필요할 때 알려요</string>
     <string name="backup_backup_automatico_falhou">자동 백업(%1$s)에 실패했어요</string>
-    <string name="backup_cryo_protegeu_seu_backup">Cryo가 백업(%1$s)을 지켰어요</string>
+    <string name="backup_bambua_protegeu_seu_backup">Bambua가 백업(%1$s)을 지켰어요</string>
     <string name="backup_sha_256">SHA-256</string>
     <string name="backup_nao_foi_possivel_abrir">파일을 열지 못했어요</string>
     <string name="backup_pasta_indisponivel">폴더를 사용할 수 없어요</string>
@@ -1128,7 +1128,7 @@
     <string name="backup_nao_foi_possivel_apagar">삭제하지 못했어요</string>
     <string name="backup_arquivo">파일</string>
     <string name="backup_pasta_3">폴더</string>
-    <string name="backup_cryo_perdeu_permissao_para">Cryo가 %1$s을(를) 사용할 권한을 잃었어요. 다시 골라 주세요.</string>
+    <string name="backup_bambua_perdeu_permissao_para">Bambua가 %1$s을(를) 사용할 권한을 잃었어요. 다시 골라 주세요.</string>
     <string name="backup_arquivo_nao_existe_mais">파일이 더 이상 없어요. 다시 골라 주세요.</string>
     <string name="backup_pasta_nao_existe_mais">폴더가 더 이상 없어요. 다른 폴더를 골라 주세요.</string>
     <string name="backup_nao_consegui_gravar_sem">쓰지 못했어요(공간이 없거나 클라우드가 응답하지 않았어요). 나중에 다시 시도할게요.</string>
@@ -1152,7 +1152,7 @@
     <string name="importer_arquivo_grande_demais_para">이 휴대폰에는 너무 큰 파일이에요.</string>
     <string name="importer_nao_consegui_ler_esse">이 파일을 읽지 못했어요.</string>
     <string name="importer_arquivo_esta_vazio">파일이 비어 있어요.</string>
-    <string name="importer_este_arquivo_backup_cryo">이 파일은 Cryo 백업이에요. 사용하려면 설정 › 백업 복원으로 가세요.</string>
+    <string name="importer_este_arquivo_backup_bambua">이 파일은 Bambua 백업이에요. 사용하려면 설정 › 백업 복원으로 가세요.</string>
     <string name="importer_esse_arquivo_nao_parece">거래내역 파일이 아닌 것 같아요. 은행의 OFX, CSV, 스프레드시트(XLSX), PDF를 사용하세요.</string>
     <string name="importer_tabela_html_excel_muitos">HTML 표 (많은 은행의 \"엑셀\" 파일)</string>
     <string name="importer_esse_arquivo_pagina_internet">이 파일은 거래내역 표가 없는 웹 페이지예요. 은행에 OFX, CSV, XLSX 거래내역을 요청하세요.</string>
@@ -1172,19 +1172,19 @@
     <string name="importer_formato_ofx">OFX 형식\u0020</string>
     <string name="importer_extrato_conta">계좌 거래내역</string>
     <string name="importer_extrato_cartao_credito">신용카드 이용내역</string>
-    <string name="importer_para_ler_pdf_cryo">PDF를 읽으려면 더 새로운 Android가 필요해요. 은행에 OFX, CSV, 스프레드시트(XLSX) 거래내역을 요청하세요.</string>
+    <string name="importer_para_ler_pdf_bambua">PDF를 읽으려면 더 새로운 Android가 필요해요. 은행에 OFX, CSV, 스프레드시트(XLSX) 거래내역을 요청하세요.</string>
     <string name="importer_nao_consegui_abrir_esse">이 PDF를 열지 못했어요. 손상됐을 수 있어요.</string>
-    <string name="importer_essa_planilha_nao_tem">이 스프레드시트에는 Cryo가 읽을 수 있는 시트가 없어요.</string>
+    <string name="importer_essa_planilha_nao_tem">이 스프레드시트에는 Bambua가 읽을 수 있는 시트가 없어요.</string>
     <string name="importer_essa_planilha_grande_demais">이 스프레드시트는 너무 커요.</string>
     <string name="importer_nao_consegui_abrir_essa">이 스프레드시트를 열지 못했어요. 손상됐을 수 있어요.</string>
     <string name="importer_json_precisa_ter_lista">JSON에는 \"transactions\" 목록이 있어야 해요.</string>
-    <string name="importer_esse_json_nao_esta">이 JSON은 Cryo 테스트 형식이 아니에요.</string>
+    <string name="importer_esse_json_nao_esta">이 JSON은 Bambua 테스트 형식이 아니에요.</string>
     <string name="importer_esse_json_versao_mais">이 JSON은 더 새로운 버전의 테스트 형식이에요.</string>
     <string name="importer_nao_objeto">객체가 아님</string>
     <string name="importer_date_ausente_ou_invalida">\"date\"가 없거나 잘못됐어요 (2026-10-01 형식으로)</string>
     <string name="importer_amount_ausente_ou_invalido">\"amount\"가 없거나 잘못됐어요</string>
-    <string name="importer_formato_testes_cryo_versao">Cryo 테스트 형식, 버전 %1$s</string>
-    <string name="importer_nao_encontrei_texto_nesse">이 PDF에서 글자를 찾지 못했어요. 사진이나 스캔이라면 Cryo가 읽을 수 없어요.</string>
+    <string name="importer_formato_testes_bambua_versao">Bambua 테스트 형식, 버전 %1$s</string>
+    <string name="importer_nao_encontrei_texto_nesse">이 PDF에서 글자를 찾지 못했어요. 사진이나 스캔이라면 Bambua가 읽을 수 없어요.</string>
     <string name="importer_sem_data_antes">앞에 날짜 없음</string>
     <string name="importer_valor_sem_descricao">내용 없는 금액</string>
     <string name="importer_linha_saldo_total_ou">잔액, 합계 또는 요약 줄</string>
@@ -1211,7 +1211,7 @@
     <string name="importer_mes_antes_do_dia">날짜는 월이 먼저 (미국식)</string>
     <string name="importer_centavos_depois_virgula">소수점은 쉼표</string>
     <string name="importer_parcela">\u0020- 할부 %1$s/%2$s</string>
-    <string name="report_relatorio_leitura_extrato_cryo">거래내역 읽기 보고서 · Cryo %1$s</string>
+    <string name="report_relatorio_leitura_extrato_bambua">거래내역 읽기 보고서 · Bambua %1$s</string>
     <string name="report_gerado">생성 시각 %1$s</string>
     <string name="report_versao_anonima_letras_viram">익명 버전: 글자는 x, 숫자는 9로 바뀌어요. 각 줄의 형태는 그대로예요.</string>
     <string name="report_arquivo_2">파일: %1$s (%2$s)</string>
@@ -1361,27 +1361,27 @@
     <string name="tx_pagamento_divida_registrado">%1$s 상환을 기록했어요</string>
     <string name="tx_ex_almoco">예: 점심</string>
     <string name="backup_invalid_file">올바른 백업 파일이 아니에요.</string>
-    <string name="backup_not_cryo_file">이 파일은 Cryo 백업이 아니에요.</string>
-    <string name="backup_newer_version">이 백업은 더 새로운 버전의 Cryo에서 만들었어요. 앱을 업데이트하세요.</string>
-    <string name="backup_err_foreign">이 폴더에는 이 휴대폰이 만들지 않은 cryo-backup.json 파일이 있어요. 지우지 않도록 Cryo가 바꾸지 않았어요. 폴더 변경을 눌러 같은 폴더를 골라 어떻게 할지 정하거나, 여러 사본 보관을 고르세요.</string>
-    <string name="backup_err_changed_folder">마지막 백업 이후 폴더의 cryo-backup.json 파일이 다른 휴대폰이나 앱에서 바뀌었어요. 그 버전을 지우지 않도록 Cryo가 바꾸지 않았어요. 폴더 변경을 눌러 같은 폴더를 골라 어떻게 할지 정하세요.</string>
-    <string name="backup_err_changed_cloud">마지막 백업 이후 클라우드의 파일이 다른 휴대폰이나 앱에서 바뀌었어요. 그 버전을 지우지 않도록 Cryo가 바꾸지 않았어요. 변경을 눌러 같은 파일을 골라 어떻게 할지 정하세요.</string>
+    <string name="backup_not_bambua_file">이 파일은 Bambua 백업이 아니에요.</string>
+    <string name="backup_newer_version">이 백업은 더 새로운 버전의 Bambua에서 만들었어요. 앱을 업데이트하세요.</string>
+    <string name="backup_err_foreign">이 폴더에는 이 휴대폰이 만들지 않은 bambua-backup.json 파일이 있어요. 지우지 않도록 Bambua가 바꾸지 않았어요. 폴더 변경을 눌러 같은 폴더를 골라 어떻게 할지 정하거나, 여러 사본 보관을 고르세요.</string>
+    <string name="backup_err_changed_folder">마지막 백업 이후 폴더의 bambua-backup.json 파일이 다른 휴대폰이나 앱에서 바뀌었어요. 그 버전을 지우지 않도록 Bambua가 바꾸지 않았어요. 폴더 변경을 눌러 같은 폴더를 골라 어떻게 할지 정하세요.</string>
+    <string name="backup_err_changed_cloud">마지막 백업 이후 클라우드의 파일이 다른 휴대폰이나 앱에서 바뀌었어요. 그 버전을 지우지 않도록 Bambua가 바꾸지 않았어요. 변경을 눌러 같은 파일을 골라 어떻게 할지 정하세요.</string>
     <string name="backup_err_cant_read">이 위치에 있는 백업을 읽지 못했어요(클라우드가 연결되지 않았을 수 있어요).</string>
-    <string name="backup_err_newer">이 위치에 있는 백업은 더 새로운 버전의 Cryo에서 만들었어요.</string>
+    <string name="backup_err_newer">이 위치에 있는 백업은 더 새로운 버전의 Bambua에서 만들었어요.</string>
     <string name="backup_err_damaged">이 위치에 있는 백업이 손상된 것 같아요.</string>
-    <string name="backup_err_not_cryo">이 폴더에는 Cryo 백업이 아닌 cryo-backup.json 파일이 이미 있어요.</string>
+    <string name="backup_err_not_bambua">이 폴더에는 Bambua 백업이 아닌 bambua-backup.json 파일이 이미 있어요.</string>
     <string name="backup_err_cant_open_folder">이 폴더를 열지 못했어요. 다시 시도하거나 다른 폴더를 고르세요.</string>
-    <string name="backup_err_read_data">지금은 Cryo 데이터를 읽지 못했어요. 나중에 다시 시도할게요.</string>
+    <string name="backup_err_read_data">지금은 Bambua 데이터를 읽지 못했어요. 나중에 다시 시도할게요.</string>
     <string name="backup_err_cant_check">저장하기 전에 확인하려고 파일을 열었지만 열지 못했어요(클라우드가 연결되지 않았거나 파일이 삭제됐을 수 있어요). 나중에 다시 시도할게요. 계속 이러면 위치를 다시 고르세요.</string>
 
-    <!-- Como usar o Cryo (RF-TOUR) -->
-    <string name="tour_how_to_use">Cryo 사용법</string>
+    <!-- Como usar o Bambua (RF-TOUR) -->
+    <string name="tour_how_to_use">Bambua 사용법</string>
     <string name="tour_how_to_use_sub">애니메이션으로 보는 빠른 앱 소개</string>
     <string name="tour_1_title">몇 초 만에 기록</string>
-    <string name="tour_1_text">편하게 쓰거나 말하세요. Cryo가 금액, 카테고리, 계좌를 알아들어요. 확인하고 저장만 하면 돼요.</string>
+    <string name="tour_1_text">편하게 쓰거나 말하세요. Bambua가 금액, 카테고리, 계좌를 알아들어요. 확인하고 저장만 하면 돼요.</string>
     <string name="tour_1_phrase">점심 %1$s</string>
     <string name="tour_1_lunch">점심</string>
-    <string name="tour_2_text">지금 지출 속도라면 월말에 얼마가 남을지, 하루에 얼마까지 써도 되는지 Cryo가 보여 줘요.</string>
+    <string name="tour_2_text">지금 지출 속도라면 월말에 얼마가 남을지, 하루에 얼마까지 써도 되는지 Bambua가 보여 줘요.</string>
     <string name="tour_2_per_day">하루 %1$s까지 쓸 수 있어요</string>
     <string name="tour_3_title">카드와 할부도 걱정 없이</string>
     <string name="tour_3_text">할부로 샀나요? 회차마다 맞는 청구서에 들어가고, 남은 한도도 한눈에 보여요.</string>

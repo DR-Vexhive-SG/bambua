@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Cryo"
+rootProject.name = "Bambua"
 include(":app")

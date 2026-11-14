@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Textos do Cryo em hindi (PRD: RF-LNG-01, TXT-09). Mesmas chaves e marcadores de values/strings.xml
+    Textos do Bambua em hindi (PRD: RF-LNG-01, TXT-09). Mesmas chaves e marcadores de values/strings.xml
     (a base, em português do Brasil); PrdConformanceTest confere.
 -->
 <resources>
@@ -56,8 +56,8 @@
     <string name="home_goals">लक्ष्य और गुल्लक</string>
     <string name="goal_progress">%2$s में से %1$s</string>
     <string name="home_recent">हाल के लेन-देन</string>
-    <string name="home_empty_hint">क्विक एंट्री से शुरू करें: माइक्रोफ़ोन दबाएँ और बोलें, जैसे “चाय 20 रुपये नकद”। Cryo रकम, श्रेणी और खाता समझ लेता है। आपको बस जाँचकर सेव करना है।</string>
-    <string name="home_insights">Cryo ने देखा</string>
+    <string name="home_empty_hint">क्विक एंट्री से शुरू करें: माइक्रोफ़ोन दबाएँ और बोलें, जैसे “चाय 20 रुपये नकद”। Bambua रकम, श्रेणी और खाता समझ लेता है। आपको बस जाँचकर सेव करना है।</string>
+    <string name="home_insights">Bambua ने देखा</string>
     <string name="month_in">आया</string>
     <string name="month_out">गया</string>
     <string name="month_end">महीने के अंत तक</string>
@@ -277,7 +277,7 @@
     <string name="debt_proxima">अगली: %1$s</string>
     <string name="debt_organize_suas_dividas">अपने कर्ज़ व्यवस्थित करें</string>
     <string name="debt_cadastre_emprestimos_financiamentos_acordos">लोन, EMI, समझौते या किसी से उधार लिया पैसा जोड़ें।\u0020</string>
-    <string name="debt_cryo_mostra_quanto_falta">Cryo दिखाता है कि कितना बाकी है, तारीखें याद दिलाता है और बताता है कि आप कब कर्ज़ से मुक्त होंगे।</string>
+    <string name="debt_bambua_mostra_quanto_falta">Bambua दिखाता है कि कितना बाकी है, तारीखें याद दिलाता है और बताता है कि आप कब कर्ज़ से मुक्त होंगे।</string>
     <string name="debt_cadastrar_divida">कर्ज़ जोड़ें</string>
     <string name="debt_aberto">बकाया</string>
     <string name="debt_nenhuma_divida_aberto_muito">कोई बकाया कर्ज़ नहीं। बहुत बढ़िया!</string>
@@ -435,7 +435,7 @@
     <string name="plan_restam_cerca_por_dia">%1$s बाकी · रोज़ लगभग %2$s</string>
     <string name="plan_voce_passou_total_planejado">आप कुल योजना से %1$s ज़्यादा खर्च कर चुके हैं</string>
     <string name="plan_defina_limites_por_categoria">हर श्रेणी की सीमा तय करें</string>
-    <string name="plan_cryo_avisa_quando_voce" formatted="false">80% पहुँचने और सीमा पार होने पर Cryo बताता है।</string>
+    <string name="plan_bambua_avisa_quando_voce" formatted="false">80% पहुँचने और सीमा पार होने पर Bambua बताता है।</string>
     <string name="plan_sugestoes_pela_sua_media">आपके औसत खर्च के हिसाब से सुझाव</string>
     <string name="plan_orcamento_salvo">बजट सेव हुआ</string>
     <string name="plan_orcamento_removido">बजट हटाया गया</string>
@@ -448,7 +448,7 @@
     <string name="plan_salvar_orcamento">बजट सेव करें</string>
     <string name="plan_remover_orcamento">बजट हटाएँ</string>
     <string name="plan_nenhuma_conta_fixa">कोई तय खर्च नहीं</string>
-    <string name="plan_cadastre_aluguel_internet_assinaturas">किराया, इंटरनेट, सब्सक्रिप्शन और अपनी सैलरी भी जोड़ें। Cryo तारीखें याद दिलाता है और इन्हें महीने के अनुमान में इस्तेमाल करता है।</string>
+    <string name="plan_cadastre_aluguel_internet_assinaturas">किराया, इंटरनेट, सब्सक्रिप्शन और अपनी सैलरी भी जोड़ें। Bambua तारीखें याद दिलाता है और इन्हें महीने के अनुमान में इस्तेमाल करता है।</string>
     <string name="plan_pagas">%2$s में से %1$s चुकाए</string>
     <string name="plan_parcelas_dividas">कर्ज़ की किस्तें</string>
     <string name="plan_recebidos">%2$s में से %1$s मिले</string>
@@ -488,7 +488,7 @@
     <string name="plan_apagar">%1$s मिटाएँ?</string>
     <string name="plan_conta_fixa_apagada">तय खर्च मिटा दिया</string>
     <string name="plan_crie_sua_primeira_meta">अपना पहला लक्ष्य बनाएँ</string>
-    <string name="plan_viagem_reserva_emergencia_celular">घूमने जाना, इमरजेंसी फ़ंड, नया फ़ोन... रकम और समय-सीमा तय करें, Cryo बताएगा कि हर महीने कितना बचाना है।</string>
+    <string name="plan_viagem_reserva_emergencia_celular">घूमने जाना, इमरजेंसी फ़ंड, नया फ़ोन... रकम और समय-सीमा तय करें, Bambua बताएगा कि हर महीने कितना बचाना है।</string>
     <string name="plan_nenhuma_meta_ativa">कोई चालू लक्ष्य नहीं</string>
     <string name="plan_suas_metas_arquivadas_continuam">आपके आर्काइव लक्ष्य ठीक नीचे आर्काइव में रखे हैं। जब चाहें नया लक्ष्य बनाएँ।</string>
     <string name="plan_guardado_metas">लक्ष्यों में बचत</string>
@@ -604,10 +604,10 @@
     <string name="locale_language_title">भाषा</string>
     <string name="locale_language_device">फ़ोन के अनुसार</string>
     <string name="locale_currency_title">मुद्रा</string>
-    <string name="locale_currency_hint">Cryo की सारी रकम इसी मुद्रा में दिखती है।</string>
+    <string name="locale_currency_hint">Bambua की सारी रकम इसी मुद्रा में दिखती है।</string>
     <string name="locale_currency_device">फ़ोन के देश के अनुसार</string>
     <string name="locale_currency_confirm_title">मुद्रा बदलें?</string>
-    <string name="locale_currency_confirm_text">पहले दर्ज रकम के अंक वही रहेंगे: सिर्फ़ चिह्न और लिखने का तरीका बदलेगा। Cryo बिना इंटरनेट चलता है और उसके पास विनिमय दर नहीं है, इसलिए मुद्राएँ नहीं बदलता।</string>
+    <string name="locale_currency_confirm_text">पहले दर्ज रकम के अंक वही रहेंगे: सिर्फ़ चिह्न और लिखने का तरीका बदलेगा। Bambua बिना इंटरनेट चलता है और उसके पास विनिमय दर नहीं है, इसलिए मुद्राएँ नहीं बदलता।</string>
     <string name="locale_currency_confirm_button">मुद्रा बदलें</string>
     <string name="settings_hide_values_hint">अंकों की जगह %1$s दिखाता है</string>
     <plurals name="category_keywords">
@@ -632,7 +632,7 @@
     <string name="settings_automatico">अपने आप</string>
     <string name="settings_cores_papel_parede_material">वॉलपेपर के रंग (Material You)</string>
     <string name="settings_app_combina_com_cores">ऐप आपके फ़ोन के रंगों से मेल खाता है</string>
-    <string name="settings_cores_papel_parede_precisam">वॉलपेपर के रंगों के लिए Android 12 या नया चाहिए। Cryo के रंग इस्तेमाल हो रहे हैं।</string>
+    <string name="settings_cores_papel_parede_precisam">वॉलपेपर के रंगों के लिए Android 12 या नया चाहिए। Bambua के रंग इस्तेमाल हो रहे हैं।</string>
     <string name="settings_privacidade_seguranca">प्राइवेसी और सुरक्षा</string>
     <string name="settings_bloquear_com_digital_ou">फ़िंगरप्रिंट या पासकोड से लॉक करें</string>
     <string name="settings_cadastre_digital_rosto_ou">पहले Android में फ़िंगरप्रिंट, चेहरा या स्क्रीन लॉक सेट करें</string>
@@ -664,13 +664,13 @@
     <string name="settings_dados_teste_arquivos_exemplo">टेस्ट डेटा, उदाहरण फ़ाइलें और रिपोर्ट</string>
     <string name="settings_usando_dados_teste_arquivos">टेस्ट डेटा चालू · उदाहरण फ़ाइलें और रिपोर्ट</string>
     <string name="settings_sobre">जानकारी</string>
-    <string name="settings_github_com_h3yk0_cryo">github.com/H3yK0/cryo · सुझाव और समस्याएँ बताने का स्वागत है</string>
+    <string name="settings_github_com_h3yk0_bambua">github.com/H3yK0/cryo · सुझाव और समस्याएँ बताने का स्वागत है</string>
     <string name="settings_codigo_fonte">सोर्स कोड</string>
     <string name="settings_gnu_agpl_v3_ou">GNU AGPL v3 या नया · फ़्री सॉफ़्टवेयर</string>
     <string name="settings_licenca">लाइसेंस</string>
     <string name="settings_modo_desenvolvedor_ja_esta">डेवलपर मोड पहले से चालू है</string>
     <string name="settings_modo_desenvolvedor_ligado">डेवलपर मोड चालू</string>
-    <string name="settings_cryo">Cryo %1$s</string>
+    <string name="settings_bambua">Bambua %1$s</string>
     <string name="settings_mais_toques_para_modo">डेवलपर मोड के लिए %1$s बार और टैप करें</string>
     <string name="settings_mais_toque_para_modo">डेवलपर मोड के लिए 1 बार और टैप करें</string>
     <string name="settings_organizacao_financeira_com_registro">बोलकर हिसाब रखें, महीने का अनुमान और पैसे का बहाव देखें। बिना इंटरनेट, बिना विज्ञापन, बिना ट्रैकिंग।</string>
@@ -690,17 +690,17 @@
     <string name="settings_nova_categoria">नई श्रेणी</string>
     <string name="settings_palavras_chave_registro_rapido">क्विक एंट्री के कीवर्ड</string>
     <string name="settings_ex_padaria_lanche_cafe">जैसे: चाय, नाश्ता, कॉफ़ी</string>
-    <string name="settings_quando_voce_digitar_ou">जब आप इनमें से कोई शब्द लिखेंगे या बोलेंगे, Cryo यह श्रेणी चुनेगा। कॉमा से अलग करें।</string>
+    <string name="settings_quando_voce_digitar_ou">जब आप इनमें से कोई शब्द लिखेंगे या बोलेंगे, Bambua यह श्रेणी चुनेगा। कॉमा से अलग करें।</string>
     <string name="settings_se_ela_ja_foi">अगर यह पहले इस्तेमाल हो चुकी है, तो इतिहास न बिगड़े इसलिए सिर्फ़ आर्काइव होगी।</string>
     <string name="settings_apagar_categoria">श्रेणी मिटाएँ?</string>
     <string name="settings_categoria_arquivada">श्रेणी आर्काइव हुई</string>
     <string name="settings_categoria_apagada">श्रेणी मिटा दी</string>
-    <string name="onboarding_bem_vindo_ao_cryo">Cryo में आपका स्वागत है</string>
-    <string name="onboarding_seu_dinheiro_claro_como">आपका पैसा, बर्फ़ जैसा साफ़।</string>
+    <string name="onboarding_bem_vindo_ao_bambua">Bambua में आपका स्वागत है</string>
+    <string name="onboarding_seu_dinheiro_claro_como">आपका पैसा, साफ़ और व्यवस्थित।</string>
     <string name="onboarding_saiba_como_mes_vai">जानें महीना कैसे खत्म होगा</string>
     <string name="onboarding_seus_dados_sao_seus">आपका डेटा आपका है</string>
     <string name="onboarding_como_quer_ser_chamado">आपको क्या कहकर बुलाएँ? (वैकल्पिक)</string>
-    <string name="onboarding_ja_uso_cryo_restaurar">मैं पहले से Cryo इस्तेमाल करता हूँ: बैकअप वापस लाएँ</string>
+    <string name="onboarding_ja_uso_bambua_restaurar">मैं पहले से Bambua इस्तेमाल करता हूँ: बैकअप वापस लाएँ</string>
     <string name="onboarding_sua_conta_principal">आपका मुख्य खाता</string>
     <string name="onboarding_onde_fica_maior_parte">आपका ज़्यादातर पैसा कहाँ है? बैंक या डिजिटल वॉलेट, कुछ भी हो सकता है।</string>
     <string name="onboarding_ex_nubank_caixa_inter">जैसे: SBI, HDFC, Paytm</string>
@@ -709,25 +709,25 @@
     <string name="onboarding_cria_carteira_para_gastos">नकद खर्च के लिए एक “बटुआ” बनाता है</string>
     <string name="onboarding_tambem_uso_dinheiro_vivo">मैं नकद भी इस्तेमाल करता हूँ</string>
     <string name="onboarding_cartao_credito">क्रेडिट कार्ड</string>
-    <string name="onboarding_com_cartao_cadastrado_cryo">कार्ड जोड़ने पर Cryo खरीदारी को बिल के हिसाब से बाँटता है और EMI का ध्यान रखता है।</string>
+    <string name="onboarding_com_cartao_cadastrado_bambua">कार्ड जोड़ने पर Bambua खरीदारी को बिल के हिसाब से बाँटता है और EMI का ध्यान रखता है।</string>
     <string name="onboarding_uso_cartao_credito">मैं क्रेडिट कार्ड इस्तेमाल करता हूँ</string>
     <string name="onboarding_ex_nubank">जैसे: HDFC</string>
     <string name="onboarding_para_ver_essas_datas">ये तारीखें आपके बैंक के ऐप में मिल जाएँगी। बाद में बदल सकते हैं।</string>
     <string name="onboarding_tudo_pronto">सब तैयार!</string>
     <string name="onboarding_tela_inicial_toque_microfone">होम स्क्रीन पर माइक्रोफ़ोन दबाएँ और आज का कोई खर्च बोलें।</string>
     <string name="onboarding_experimente_registro_rapido">क्विक एंट्री आज़माएँ</string>
-    <string name="onboarding_cadastre_suas_contas_fixas">योजना में अपने तय खर्च जोड़ें और Cryo तारीख से पहले याद दिलाएगा।</string>
+    <string name="onboarding_cadastre_suas_contas_fixas">योजना में अपने तय खर्च जोड़ें और Bambua तारीख से पहले याद दिलाएगा।</string>
     <string name="onboarding_lembretes_contas">तय खर्च के रिमाइंडर</string>
     <string name="onboarding_permitir_notificacoes">सूचनाओं की अनुमति दें</string>
     <string name="onboarding_voltar">वापस</string>
     <string name="onboarding_comecar">शुरू करें</string>
     <string name="onboarding_pular">छोड़ें</string>
-    <string name="onboarding_ir_para_cryo">Cryo पर जाएँ</string>
+    <string name="onboarding_ir_para_bambua">Bambua पर जाएँ</string>
     <string name="onboarding_continuar">आगे</string>
     <string name="onboarding_restaurar_este_backup">यह बैकअप वापस लाएँ?</string>
-    <string name="onboarding_dados_arquivo_entram_cryo">%1$s · %2$s. फ़ाइल का डेटा Cryo में आ जाएगा और परिचय यहीं खत्म होगा।</string>
+    <string name="onboarding_dados_arquivo_entram_bambua">%1$s · %2$s. फ़ाइल का डेटा Bambua में आ जाएगा और परिचय यहीं खत्म होगा।</string>
     <string name="onboarding_trocar">बदलें</string>
-    <string name="onboarding_cryo_bloqueado">Cryo लॉक है</string>
+    <string name="onboarding_bambua_bloqueado">Bambua लॉक है</string>
     <string name="onboarding_use_sua_digital_rosto">अपना फ़िंगरप्रिंट, चेहरा या फ़ोन का पासकोड इस्तेमाल करें।</string>
     <string name="onboarding_desbloquear">अनलॉक करें</string>
     <string name="backup_hoje">आज %1$s बजे</string>
@@ -740,28 +740,28 @@
     <string name="backup_primeiro_ainda_vai_ser">%1$s · पहला बैकअप अभी होना है</string>
     <string name="backup_nao_consegui_concluir_agora">अभी पूरा नहीं हो सका। फिर से कोशिश करें।</string>
     <string name="backup_nao_deu_para_usar">यह फ़ोल्डर इस्तेमाल नहीं हो सका। कोई और चुनें।</string>
-    <string name="backup_essa_nuvem_nao_deixa">यह क्लाउड Cryo को बाद में फ़ाइल अपडेट नहीं करने देता। कोई और क्लाउड या फ़ोन का फ़ोल्डर इस्तेमाल करें।</string>
+    <string name="backup_essa_nuvem_nao_deixa">यह क्लाउड Bambua को बाद में फ़ाइल अपडेट नहीं करने देता। कोई और क्लाउड या फ़ोन का फ़ोल्डर इस्तेमाल करें।</string>
     <string name="backup_este_celular_nao_tem">इस फ़ोन में Android का फ़ाइल चुनने वाला नहीं है।</string>
     <string name="backup_sem_permissao_aviso_nao">अनुमति के बिना सूचना नहीं दिखेगी। आप Android सेटिंग्स में अनुमति दे सकते हैं।</string>
     <string name="backup_copia_tudo_sem_voce">हर चीज़ की कॉपी, बिना याद रखे</string>
-    <string name="backup_cryo_salva_seus_dados">Cryo आपका डेटा अपने आप फ़ोन के फ़ोल्डर, क्लाउड या दोनों में सेव करता है। Cryo अब भी इंटरनेट से नहीं जुड़ता: फ़ाइल क्लाउड पर क्लाउड का अपना ऐप भेजता है।</string>
+    <string name="backup_bambua_salva_seus_dados">Bambua आपका डेटा अपने आप फ़ोन के फ़ोल्डर, क्लाउड या दोनों में सेव करता है। Bambua अब भी इंटरनेट से नहीं जुड़ता: फ़ाइल क्लाउड पर क्लाउड का अपना ऐप भेजता है।</string>
     <string name="backup_fazer_backup_automatico">ऑटो बैकअप करें</string>
     <string name="backup_escolha_abaixo_onde_guardar">नीचे चुनें कि कहाँ सेव करें</string>
     <string name="backup_segundo_plano_mesmo_com">बैकग्राउंड में, ऐप बंद होने पर भी</string>
-    <string name="backup_toque_aqui_permita_notificacoes">यहाँ टैप करके सूचनाओं की अनुमति दें, ताकि बैकअप सेव न होने पर Cryo बता सके।</string>
+    <string name="backup_toque_aqui_permita_notificacoes">यहाँ टैप करके सूचनाओं की अनुमति दें, ताकि बैकअप सेव न होने पर Bambua बता सके।</string>
     <string name="backup_com_que_frequencia">कितनी बार</string>
-    <string name="backup_se_nada_mudou_desde">अगर पिछले बैकअप के बाद कुछ नहीं बदला, तो Cryo वैसी ही दूसरी कॉपी नहीं बनाता।</string>
+    <string name="backup_se_nada_mudou_desde">अगर पिछले बैकअप के बाद कुछ नहीं बदला, तो Bambua वैसी ही दूसरी कॉपी नहीं बनाता।</string>
     <string name="backup_celular">फ़ोन में</string>
     <string name="backup_nuvem_2">क्लाउड में</string>
     <string name="backup_fazer_backup_agora">अभी बैकअप करें</string>
     <string name="backup_salvando">सेव हो रहा है...</string>
-    <string name="backup_para_voltar_backup_use">किसी बैकअप पर लौटने के लिए सेटिंग्स › बैकअप से वापस लाएँ में फ़ाइल चुनें। अगर फ़ोन बैटरी बहुत बचाता है तो बैकअप थोड़ा देर से हो सकता है; Cryo खोलने पर रुका हुआ बैकअप भी हो जाता है।</string>
+    <string name="backup_para_voltar_backup_use">किसी बैकअप पर लौटने के लिए सेटिंग्स › बैकअप से वापस लाएँ में फ़ाइल चुनें। अगर फ़ोन बैटरी बहुत बचाता है तो बैकअप थोड़ा देर से हो सकता है; Bambua खोलने पर रुका हुआ बैकअप भी हो जाता है।</string>
     <string name="backup_nao_consegui_restaurar_esse">यह बैकअप वापस नहीं लाया जा सका। कुछ नहीं बदला।</string>
     <string name="backup_usar_este_lugar">यह जगह इस्तेमाल करें?</string>
     <string name="backup_se_continuar_ele_sera">%1$s आगे बढ़ने पर इसे इस फ़ोन के डेटा से बदल दिया जाएगा।</string>
     <string name="backup_substituir">बदलें</string>
     <string name="backup_nenhuma_pasta_escolhida">कोई फ़ोल्डर नहीं चुना</string>
-    <string name="backup_guarde_proprio_celular_ou">फ़ोन में ही या ऐसे फ़ोल्डर में सेव करें जिसे कोई क्लाउड ऐप सिंक करता हो। सुझाव: खुलने वाली स्क्रीन पर Cryo नाम का फ़ोल्डर बनाएँ (जैसे Documents के अंदर) और \"इस फ़ोल्डर का इस्तेमाल करें\" टैप करें।</string>
+    <string name="backup_guarde_proprio_celular_ou">फ़ोन में ही या ऐसे फ़ोल्डर में सेव करें जिसे कोई क्लाउड ऐप सिंक करता हो। सुझाव: खुलने वाली स्क्रीन पर Bambua नाम का फ़ोल्डर बनाएँ (जैसे Documents के अंदर) और \"इस फ़ोल्डर का इस्तेमाल करें\" टैप करें।</string>
     <string name="backup_escolher_pasta">फ़ोल्डर चुनें</string>
     <string name="backup_como_guardar">कैसे सेव करें</string>
     <string name="backup_fica_so_copia_mais">सिर्फ़ सबसे नई कॉपी रहती है, फ़ाइल %1$s में</string>
@@ -779,7 +779,7 @@
     <string name="backup_tela_que_abrir_toque">खुलने वाली स्क्रीन पर ☰ टैप करें और क्लाउड चुनें।</string>
     <string name="backup_escolha_pasta_toque_salvar">फ़ोल्डर चुनें और सेव पर टैप करें।</string>
     <string name="backup_escolher_nuvem">क्लाउड में चुनें</string>
-    <string name="backup_cada_backup_cryo_atualiza">हर बैकअप पर Cryo यही फ़ाइल अपडेट करता है। इंटरनेट पर भेजने का काम क्लाउड ऐप करता है।</string>
+    <string name="backup_cada_backup_bambua_atualiza">हर बैकअप पर Bambua यही फ़ाइल अपडेट करता है। इंटरनेट पर भेजने का काम क्लाउड ऐप करता है।</string>
     <string name="backup_parar_usar">इस्तेमाल बंद करें</string>
     <string name="backup_nao_salvou">%1$s सेव नहीं हुआ: %2$s</string>
     <string name="backup_nada_mudou_desde_entao">\u0020· तब से कुछ नहीं बदला</string>
@@ -790,7 +790,7 @@
     <string name="backup_ja_existe_backup_aqui">यहाँ पहले से एक बैकअप है</string>
     <string name="backup_este_arquivo">यह फ़ाइल</string>
     <string name="backup_esta_pasta">यह फ़ोल्डर</string>
-    <string name="backup_ja_tem_backup_cryo">\u0020में पहले से Cryo का एक बैकअप है, जिसका डेटा इस फ़ोन से अलग है।</string>
+    <string name="backup_ja_tem_backup_bambua">\u0020में पहले से Bambua का एक बैकअप है, जिसका डेटा इस फ़ोन से अलग है।</string>
     <string name="backup_salvo">\u0020· %1$s सेव हुआ</string>
     <string name="backup_backup">बैकअप में</string>
     <string name="backup_neste_celular_agora">इस फ़ोन में अभी</string>
@@ -807,7 +807,7 @@
     <string name="backup_nada_para_salvar_agora">अभी सेव करने को कुछ नहीं</string>
     <string name="backup_nuvem">क्लाउड में</string>
     <string name="backup_pasta">फ़ोल्डर में</string>
-    <string name="backup_backup_restaurado_daqui_para">बैकअप वापस लाया गया। अब से Cryo %1$s सेव करेगा।</string>
+    <string name="backup_backup_restaurado_daqui_para">बैकअप वापस लाया गया। अब से Bambua %1$s सेव करेगा।</string>
     <string name="backup_pronto_agora_backup_fica">हो गया! अब बैकअप हमेशा फ़ाइल %1$s में रहेगा।</string>
     <string name="backup_pronto_primeiro_backup_ja">हो गया! पहला बैकअप %1$s सेव हो चुका है।</string>
     <string name="backup_lugar_escolhido_primeiro_backup">जगह चुन ली गई। कुछ जोड़ने पर पहला बैकअप होगा।</string>
@@ -892,7 +892,7 @@
     <string name="chart_dia_gastou">दिन %1$s: %2$s खर्च किए</string>
     <string name="chart_menos">कम</string>
     <string name="chart_mais">ज़्यादा</string>
-    <string name="lock_desbloquear_cryo">Cryo अनलॉक करें</string>
+    <string name="lock_desbloquear_bambua">Bambua अनलॉक करें</string>
     <string name="lock_use_sua_digital_rosto">अपना फ़िंगरप्रिंट, चेहरा या फ़ोन का पासकोड इस्तेमाल करें</string>
     <string name="chart_flow_a11y">पैसे का बहाव। आय: %1$s। खर्च: %2$s</string>
     <plurals name="import_button">
@@ -900,8 +900,8 @@
         <item quantity="other">%d लेन-देन इंपोर्ट करें</item>
     </plurals>
     <plurals name="import_selected_duplicates">
-        <item quantity="one">चुनी गई %d लाइन शायद पहले से Cryo में है और इंपोर्ट करने पर दोहरी हो जाएगी।</item>
-        <item quantity="other">चुनी गई %d लाइनें शायद पहले से Cryo में हैं और इंपोर्ट करने पर दोहरी हो जाएँगी।</item>
+        <item quantity="one">चुनी गई %d लाइन शायद पहले से Bambua में है और इंपोर्ट करने पर दोहरी हो जाएगी।</item>
+        <item quantity="other">चुनी गई %d लाइनें शायद पहले से Bambua में हैं और इंपोर्ट करने पर दोहरी हो जाएँगी।</item>
     </plurals>
     <plurals name="import_flag_imported">
         <item quantity="one">%d पहले इंपोर्ट हो चुका</item>
@@ -922,8 +922,8 @@
         <item quantity="other">चुने गए %d बिल भुगतान कार्ड में क्रेडिट के रूप में जाएँगे, किसी खाते से नहीं निकलेंगे। अगर ये आपके किसी खाते से गए थे, तो हर लाइन पर टैप करके खाता चुनें।</item>
     </plurals>
     <plurals name="import_unpaired_account">
-        <item quantity="one">चुना गया %d कार्ड बिल भुगतान आम खर्च के रूप में जाएगा। अगर उस कार्ड की खरीदारी पहले से Cryo में है, तो खर्च दो बार गिना जाएगा: लाइन पर टैप करके कार्ड चुनें।</item>
-        <item quantity="other">चुने गए %d कार्ड बिल भुगतान आम खर्च के रूप में जाएँगे। अगर उन कार्डों की खरीदारी पहले से Cryo में है, तो खर्च दो बार गिना जाएगा: हर लाइन पर टैप करके कार्ड चुनें।</item>
+        <item quantity="one">चुना गया %d कार्ड बिल भुगतान आम खर्च के रूप में जाएगा। अगर उस कार्ड की खरीदारी पहले से Bambua में है, तो खर्च दो बार गिना जाएगा: लाइन पर टैप करके कार्ड चुनें।</item>
+        <item quantity="other">चुने गए %d कार्ड बिल भुगतान आम खर्च के रूप में जाएँगे। अगर उन कार्डों की खरीदारी पहले से Bambua में है, तो खर्च दो बार गिना जाएगा: हर लाइन पर टैप करके कार्ड चुनें।</item>
     </plurals>
     <plurals name="import_done_title">
         <item quantity="one">%d लेन-देन इंपोर्ट हुआ</item>
@@ -943,11 +943,11 @@
     <string name="import_continuar_conferindo">जाँच जारी रखें</string>
     <string name="import_escolher_arquivo">फ़ाइल चुनें</string>
     <string name="import_traga_movimentacoes_seu_banco">अपने बैंक के लेन-देन लाएँ</string>
-    <string name="import_baixe_extrato_app_ou">बैंक के ऐप या वेबसाइट से स्टेटमेंट डाउनलोड करें और यहाँ फ़ाइल चुनें। Cryo में कुछ भी जाने से पहले आप सूची जाँचते हैं: जो पहले से दर्ज है, वह बाहर रहता है।</string>
+    <string name="import_baixe_extrato_app_ou">बैंक के ऐप या वेबसाइट से स्टेटमेंट डाउनलोड करें और यहाँ फ़ाइल चुनें। Bambua में कुछ भी जाने से पहले आप सूची जाँचते हैं: जो पहले से दर्ज है, वह बाहर रहता है।</string>
     <string name="import_ver_relatorio_leitura">पढ़ने की रिपोर्ट देखें</string>
-    <string name="import_formatos_que_cryo_le">Cryo कौन-से फ़ॉर्मैट पढ़ता है</string>
-    <string name="import_melhor_valores_exatos_cryo">सबसे अच्छा: सटीक रकम, और Cryo पहले इंपोर्ट हुई चीज़ें पहचान लेता है।</string>
-    <string name="import_funciona_com_quase_todos">लगभग सभी बैंकों के साथ काम करता है। कॉलम साफ़ न हों तो Cryo पूछता है।</string>
+    <string name="import_formatos_que_bambua_le">Bambua कौन-से फ़ॉर्मैट पढ़ता है</string>
+    <string name="import_melhor_valores_exatos_bambua">सबसे अच्छा: सटीक रकम, और Bambua पहले इंपोर्ट हुई चीज़ें पहचान लेता है।</string>
+    <string name="import_funciona_com_quase_todos">लगभग सभी बैंकों के साथ काम करता है। कॉलम साफ़ न हों तो Bambua पूछता है।</string>
     <string name="import_csv_ou_planilha_xlsx">CSV या स्प्रेडशीट (XLSX)</string>
     <string name="import_lido_pelo_texto_arquivo">फ़ाइल के टेक्स्ट से पढ़ा जाता है। सूची ध्यान से जाँचें।</string>
     <string name="import_este_celular_nao_consegue">यह फ़ोन PDF का टेक्स्ट नहीं पढ़ सकता। OFX, CSV या XLSX इस्तेमाल करें।</string>
@@ -966,10 +966,10 @@
     <string name="import_senha_pdf">PDF का पासवर्ड</string>
     <string name="import_mostrar_senha">पासवर्ड दिखाएँ</string>
     <string name="import_esconder_senha">पासवर्ड छिपाएँ</string>
-    <string name="import_senha_so_abre_arquivo">पासवर्ड सिर्फ़ अभी, इसी फ़ोन में फ़ाइल खोलने के लिए है। Cryo इसे सेव नहीं करता।</string>
+    <string name="import_senha_so_abre_arquivo">पासवर्ड सिर्फ़ अभी, इसी फ़ोन में फ़ाइल खोलने के लिए है। Bambua इसे सेव नहीं करता।</string>
     <string name="import_escolher_outro_arquivo">दूसरी फ़ाइल चुनें</string>
     <string name="import_escolher_colunas">कॉलम चुनें</string>
-    <string name="import_cryo_nao_teve_certeza">Cryo को पक्का नहीं है कि इस फ़ाइल में हर जानकारी कहाँ है। हर एक के लिए सही कॉलम टैप करें।</string>
+    <string name="import_bambua_nao_teve_certeza">Bambua को पक्का नहीं है कि इस फ़ाइल में हर जानकारी कहाँ है। हर एक के लिए सही कॉलम टैप करें।</string>
     <string name="import_comeco_arquivo">फ़ाइल की शुरुआत</string>
     <string name="import_entradas_saidas">आय और खर्च</string>
     <string name="import_coluna">एक कॉलम</string>
@@ -986,7 +986,7 @@
     <string name="import_importando">इंपोर्ट हो रहा है...</string>
     <string name="import_marque_que_quer_importar">जो इंपोर्ट करना है उसे चुनें</string>
     <string name="import_para_onde_vao">कहाँ जाएँगे</string>
-    <string name="import_compras_vieram_com_valor">खरीदारी पॉज़िटिव रकम में आई, इसलिए Cryo ने चिह्न उलट दिए। अगर ऐसा नहीं होना था: मेन्यू › आय और खर्च उलटें।</string>
+    <string name="import_compras_vieram_com_valor">खरीदारी पॉज़िटिव रकम में आई, इसलिए Bambua ने चिह्न उलट दिए। अगर ऐसा नहीं होना था: मेन्यू › आय और खर्च उलटें।</string>
     <string name="import_arquivo">फ़ाइल में: %1$s</string>
     <string name="import_qual_fatura">किस बिल में</string>
     <string name="import_pela_data_cada_compra">हर खरीदारी की तारीख से</string>
@@ -1011,17 +1011,17 @@
     <string name="import_importar_esta_movimentacao">यह लेन-देन इंपोर्ट करें</string>
     <string name="import_pronto">हो गया</string>
     <string name="import_esta_movimentacao_ja_veio">यह लेन-देन पिछले इंपोर्ट में आ चुका है। फिर से इंपोर्ट करने पर दोहरा हो जाएगा।</string>
-    <string name="import_parece_com_que_ja">%2$s के “%1$s” (%3$s) जैसा लगता है, जो पहले से Cryo में है%4$s।</string>
-    <string name="import_parece_com_algo_que">Cryo में पहले से मौजूद किसी चीज़ जैसा लगता है।</string>
-    <string name="import_parece_pagamento_fatura_cryo">यह बिल का भुगतान लगता है। Cryo में यह किसी खाते से निकलकर कार्ड में जाता है: बताएँ किस खाते से गया। अगर यह भुगतान पहले दर्ज कर चुके हैं, तो यह लाइन बिना चुने छोड़ दें।</string>
+    <string name="import_parece_com_que_ja">%2$s के “%1$s” (%3$s) जैसा लगता है, जो पहले से Bambua में है%4$s।</string>
+    <string name="import_parece_com_algo_que">Bambua में पहले से मौजूद किसी चीज़ जैसा लगता है।</string>
+    <string name="import_parece_pagamento_fatura_bambua">यह बिल का भुगतान लगता है। Bambua में यह किसी खाते से निकलकर कार्ड में जाता है: बताएँ किस खाते से गया। अगर यह भुगतान पहले दर्ज कर चुके हैं, तो यह लाइन बिना चुने छोड़ दें।</string>
     <string name="import_parece_pagamento_fatura_cartao">यह क्रेडिट कार्ड बिल का भुगतान लगता है। खर्च दो बार न गिना जाए (खरीदारी पहले से कार्ड में है), इसलिए इसे कार्ड भुगतान के रूप में दर्ज करें। अगर यह भुगतान पहले दर्ज कर चुके हैं, तो यह लाइन बिना चुने छोड़ दें।</string>
     <string name="import_conta">खाता %1$s में</string>
     <string name="import_cartao">कार्ड %1$s में</string>
     <string name="import_importar_extrato">स्टेटमेंट इंपोर्ट करें</string>
     <string name="import_importacao_desfeita">इंपोर्ट वापस लिया गया</string>
-    <string name="import_nada_deste_arquivo_ficou">इस फ़ाइल का कुछ भी Cryo में नहीं रहा।</string>
+    <string name="import_nada_deste_arquivo_ficou">इस फ़ाइल का कुछ भी Bambua में नहीं रहा।</string>
     <string name="import_saldo_fim_extrato">स्टेटमेंट के अंत का बैलेंस</string>
-    <string name="import_saldo_cryo_agora">Cryo में अभी का बैलेंस</string>
+    <string name="import_saldo_bambua_agora">Bambua में अभी का बैलेंस</string>
     <string name="import_estao_diferentes_pode_ser">ये अलग हैं: शायद जाँच में कुछ बिना चुने रह गया, या फ़ाइल की अवधि से पहले कुछ हुआ था, या खाते का शुरुआती बैलेंस सुधारना होगा (बटुआ में खाता बदलें)।</string>
     <string name="import_ver_conta">खाता देखें</string>
     <string name="import_ver_cartao">कार्ड देखें</string>
@@ -1030,18 +1030,18 @@
     <string name="import_relatorio_leitura">पढ़ने की रिपोर्ट</string>
     <string name="import_nao_consegui_abrir_esse">यह फ़ाइल नहीं खुली। फिर से डाउनलोड करें या दूसरी चुनें।</string>
     <string name="import_arquivo_grande_demais_mais">फ़ाइल बहुत बड़ी है (20 MB से ज़्यादा)। बैंक से कम अवधि का स्टेटमेंट माँगें।</string>
-    <string name="import_este_extrato_exemplo_cryo">यह Cryo का उदाहरण स्टेटमेंट (काल्पनिक) है। इसे सिर्फ़ टेस्ट मोड में इंपोर्ट किया जा सकता है।</string>
+    <string name="import_este_extrato_exemplo_bambua">यह Bambua का उदाहरण स्टेटमेंट (काल्पनिक) है। इसे सिर्फ़ टेस्ट मोड में इंपोर्ट किया जा सकता है।</string>
     <string name="import_nenhuma_movimentacao_encontrada">कोई लेन-देन नहीं मिला</string>
     <string name="import_com_essas_colunas_nenhuma">इन कॉलम से कोई भी लाइन लेन-देन नहीं बनी। जाँचें कि किस कॉलम में तारीख है और किसमें रकम।</string>
     <string name="import_nao_encontrei_movimentacoes_nesse">इस फ़ाइल में कोई लेन-देन नहीं मिला।</string>
-    <string name="import_cryo_pediu_para_escolher">Cryo ने कॉलम चुनने को कहा</string>
+    <string name="import_bambua_pediu_para_escolher">Bambua ने कॉलम चुनने को कहा</string>
     <string name="import_crie_conta_ou_cartao">इंपोर्ट से पहले बटुआ में एक खाता या कार्ड बनाएँ।</string>
     <string name="import_nao_consegui_importar_nada">इंपोर्ट नहीं हो सका। कुछ भी सेव नहीं हुआ।</string>
     <string name="import_nao_consegui_desfazer_tente">वापस नहीं लिया जा सका। फिर से कोशिश करें।</string>
     <string name="dev_nao_consegui_preparar_modo">टेस्ट मोड तैयार नहीं हो सका। फिर से कोशिश करें।</string>
     <string name="dev_nao_deu_certo_tente">नहीं हो सका। फिर से कोशिश करें।</string>
     <string name="dev_nao_consegui_salvar_arquivos">इस फ़ोल्डर में फ़ाइलें सेव नहीं हो सकीं</string>
-    <string name="dev_ferramentas_para_testar_cryo">Cryo को टेस्ट करने और स्टेटमेंट पढ़ना बेहतर बनाने के टूल, आपके असली डेटा को छुए बिना।</string>
+    <string name="dev_ferramentas_para_testar_bambua">Bambua को टेस्ट करने और स्टेटमेंट पढ़ना बेहतर बनाने के टूल, आपके असली डेटा को छुए बिना।</string>
     <string name="dev_modo_teste">टेस्ट मोड</string>
     <string name="dev_usar_dados_teste_2">टेस्ट डेटा इस्तेमाल करें</string>
     <string name="dev_telas_passam_usar_outro">स्क्रीन एक दूसरे डेटाबेस से उदाहरण डेटा दिखाएँगी। आपका डेटा जैसा है वैसा रहेगा, जब तक आप वापस न आएँ।</string>
@@ -1061,7 +1061,7 @@
     <string name="dev_modo_teste_aceita_tambem">टेस्ट मोड में टेस्ट JSON भी चलता है</string>
     <string name="dev_formatos_json_teste_como">फ़ॉर्मैट, टेस्ट JSON और गुमनाम स्टेटमेंट कैसे भेजें</string>
     <string name="dev_este_celular">यह फ़ोन</string>
-    <string name="dev_versao_cryo">Cryo का संस्करण</string>
+    <string name="dev_versao_bambua">Bambua का संस्करण</string>
     <string name="dev_api">%1$s (API %2$s)</string>
     <string name="dev_android">Android</string>
     <string name="dev_indisponivel_neste_android">इस Android पर उपलब्ध नहीं</string>
@@ -1072,7 +1072,7 @@
     <string name="dev_desligar_modo_desenvolvedor">डेवलपर मोड बंद करें</string>
     <string name="dev_modo_desenvolvedor_desligado">डेवलपर मोड बंद</string>
     <string name="dev_usar_dados_teste">टेस्ट डेटा इस्तेमाल करें?</string>
-    <string name="dev_cryo_vai_mostrar_dados">Cryo एक अलग डेटाबेस में उदाहरण डेटा दिखाएगा। आपका डेटा बिना बदले सुरक्षित रहेगा और टेस्ट मोड से बाहर निकलने पर वापस आ जाएगा (स्क्रीन के नीचे की पट्टी से या यहाँ से)।</string>
+    <string name="dev_bambua_vai_mostrar_dados">Bambua एक अलग डेटाबेस में उदाहरण डेटा दिखाएगा। आपका डेटा बिना बदले सुरक्षित रहेगा और टेस्ट मोड से बाहर निकलने पर वापस आ जाएगा (स्क्रीन के नीचे की पट्टी से या यहाँ से)।</string>
     <string name="dev_entrar_modo_teste">टेस्ट मोड में जाएँ</string>
     <string name="dev_tudo_que_esta_modo">टेस्ट मोड का सब कुछ मिटाकर उदाहरणों से बदल दिया जाएगा। आपका असली डेटा नहीं बदलेगा।</string>
     <string name="dev_recriar_dados_exemplo">उदाहरण डेटा फिर से बनाएँ?</string>
@@ -1086,14 +1086,14 @@
     <string name="dev_compartilhar_relatorio">रिपोर्ट शेयर करें</string>
     <string name="dev_nenhum_app_para_compartilhar">शेयर करने के लिए कोई ऐप नहीं</string>
     <string name="dev_nao_consegui_compartilhar_relatorio">रिपोर्ट शेयर नहीं हो सकी</string>
-    <string name="dev_relatorio_cryo">Cryo रिपोर्ट</string>
+    <string name="dev_relatorio_bambua">Bambua रिपोर्ट</string>
     <string name="dev_relatorio_copiado">रिपोर्ट कॉपी हुई</string>
     <string name="dev_nao_consegui_copiar_relatorio">रिपोर्ट कॉपी नहीं हो सकी</string>
     <string name="dev_nenhuma_leitura_ainda">अभी कुछ नहीं पढ़ा गया</string>
-    <string name="dev_importe_extrato_volte_aqui">एक स्टेटमेंट इंपोर्ट करें और यहाँ लौटकर देखें कि Cryo ने फ़ाइल लाइन-दर-लाइन कैसे पढ़ी।</string>
+    <string name="dev_importe_extrato_volte_aqui">एक स्टेटमेंट इंपोर्ट करें और यहाँ लौटकर देखें कि Bambua ने फ़ाइल लाइन-दर-लाइन कैसे पढ़ी।</string>
     <string name="dev_completo">पूरी</string>
     <string name="dev_anonimo">गुमनाम</string>
-    <string name="dev_letras_viram_x_numeros">अक्षर x बन जाते हैं और अंक 9, पर हर लाइन का ढाँचा वैसा ही रहता है। यही संस्करण पढ़ना सुधारने में मदद करता है: इसे Cryo के GitHub पर issue में भेजें।</string>
+    <string name="dev_letras_viram_x_numeros">अक्षर x बन जाते हैं और अंक 9, पर हर लाइन का ढाँचा वैसा ही रहता है। यही संस्करण पढ़ना सुधारने में मदद करता है: इसे Bambua के GitHub पर issue में भेजें।</string>
     <string name="dev_esta_versao_tem_suas">इस संस्करण में आपके असली लेन-देन हैं। इसे कहीं भी पोस्ट न करें।</string>
     <string name="dev_copiar">कॉपी करें</string>
     <string name="dev_compartilhar">शेयर करें</string>
@@ -1145,7 +1145,7 @@
     <string name="reminder_toque_para_marcar_como">%1$s · चुकाया चिह्नित करने के लिए टैप करें</string>
     <string name="backup_avisa_quando_backup_automatico">जब ऑटो बैकअप सेव न कर पाए या आपकी ज़रूरत हो, तब बताता है</string>
     <string name="backup_backup_automatico_falhou">ऑटो बैकअप %1$s नहीं हो सका</string>
-    <string name="backup_cryo_protegeu_seu_backup">Cryo ने आपका बैकअप %1$s सुरक्षित रखा</string>
+    <string name="backup_bambua_protegeu_seu_backup">Bambua ने आपका बैकअप %1$s सुरक्षित रखा</string>
     <string name="backup_sha_256">SHA-256</string>
     <string name="backup_nao_foi_possivel_abrir">फ़ाइल नहीं खुल सकी</string>
     <string name="backup_pasta_indisponivel">फ़ोल्डर उपलब्ध नहीं</string>
@@ -1154,7 +1154,7 @@
     <string name="backup_nao_foi_possivel_apagar">मिटाया नहीं जा सका</string>
     <string name="backup_arquivo">फ़ाइल</string>
     <string name="backup_pasta_3">फ़ोल्डर</string>
-    <string name="backup_cryo_perdeu_permissao_para">Cryo को %1$s इस्तेमाल करने की अनुमति नहीं रही। फिर से चुनें।</string>
+    <string name="backup_bambua_perdeu_permissao_para">Bambua को %1$s इस्तेमाल करने की अनुमति नहीं रही। फिर से चुनें।</string>
     <string name="backup_arquivo_nao_existe_mais">फ़ाइल अब मौजूद नहीं है। फिर से चुनें।</string>
     <string name="backup_pasta_nao_existe_mais">फ़ोल्डर अब मौजूद नहीं है। दूसरा चुनें।</string>
     <string name="backup_nao_consegui_gravar_sem">लिखा नहीं जा सका (जगह नहीं है या क्लाउड ने जवाब नहीं दिया)। बाद में फिर कोशिश करूँगा।</string>
@@ -1178,7 +1178,7 @@
     <string name="importer_arquivo_grande_demais_para">फ़ाइल इस फ़ोन के लिए बहुत बड़ी है।</string>
     <string name="importer_nao_consegui_ler_esse">यह फ़ाइल पढ़ी नहीं जा सकी।</string>
     <string name="importer_arquivo_esta_vazio">फ़ाइल खाली है।</string>
-    <string name="importer_este_arquivo_backup_cryo">यह फ़ाइल Cryo का बैकअप है। इस्तेमाल करने के लिए सेटिंग्स › बैकअप से वापस लाएँ पर जाएँ।</string>
+    <string name="importer_este_arquivo_backup_bambua">यह फ़ाइल Bambua का बैकअप है। इस्तेमाल करने के लिए सेटिंग्स › बैकअप से वापस लाएँ पर जाएँ।</string>
     <string name="importer_esse_arquivo_nao_parece">यह फ़ाइल स्टेटमेंट नहीं लगती। बैंक की OFX, CSV, स्प्रेडशीट (XLSX) या PDF इस्तेमाल करें।</string>
     <string name="importer_tabela_html_excel_muitos">HTML टेबल (कई बैंकों की \"Excel\" फ़ाइल)</string>
     <string name="importer_esse_arquivo_pagina_internet">यह फ़ाइल बिना लेन-देन टेबल वाला वेब पेज है। बैंक से OFX, CSV या XLSX स्टेटमेंट माँगें।</string>
@@ -1198,19 +1198,19 @@
     <string name="importer_formato_ofx">OFX फ़ॉर्मैट\u0020</string>
     <string name="importer_extrato_conta">खाते का स्टेटमेंट</string>
     <string name="importer_extrato_cartao_credito">क्रेडिट कार्ड स्टेटमेंट</string>
-    <string name="importer_para_ler_pdf_cryo">PDF पढ़ने के लिए Cryo को नया Android चाहिए। बैंक से OFX, CSV या स्प्रेडशीट (XLSX) स्टेटमेंट माँगें।</string>
+    <string name="importer_para_ler_pdf_bambua">PDF पढ़ने के लिए Bambua को नया Android चाहिए। बैंक से OFX, CSV या स्प्रेडशीट (XLSX) स्टेटमेंट माँगें।</string>
     <string name="importer_nao_consegui_abrir_esse">यह PDF नहीं खुल सकी। शायद यह खराब है।</string>
-    <string name="importer_essa_planilha_nao_tem">इस स्प्रेडशीट में ऐसी कोई शीट नहीं जिसे Cryo पढ़ सके।</string>
+    <string name="importer_essa_planilha_nao_tem">इस स्प्रेडशीट में ऐसी कोई शीट नहीं जिसे Bambua पढ़ सके।</string>
     <string name="importer_essa_planilha_grande_demais">यह स्प्रेडशीट बहुत बड़ी है।</string>
     <string name="importer_nao_consegui_abrir_essa">यह स्प्रेडशीट नहीं खुल सकी। शायद यह खराब है।</string>
     <string name="importer_json_precisa_ter_lista">JSON में \"transactions\" सूची होनी चाहिए।</string>
-    <string name="importer_esse_json_nao_esta">यह JSON Cryo के टेस्ट फ़ॉर्मैट में नहीं है।</string>
+    <string name="importer_esse_json_nao_esta">यह JSON Bambua के टेस्ट फ़ॉर्मैट में नहीं है।</string>
     <string name="importer_esse_json_versao_mais">यह JSON टेस्ट फ़ॉर्मैट के नए संस्करण का है।</string>
     <string name="importer_nao_objeto">ऑब्जेक्ट नहीं है</string>
     <string name="importer_date_ausente_ou_invalida">\"date\" नहीं है या गलत है (2026-10-01 इस्तेमाल करें)</string>
     <string name="importer_amount_ausente_ou_invalido">\"amount\" नहीं है या गलत है</string>
-    <string name="importer_formato_testes_cryo_versao">Cryo का टेस्ट फ़ॉर्मैट, संस्करण %1$s</string>
-    <string name="importer_nao_encontrei_texto_nesse">इस PDF में कोई टेक्स्ट नहीं मिला। अगर यह फ़ोटो या स्कैन है, तो Cryo इसे नहीं पढ़ सकता।</string>
+    <string name="importer_formato_testes_bambua_versao">Bambua का टेस्ट फ़ॉर्मैट, संस्करण %1$s</string>
+    <string name="importer_nao_encontrei_texto_nesse">इस PDF में कोई टेक्स्ट नहीं मिला। अगर यह फ़ोटो या स्कैन है, तो Bambua इसे नहीं पढ़ सकता।</string>
     <string name="importer_sem_data_antes">पहले कोई तारीख नहीं</string>
     <string name="importer_valor_sem_descricao">बिना विवरण की रकम</string>
     <string name="importer_linha_saldo_total_ou">बैलेंस, कुल या सारांश की लाइन</string>
@@ -1237,7 +1237,7 @@
     <string name="importer_mes_antes_do_dia">तारीख में महीना पहले (अमेरिका की तरह)</string>
     <string name="importer_centavos_depois_virgula">पैसे कॉमा के बाद</string>
     <string name="importer_parcela">\u0020- किस्त %1$s/%2$s</string>
-    <string name="report_relatorio_leitura_extrato_cryo">स्टेटमेंट पढ़ने की रिपोर्ट · Cryo %1$s</string>
+    <string name="report_relatorio_leitura_extrato_bambua">स्टेटमेंट पढ़ने की रिपोर्ट · Bambua %1$s</string>
     <string name="report_gerado">बनाई गई %1$s</string>
     <string name="report_versao_anonima_letras_viram">गुमनाम संस्करण: अक्षर x और अंक 9 बन जाते हैं; हर लाइन का ढाँचा वैसा ही रहता है।</string>
     <string name="report_arquivo_2">फ़ाइल: %1$s (%2$s)</string>
@@ -1387,27 +1387,27 @@
     <string name="tx_pagamento_divida_registrado">कर्ज़ पर %1$s का भुगतान दर्ज हुआ</string>
     <string name="tx_ex_almoco">जैसे: लंच</string>
     <string name="backup_invalid_file">यह फ़ाइल सही बैकअप नहीं है।</string>
-    <string name="backup_not_cryo_file">यह फ़ाइल Cryo का बैकअप नहीं है।</string>
-    <string name="backup_newer_version">यह बैकअप Cryo के नए संस्करण का है। ऐप अपडेट करें।</string>
-    <string name="backup_err_foreign">इस फ़ोल्डर में पहले से एक cryo-backup.json फ़ाइल है जो इस फ़ोन ने नहीं बनाई। उसे न मिटाने के लिए Cryo ने उसे नहीं बदला। फ़ोल्डर बदलें पर टैप करके यही फ़ोल्डर चुनें और तय करें, या कई कॉपी रखें चुनें।</string>
-    <string name="backup_err_changed_folder">पिछले बैकअप के बाद फ़ोल्डर की cryo-backup.json फ़ाइल किसी और फ़ोन या ऐप ने बदली है। उस संस्करण को न मिटाने के लिए Cryo ने उसे नहीं बदला। फ़ोल्डर बदलें पर टैप करके यही फ़ोल्डर चुनें और तय करें।</string>
-    <string name="backup_err_changed_cloud">पिछले बैकअप के बाद क्लाउड की फ़ाइल किसी और फ़ोन या ऐप ने बदली है। उस संस्करण को न मिटाने के लिए Cryo ने उसे नहीं बदला। बदलें पर टैप करके वही फ़ाइल चुनें और तय करें।</string>
+    <string name="backup_not_bambua_file">यह फ़ाइल Bambua का बैकअप नहीं है।</string>
+    <string name="backup_newer_version">यह बैकअप Bambua के नए संस्करण का है। ऐप अपडेट करें।</string>
+    <string name="backup_err_foreign">इस फ़ोल्डर में पहले से एक bambua-backup.json फ़ाइल है जो इस फ़ोन ने नहीं बनाई। उसे न मिटाने के लिए Bambua ने उसे नहीं बदला। फ़ोल्डर बदलें पर टैप करके यही फ़ोल्डर चुनें और तय करें, या कई कॉपी रखें चुनें।</string>
+    <string name="backup_err_changed_folder">पिछले बैकअप के बाद फ़ोल्डर की bambua-backup.json फ़ाइल किसी और फ़ोन या ऐप ने बदली है। उस संस्करण को न मिटाने के लिए Bambua ने उसे नहीं बदला। फ़ोल्डर बदलें पर टैप करके यही फ़ोल्डर चुनें और तय करें।</string>
+    <string name="backup_err_changed_cloud">पिछले बैकअप के बाद क्लाउड की फ़ाइल किसी और फ़ोन या ऐप ने बदली है। उस संस्करण को न मिटाने के लिए Bambua ने उसे नहीं बदला। बदलें पर टैप करके वही फ़ाइल चुनें और तय करें।</string>
     <string name="backup_err_cant_read">उस जगह पहले से मौजूद बैकअप पढ़ा नहीं जा सका (शायद क्लाउड ऑफ़लाइन है)।</string>
-    <string name="backup_err_newer">उस जगह मौजूद बैकअप Cryo के नए संस्करण का है।</string>
+    <string name="backup_err_newer">उस जगह मौजूद बैकअप Bambua के नए संस्करण का है।</string>
     <string name="backup_err_damaged">उस जगह मौजूद बैकअप खराब लगता है।</string>
-    <string name="backup_err_not_cryo">इस फ़ोल्डर में पहले से एक cryo-backup.json फ़ाइल है जो Cryo का बैकअप नहीं है।</string>
+    <string name="backup_err_not_bambua">इस फ़ोल्डर में पहले से एक bambua-backup.json फ़ाइल है जो Bambua का बैकअप नहीं है।</string>
     <string name="backup_err_cant_open_folder">यह फ़ोल्डर नहीं खुल सका। फिर से कोशिश करें या दूसरा चुनें।</string>
-    <string name="backup_err_read_data">अभी Cryo का डेटा पढ़ा नहीं जा सका। बाद में फिर कोशिश करूँगा।</string>
+    <string name="backup_err_read_data">अभी Bambua का डेटा पढ़ा नहीं जा सका। बाद में फिर कोशिश करूँगा।</string>
     <string name="backup_err_cant_check">लिखने से पहले जाँचने के लिए फ़ाइल नहीं खुल सकी (शायद क्लाउड ऑफ़लाइन है या फ़ाइल मिट गई)। बाद में फिर कोशिश करूँगा; ऐसा होता रहे तो जगह फिर से चुनें।</string>
 
-    <!-- Como usar o Cryo (RF-TOUR) -->
-    <string name="tour_how_to_use">Cryo कैसे इस्तेमाल करें</string>
+    <!-- Como usar o Bambua (RF-TOUR) -->
+    <string name="tour_how_to_use">Bambua कैसे इस्तेमाल करें</string>
     <string name="tour_how_to_use_sub">ऐप की एक छोटी एनिमेटेड सैर</string>
     <string name="tour_1_title">सेकंडों में दर्ज करें</string>
-    <string name="tour_1_text">अपने तरीके से लिखें या बोलें। Cryo रकम, श्रेणी और खाता समझ लेता है: आप बस जाँचें और सेव करें।</string>
+    <string name="tour_1_text">अपने तरीके से लिखें या बोलें। Bambua रकम, श्रेणी और खाता समझ लेता है: आप बस जाँचें और सेव करें।</string>
     <string name="tour_1_phrase">लंच %1$s</string>
     <string name="tour_1_lunch">लंच</string>
-    <string name="tour_2_text">आपके खर्च की रफ़्तार से, Cryo दिखाता है कि महीने के आख़िर में कितना बचेगा और रोज़ कितना खर्च कर सकते हैं।</string>
+    <string name="tour_2_text">आपके खर्च की रफ़्तार से, Bambua दिखाता है कि महीने के आख़िर में कितना बचेगा और रोज़ कितना खर्च कर सकते हैं।</string>
     <string name="tour_2_per_day">आप रोज़ %1$s खर्च कर सकते हैं</string>
     <string name="tour_3_title">कार्ड और किस्तें, बिना झंझट</string>
     <string name="tour_3_text">किस्तों में ख़रीदा? हर किस्त सही बिल में जाती है, और आप देखते हैं कि लिमिट में कितना बचा है।</string>

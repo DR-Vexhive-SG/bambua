@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-    Textos do Cryo em chinês simplificado (PRD: RF-LNG-01, TXT-09). Mesmas chaves e marcadores de values/strings.xml
+    Textos do Bambua em chinês simplificado (PRD: RF-LNG-01, TXT-09). Mesmas chaves e marcadores de values/strings.xml
     (a base, em português do Brasil); PrdConformanceTest confere.
 -->
 <resources>
@@ -53,8 +53,8 @@
     <string name="home_goals">目标和存钱罐</string>
     <string name="goal_progress">%1$s / %2$s</string>
     <string name="home_recent">最近账单</string>
-    <string name="home_empty_hint">从快速记账开始吧：点一下麦克风，说一句，比如“午饭50元信用卡”。Cryo 会识别金额、分类和账户，你只需确认并保存。</string>
-    <string name="home_insights">Cryo 发现</string>
+    <string name="home_empty_hint">从快速记账开始吧：点一下麦克风，说一句，比如“午饭50元信用卡”。Bambua 会识别金额、分类和账户，你只需确认并保存。</string>
+    <string name="home_insights">Bambua 发现</string>
     <string name="month_in">收入</string>
     <string name="month_out">支出</string>
     <string name="month_end">月底</string>
@@ -266,7 +266,7 @@
     <string name="debt_proxima">下次：%1$s</string>
     <string name="debt_organize_suas_dividas">整理你的债务</string>
     <string name="debt_cadastre_emprestimos_financiamentos_acordos">添加贷款、分期、还款协议或欠别人的钱。\u0020</string>
-    <string name="debt_cryo_mostra_quanto_falta">Cryo 会显示还剩多少，提醒还款日，并告诉你什么时候能还清。</string>
+    <string name="debt_bambua_mostra_quanto_falta">Bambua 会显示还剩多少，提醒还款日，并告诉你什么时候能还清。</string>
     <string name="debt_cadastrar_divida">添加债务</string>
     <string name="debt_aberto">待还</string>
     <string name="debt_nenhuma_divida_aberto_muito">没有待还的债务。真棒！</string>
@@ -424,7 +424,7 @@
     <string name="plan_restam_cerca_por_dia">剩余 %1$s · 每天约 %2$s</string>
     <string name="plan_voce_passou_total_planejado">已超出计划总额 %1$s</string>
     <string name="plan_defina_limites_por_categoria">按分类设置上限</string>
-    <string name="plan_cryo_avisa_quando_voce" formatted="false">用到80%和超出上限时，Cryo 会提醒你。</string>
+    <string name="plan_bambua_avisa_quando_voce" formatted="false">用到80%和超出上限时，Bambua 会提醒你。</string>
     <string name="plan_sugestoes_pela_sua_media">根据你的平均支出给出的建议</string>
     <string name="plan_orcamento_salvo">已保存预算</string>
     <string name="plan_orcamento_removido">已删除预算</string>
@@ -437,7 +437,7 @@
     <string name="plan_salvar_orcamento">保存预算</string>
     <string name="plan_remover_orcamento">删除预算</string>
     <string name="plan_nenhuma_conta_fixa">没有固定支出</string>
-    <string name="plan_cadastre_aluguel_internet_assinaturas">添加房租、宽带、订阅，还有工资。Cryo 会提醒到期日，并用于本月预测。</string>
+    <string name="plan_cadastre_aluguel_internet_assinaturas">添加房租、宽带、订阅，还有工资。Bambua 会提醒到期日，并用于本月预测。</string>
     <string name="plan_pagas">已付 %1$s / %2$s</string>
     <string name="plan_parcelas_dividas">债务还款</string>
     <string name="plan_recebidos">已收 %1$s / %2$s</string>
@@ -477,7 +477,7 @@
     <string name="plan_apagar">删除 %1$s？</string>
     <string name="plan_conta_fixa_apagada">已删除固定支出</string>
     <string name="plan_crie_sua_primeira_meta">创建你的第一个目标</string>
-    <string name="plan_viagem_reserva_emergencia_celular">旅行、应急金、新手机……设定金额和期限，Cryo 会告诉你每月存多少。</string>
+    <string name="plan_viagem_reserva_emergencia_celular">旅行、应急金、新手机……设定金额和期限，Bambua 会告诉你每月存多少。</string>
     <string name="plan_nenhuma_meta_ativa">没有进行中的目标</string>
     <string name="plan_suas_metas_arquivadas_continuam">你归档的目标仍保存在下方的归档中。随时可以创建新目标。</string>
     <string name="plan_guardado_metas">目标中的存款</string>
@@ -591,10 +591,10 @@
     <string name="locale_language_title">语言</string>
     <string name="locale_language_device">跟随手机</string>
     <string name="locale_currency_title">货币</string>
-    <string name="locale_currency_hint">Cryo 中所有金额都用这种货币显示。</string>
+    <string name="locale_currency_hint">Bambua 中所有金额都用这种货币显示。</string>
     <string name="locale_currency_device">跟随手机所在国家</string>
     <string name="locale_currency_confirm_title">更换货币？</string>
-    <string name="locale_currency_confirm_text">已记录的金额数字不变，只改变符号和写法。Cryo 不联网、没有汇率，所以不会换算货币。</string>
+    <string name="locale_currency_confirm_text">已记录的金额数字不变，只改变符号和写法。Bambua 不联网、没有汇率，所以不会换算货币。</string>
     <string name="locale_currency_confirm_button">更换货币</string>
     <string name="settings_hide_values_hint">用 %1$s 代替数字显示</string>
     <plurals name="category_keywords">
@@ -618,7 +618,7 @@
     <string name="settings_automatico">自动</string>
     <string name="settings_cores_papel_parede_material">壁纸配色（Material You）</string>
     <string name="settings_app_combina_com_cores">App 配色跟随手机</string>
-    <string name="settings_cores_papel_parede_precisam">壁纸配色需要 Android 12 或更新版本。正在使用 Cryo 配色。</string>
+    <string name="settings_cores_papel_parede_precisam">壁纸配色需要 Android 12 或更新版本。正在使用 Bambua 配色。</string>
     <string name="settings_privacidade_seguranca">隐私和安全</string>
     <string name="settings_bloquear_com_digital_ou">用指纹或密码锁定</string>
     <string name="settings_cadastre_digital_rosto_ou">请先在 Android 中设置指纹、面容或锁屏</string>
@@ -650,13 +650,13 @@
     <string name="settings_dados_teste_arquivos_exemplo">测试数据、示例文件和报告</string>
     <string name="settings_usando_dados_teste_arquivos">正在使用测试数据 · 示例文件和报告</string>
     <string name="settings_sobre">关于</string>
-    <string name="settings_github_com_h3yk0_cryo">github.com/H3yK0/cryo · 欢迎提建议和反馈问题</string>
+    <string name="settings_github_com_h3yk0_bambua">github.com/H3yK0/cryo · 欢迎提建议和反馈问题</string>
     <string name="settings_codigo_fonte">源代码</string>
     <string name="settings_gnu_agpl_v3_ou">GNU AGPL v3 或更高版本 · 自由软件</string>
     <string name="settings_licenca">许可证</string>
     <string name="settings_modo_desenvolvedor_ja_esta">开发者模式已开启</string>
     <string name="settings_modo_desenvolvedor_ligado">已开启开发者模式</string>
-    <string name="settings_cryo">Cryo %1$s</string>
+    <string name="settings_bambua">Bambua %1$s</string>
     <string name="settings_mais_toques_para_modo">再点 %1$s 次进入开发者模式</string>
     <string name="settings_mais_toque_para_modo">再点 1 次进入开发者模式</string>
     <string name="settings_organizacao_financeira_com_registro">语音记账，预测月底结余，看清资金流向。无需联网，没有广告，没有追踪。</string>
@@ -676,17 +676,17 @@
     <string name="settings_nova_categoria">新分类</string>
     <string name="settings_palavras_chave_registro_rapido">快速记账关键词</string>
     <string name="settings_ex_padaria_lanche_cafe">例如：面包店、零食、咖啡</string>
-    <string name="settings_quando_voce_digitar_ou">输入或说出这些词时，Cryo 会选这个分类。用逗号分隔。</string>
+    <string name="settings_quando_voce_digitar_ou">输入或说出这些词时，Bambua 会选这个分类。用逗号分隔。</string>
     <string name="settings_se_ela_ja_foi">如果它已经用过，只会被归档，以免打乱历史记录。</string>
     <string name="settings_apagar_categoria">删除分类？</string>
     <string name="settings_categoria_arquivada">已归档分类</string>
     <string name="settings_categoria_apagada">已删除分类</string>
-    <string name="onboarding_bem_vindo_ao_cryo">欢迎使用 Cryo</string>
-    <string name="onboarding_seu_dinheiro_claro_como">你的钱，像冰一样清澈。</string>
+    <string name="onboarding_bem_vindo_ao_bambua">欢迎使用 Bambua</string>
+    <string name="onboarding_seu_dinheiro_claro_como">你的钱，清清楚楚。</string>
     <string name="onboarding_saiba_como_mes_vai">提前知道月底结余</string>
     <string name="onboarding_seus_dados_sao_seus">你的数据属于你</string>
     <string name="onboarding_como_quer_ser_chamado">想让我怎么称呼你？（可选）</string>
-    <string name="onboarding_ja_uso_cryo_restaurar">我用过 Cryo：从备份恢复</string>
+    <string name="onboarding_ja_uso_bambua_restaurar">我用过 Bambua：从备份恢复</string>
     <string name="onboarding_sua_conta_principal">你的主账户</string>
     <string name="onboarding_onde_fica_maior_parte">你的钱大部分放在哪里？可以是银行，也可以是支付宝或微信。</string>
     <string name="onboarding_ex_nubank_caixa_inter">例如：招商银行、工商银行、支付宝</string>
@@ -695,25 +695,25 @@
     <string name="onboarding_cria_carteira_para_gastos">创建一个“钱包”记现金支出</string>
     <string name="onboarding_tambem_uso_dinheiro_vivo">我也用现金</string>
     <string name="onboarding_cartao_credito">信用卡</string>
-    <string name="onboarding_com_cartao_cadastrado_cryo">添加信用卡后，Cryo 会按账单整理消费，并帮你管理分期。</string>
+    <string name="onboarding_com_cartao_cadastrado_bambua">添加信用卡后，Bambua 会按账单整理消费，并帮你管理分期。</string>
     <string name="onboarding_uso_cartao_credito">我用信用卡</string>
     <string name="onboarding_ex_nubank">例如：招行信用卡</string>
     <string name="onboarding_para_ver_essas_datas">这些日期可以在银行 App 里查到，之后也可以修改。</string>
     <string name="onboarding_tudo_pronto">都准备好了！</string>
     <string name="onboarding_tela_inicial_toque_microfone">在首页点一下麦克风，说说你今天花了什么钱。</string>
     <string name="onboarding_experimente_registro_rapido">试试快速记账</string>
-    <string name="onboarding_cadastre_suas_contas_fixas">在“计划”中添加固定支出，Cryo 会在到期前提醒你。</string>
+    <string name="onboarding_cadastre_suas_contas_fixas">在“计划”中添加固定支出，Bambua 会在到期前提醒你。</string>
     <string name="onboarding_lembretes_contas">固定支出提醒</string>
     <string name="onboarding_permitir_notificacoes">允许通知</string>
     <string name="onboarding_voltar">返回</string>
     <string name="onboarding_comecar">开始</string>
     <string name="onboarding_pular">跳过</string>
-    <string name="onboarding_ir_para_cryo">进入 Cryo</string>
+    <string name="onboarding_ir_para_bambua">进入 Bambua</string>
     <string name="onboarding_continuar">继续</string>
     <string name="onboarding_restaurar_este_backup">从这个备份恢复？</string>
-    <string name="onboarding_dados_arquivo_entram_cryo">%1$s · %2$s。文件中的数据会导入 Cryo，引导到此结束。</string>
+    <string name="onboarding_dados_arquivo_entram_bambua">%1$s · %2$s。文件中的数据会导入 Bambua，引导到此结束。</string>
     <string name="onboarding_trocar">更换</string>
-    <string name="onboarding_cryo_bloqueado">Cryo 已锁定</string>
+    <string name="onboarding_bambua_bloqueado">Bambua 已锁定</string>
     <string name="onboarding_use_sua_digital_rosto">使用指纹、面容或手机密码。</string>
     <string name="onboarding_desbloquear">解锁</string>
     <string name="backup_hoje">今天 %1$s</string>
@@ -726,28 +726,28 @@
     <string name="backup_primeiro_ainda_vai_ser">%1$s · 还没进行第一次备份</string>
     <string name="backup_nao_consegui_concluir_agora">现在无法完成，请重试。</string>
     <string name="backup_nao_deu_para_usar">无法使用这个文件夹，请换一个。</string>
-    <string name="backup_essa_nuvem_nao_deixa">这个云盘不允许 Cryo 之后更新文件。请换个云盘或使用手机文件夹。</string>
+    <string name="backup_essa_nuvem_nao_deixa">这个云盘不允许 Bambua 之后更新文件。请换个云盘或使用手机文件夹。</string>
     <string name="backup_este_celular_nao_tem">这台手机没有 Android 文件选择器。</string>
     <string name="backup_sem_permissao_aviso_nao">没有权限就不会显示提醒。可以在 Android 设置中开启。</string>
     <string name="backup_copia_tudo_sem_voce">不用记着，也能备份全部数据</string>
-    <string name="backup_cryo_salva_seus_dados">Cryo 会自动把数据保存到手机文件夹、云盘或两者。Cryo 本身仍不联网：上传到云盘的是云盘自己的 App。</string>
+    <string name="backup_bambua_salva_seus_dados">Bambua 会自动把数据保存到手机文件夹、云盘或两者。Bambua 本身仍不联网：上传到云盘的是云盘自己的 App。</string>
     <string name="backup_fazer_backup_automatico">自动备份</string>
     <string name="backup_escolha_abaixo_onde_guardar">在下方选择保存位置</string>
     <string name="backup_segundo_plano_mesmo_com">在后台运行，即使 App 已关闭</string>
-    <string name="backup_toque_aqui_permita_notificacoes">点这里允许通知，备份没保存成功时 Cryo 会提醒你。</string>
+    <string name="backup_toque_aqui_permita_notificacoes">点这里允许通知，备份没保存成功时 Bambua 会提醒你。</string>
     <string name="backup_com_que_frequencia">备份频率</string>
-    <string name="backup_se_nada_mudou_desde">如果和上次备份相比没有变化，Cryo 不会再存一份一样的。</string>
+    <string name="backup_se_nada_mudou_desde">如果和上次备份相比没有变化，Bambua 不会再存一份一样的。</string>
     <string name="backup_celular">手机</string>
     <string name="backup_nuvem_2">云盘</string>
     <string name="backup_fazer_backup_agora">立即备份</string>
     <string name="backup_salvando">正在保存...</string>
-    <string name="backup_para_voltar_backup_use">要恢复备份，请到“设置 › 从备份恢复”选择文件。如果手机省电设置很严格，备份可能会晚一点；打开 Cryo 也会补做延迟的备份。</string>
+    <string name="backup_para_voltar_backup_use">要恢复备份，请到“设置 › 从备份恢复”选择文件。如果手机省电设置很严格，备份可能会晚一点；打开 Bambua 也会补做延迟的备份。</string>
     <string name="backup_nao_consegui_restaurar_esse">无法恢复这个备份，没有做任何更改。</string>
     <string name="backup_usar_este_lugar">使用这个位置？</string>
     <string name="backup_se_continuar_ele_sera">%1$s 继续的话，它会被这台手机的数据替换。</string>
     <string name="backup_substituir">替换</string>
     <string name="backup_nenhuma_pasta_escolhida">还没有选择文件夹</string>
-    <string name="backup_guarde_proprio_celular_ou">保存到手机本身，或保存到云盘 App 会同步的文件夹。提示：在打开的界面中新建一个名为 Cryo 的文件夹（比如放在 Documents 里），然后点“使用此文件夹”。</string>
+    <string name="backup_guarde_proprio_celular_ou">保存到手机本身，或保存到云盘 App 会同步的文件夹。提示：在打开的界面中新建一个名为 Bambua 的文件夹（比如放在 Documents 里），然后点“使用此文件夹”。</string>
     <string name="backup_escolher_pasta">选择文件夹</string>
     <string name="backup_como_guardar">保存方式</string>
     <string name="backup_fica_so_copia_mais">只保留最新的一份，文件名 %1$s</string>
@@ -765,7 +765,7 @@
     <string name="backup_tela_que_abrir_toque">在打开的界面中点 ☰，选择云盘。</string>
     <string name="backup_escolha_pasta_toque_salvar">选择文件夹并点“保存”。</string>
     <string name="backup_escolher_nuvem">在云盘中选择</string>
-    <string name="backup_cada_backup_cryo_atualiza">每次备份，Cryo 都会更新这个文件。上传由云盘 App 完成。</string>
+    <string name="backup_cada_backup_bambua_atualiza">每次备份，Bambua 都会更新这个文件。上传由云盘 App 完成。</string>
     <string name="backup_parar_usar">停止使用</string>
     <string name="backup_nao_salvou">%1$s 没有保存：%2$s</string>
     <string name="backup_nada_mudou_desde_entao">\u0020· 之后没有变化</string>
@@ -776,7 +776,7 @@
     <string name="backup_ja_existe_backup_aqui">这里已经有备份了</string>
     <string name="backup_este_arquivo">这个文件</string>
     <string name="backup_esta_pasta">这个文件夹</string>
-    <string name="backup_ja_tem_backup_cryo">\u0020中已有一个 Cryo 备份，数据和这台手机不同。</string>
+    <string name="backup_ja_tem_backup_bambua">\u0020中已有一个 Bambua 备份，数据和这台手机不同。</string>
     <string name="backup_salvo">\u0020· %1$s保存</string>
     <string name="backup_backup">备份中</string>
     <string name="backup_neste_celular_agora">这台手机现在</string>
@@ -793,7 +793,7 @@
     <string name="backup_nada_para_salvar_agora">现在没有需要保存的内容</string>
     <string name="backup_nuvem">到云盘</string>
     <string name="backup_pasta">到文件夹</string>
-    <string name="backup_backup_restaurado_daqui_para">已从备份恢复。之后 Cryo 会自动保存%1$s。</string>
+    <string name="backup_backup_restaurado_daqui_para">已从备份恢复。之后 Bambua 会自动保存%1$s。</string>
     <string name="backup_pronto_agora_backup_fica">完成！以后备份都会保存在 %1$s。</string>
     <string name="backup_pronto_primeiro_backup_ja">完成！第一次备份已保存%1$s。</string>
     <string name="backup_lugar_escolhido_primeiro_backup">已选择位置。添加内容后会进行第一次备份。</string>
@@ -878,14 +878,14 @@
     <string name="chart_dia_gastou">%1$s日：花了 %2$s</string>
     <string name="chart_menos">少</string>
     <string name="chart_mais">多</string>
-    <string name="lock_desbloquear_cryo">解锁 Cryo</string>
+    <string name="lock_desbloquear_bambua">解锁 Bambua</string>
     <string name="lock_use_sua_digital_rosto">使用指纹、面容或手机密码</string>
     <string name="chart_flow_a11y">资金流向。收入：%1$s。支出：%2$s</string>
     <plurals name="import_button">
         <item quantity="other">导入 %d 笔</item>
     </plurals>
     <plurals name="import_selected_duplicates">
-        <item quantity="other">选中的 %d 笔似乎已在 Cryo 中，导入会重复。</item>
+        <item quantity="other">选中的 %d 笔似乎已在 Bambua 中，导入会重复。</item>
     </plurals>
     <plurals name="import_flag_imported">
         <item quantity="other">%d 笔已导入</item>
@@ -902,7 +902,7 @@
         <item quantity="other">选中的 %d 笔还款会记为信用卡的入账，不从任何账户扣款。如果是从你的账户还的，请点每一行选择账户。</item>
     </plurals>
     <plurals name="import_unpaired_account">
-        <item quantity="other">选中的 %d 笔信用卡还款会记为普通支出。如果这些卡的消费已在 Cryo 中，支出会算两次：请点每一行选择信用卡。</item>
+        <item quantity="other">选中的 %d 笔信用卡还款会记为普通支出。如果这些卡的消费已在 Bambua 中，支出会算两次：请点每一行选择信用卡。</item>
     </plurals>
     <plurals name="import_done_title">
         <item quantity="other">已导入 %d 笔</item>
@@ -919,11 +919,11 @@
     <string name="import_continuar_conferindo">继续核对</string>
     <string name="import_escolher_arquivo">选择文件</string>
     <string name="import_traga_movimentacoes_seu_banco">导入你的银行流水</string>
-    <string name="import_baixe_extrato_app_ou">在银行 App 或网站下载流水，然后在这里选择文件。导入 Cryo 之前你会先核对列表，已记录的会被排除。</string>
+    <string name="import_baixe_extrato_app_ou">在银行 App 或网站下载流水，然后在这里选择文件。导入 Bambua 之前你会先核对列表，已记录的会被排除。</string>
     <string name="import_ver_relatorio_leitura">查看读取报告</string>
-    <string name="import_formatos_que_cryo_le">Cryo 支持的格式</string>
-    <string name="import_melhor_valores_exatos_cryo">最推荐：金额准确，Cryo 还能识别已导入的内容。</string>
-    <string name="import_funciona_com_quase_todos">几乎所有银行都能用。列不清楚时，Cryo 会问你。</string>
+    <string name="import_formatos_que_bambua_le">Bambua 支持的格式</string>
+    <string name="import_melhor_valores_exatos_bambua">最推荐：金额准确，Bambua 还能识别已导入的内容。</string>
+    <string name="import_funciona_com_quase_todos">几乎所有银行都能用。列不清楚时，Bambua 会问你。</string>
     <string name="import_csv_ou_planilha_xlsx">CSV 或表格（XLSX）</string>
     <string name="import_lido_pelo_texto_arquivo">按文件中的文字读取，请仔细核对列表。</string>
     <string name="import_este_celular_nao_consegue">这台手机无法读取 PDF 文字。请使用 OFX、CSV 或 XLSX。</string>
@@ -942,10 +942,10 @@
     <string name="import_senha_pdf">PDF 密码</string>
     <string name="import_mostrar_senha">显示密码</string>
     <string name="import_esconder_senha">隐藏密码</string>
-    <string name="import_senha_so_abre_arquivo">密码只用于现在在这台手机上打开文件，Cryo 不会保存。</string>
+    <string name="import_senha_so_abre_arquivo">密码只用于现在在这台手机上打开文件，Bambua 不会保存。</string>
     <string name="import_escolher_outro_arquivo">选择其他文件</string>
     <string name="import_escolher_colunas">选择列</string>
-    <string name="import_cryo_nao_teve_certeza">Cryo 不确定这个文件中每项信息在哪一列。请为每一项点选正确的列。</string>
+    <string name="import_bambua_nao_teve_certeza">Bambua 不确定这个文件中每项信息在哪一列。请为每一项点选正确的列。</string>
     <string name="import_comeco_arquivo">文件开头</string>
     <string name="import_entradas_saidas">收入和支出</string>
     <string name="import_coluna">一列</string>
@@ -962,7 +962,7 @@
     <string name="import_importando">正在导入...</string>
     <string name="import_marque_que_quer_importar">勾选要导入的内容</string>
     <string name="import_para_onde_vao">导入到</string>
-    <string name="import_compras_vieram_com_valor">消费是正数，所以 Cryo 已经把正负号反过来了。如果不对：菜单 › 对调收入和支出。</string>
+    <string name="import_compras_vieram_com_valor">消费是正数，所以 Bambua 已经把正负号反过来了。如果不对：菜单 › 对调收入和支出。</string>
     <string name="import_arquivo">文件中：%1$s</string>
     <string name="import_qual_fatura">计入哪期账单</string>
     <string name="import_pela_data_cada_compra">按每笔消费的日期</string>
@@ -987,17 +987,17 @@
     <string name="import_importar_esta_movimentacao">导入这笔</string>
     <string name="import_pronto">完成</string>
     <string name="import_esta_movimentacao_ja_veio">这笔在之前的导入中已经有了。再导入会重复。</string>
-    <string name="import_parece_com_que_ja">和 Cryo 中已有的 %2$s 的“%1$s”（%3$s）很像%4$s。</string>
-    <string name="import_parece_com_algo_que">和 Cryo 中已有的内容很像。</string>
-    <string name="import_parece_pagamento_fatura_cryo">看起来是信用卡还款。在 Cryo 中，它从账户扣款并进入信用卡：请选择扣款账户。如果已经记录过这笔还款，请不要勾选这一行。</string>
+    <string name="import_parece_com_que_ja">和 Bambua 中已有的 %2$s 的“%1$s”（%3$s）很像%4$s。</string>
+    <string name="import_parece_com_algo_que">和 Bambua 中已有的内容很像。</string>
+    <string name="import_parece_pagamento_fatura_bambua">看起来是信用卡还款。在 Bambua 中，它从账户扣款并进入信用卡：请选择扣款账户。如果已经记录过这笔还款，请不要勾选这一行。</string>
     <string name="import_parece_pagamento_fatura_cartao">看起来是信用卡还款。为了不重复计算支出（消费已在信用卡中），请记为信用卡还款。如果已经记录过这笔还款，请不要勾选这一行。</string>
     <string name="import_conta">到账户 %1$s</string>
     <string name="import_cartao">到信用卡 %1$s</string>
     <string name="import_importar_extrato">导入流水</string>
     <string name="import_importacao_desfeita">已撤销导入</string>
-    <string name="import_nada_deste_arquivo_ficou">这个文件的内容没有留在 Cryo 中。</string>
+    <string name="import_nada_deste_arquivo_ficou">这个文件的内容没有留在 Bambua 中。</string>
     <string name="import_saldo_fim_extrato">流水末尾余额</string>
-    <string name="import_saldo_cryo_agora">Cryo 当前余额</string>
+    <string name="import_saldo_bambua_agora">Bambua 当前余额</string>
     <string name="import_estao_diferentes_pode_ser">两者不一致：可能核对时有内容没勾选，或有发生在文件时间段之前的账单，也可能账户初始余额需要调整（在“钱包”中编辑账户）。</string>
     <string name="import_ver_conta">查看账户</string>
     <string name="import_ver_cartao">查看信用卡</string>
@@ -1006,18 +1006,18 @@
     <string name="import_relatorio_leitura">读取报告</string>
     <string name="import_nao_consegui_abrir_esse">无法打开这个文件。请重新下载或换一个文件。</string>
     <string name="import_arquivo_grande_demais_mais">文件太大（超过 20 MB）。请向银行申请更短的时间段。</string>
-    <string name="import_este_extrato_exemplo_cryo">这是 Cryo 的示例流水（虚构的），只能在测试模式下导入。</string>
+    <string name="import_este_extrato_exemplo_bambua">这是 Bambua 的示例流水（虚构的），只能在测试模式下导入。</string>
     <string name="import_nenhuma_movimentacao_encontrada">没有找到账单</string>
     <string name="import_com_essas_colunas_nenhuma">按这些列，没有一行能识别成账单。请确认哪一列是日期、哪一列是金额。</string>
     <string name="import_nao_encontrei_movimentacoes_nesse">这个文件里没有找到账单。</string>
-    <string name="import_cryo_pediu_para_escolher">Cryo 请你选择列</string>
+    <string name="import_bambua_pediu_para_escolher">Bambua 请你选择列</string>
     <string name="import_crie_conta_ou_cartao">导入前请先在“钱包”中创建账户或信用卡。</string>
     <string name="import_nao_consegui_importar_nada">导入失败，没有保存任何内容。</string>
     <string name="import_nao_consegui_desfazer_tente">撤销失败，请重试。</string>
     <string name="dev_nao_consegui_preparar_modo">无法准备测试模式，请重试。</string>
     <string name="dev_nao_deu_certo_tente">没有成功，请重试。</string>
     <string name="dev_nao_consegui_salvar_arquivos">无法将文件保存到这个文件夹</string>
-    <string name="dev_ferramentas_para_testar_cryo">用来测试 Cryo、帮助改进流水读取的工具，不会动你的真实数据。</string>
+    <string name="dev_ferramentas_para_testar_bambua">用来测试 Bambua、帮助改进流水读取的工具，不会动你的真实数据。</string>
     <string name="dev_modo_teste">测试模式</string>
     <string name="dev_usar_dados_teste_2">使用测试数据</string>
     <string name="dev_telas_passam_usar_outro">界面会改用另一个带示例数据的数据库。你的数据会原样保存，直到你回来。</string>
@@ -1037,7 +1037,7 @@
     <string name="dev_modo_teste_aceita_tambem">测试模式下也可以导入测试用 JSON</string>
     <string name="dev_formatos_json_teste_como">格式、测试用 JSON 以及如何发送匿名流水</string>
     <string name="dev_este_celular">这台手机</string>
-    <string name="dev_versao_cryo">Cryo 版本</string>
+    <string name="dev_versao_bambua">Bambua 版本</string>
     <string name="dev_api">%1$s（API %2$s）</string>
     <string name="dev_android">Android</string>
     <string name="dev_indisponivel_neste_android">此 Android 版本不可用</string>
@@ -1048,7 +1048,7 @@
     <string name="dev_desligar_modo_desenvolvedor">关闭开发者模式</string>
     <string name="dev_modo_desenvolvedor_desligado">已关闭开发者模式</string>
     <string name="dev_usar_dados_teste">使用测试数据？</string>
-    <string name="dev_cryo_vai_mostrar_dados">Cryo 会在单独的数据库中显示示例数据。你的数据不会有任何变化，退出测试模式（通过屏幕底部的横条或这里）后就会回来。</string>
+    <string name="dev_bambua_vai_mostrar_dados">Bambua 会在单独的数据库中显示示例数据。你的数据不会有任何变化，退出测试模式（通过屏幕底部的横条或这里）后就会回来。</string>
     <string name="dev_entrar_modo_teste">进入测试模式</string>
     <string name="dev_tudo_que_esta_modo">测试模式中的内容会被清空并换成示例。你的真实数据不会变。</string>
     <string name="dev_recriar_dados_exemplo">重新生成示例数据？</string>
@@ -1062,14 +1062,14 @@
     <string name="dev_compartilhar_relatorio">分享报告</string>
     <string name="dev_nenhum_app_para_compartilhar">没有可以分享的 App</string>
     <string name="dev_nao_consegui_compartilhar_relatorio">无法分享报告</string>
-    <string name="dev_relatorio_cryo">Cryo 报告</string>
+    <string name="dev_relatorio_bambua">Bambua 报告</string>
     <string name="dev_relatorio_copiado">已复制报告</string>
     <string name="dev_nao_consegui_copiar_relatorio">无法复制报告</string>
     <string name="dev_nenhuma_leitura_ainda">还没有读取记录</string>
-    <string name="dev_importe_extrato_volte_aqui">导入一份流水后回到这里，就能看到 Cryo 是怎样逐行读取文件的。</string>
+    <string name="dev_importe_extrato_volte_aqui">导入一份流水后回到这里，就能看到 Bambua 是怎样逐行读取文件的。</string>
     <string name="dev_completo">完整版</string>
     <string name="dev_anonimo">匿名版</string>
-    <string name="dev_letras_viram_x_numeros">文字变成 x，数字变成 9，但每行的格式不变。能帮助改进读取的就是这个版本：请在 Cryo 的 GitHub 上提交 issue 发送。</string>
+    <string name="dev_letras_viram_x_numeros">文字变成 x，数字变成 9，但每行的格式不变。能帮助改进读取的就是这个版本：请在 Bambua 的 GitHub 上提交 issue 发送。</string>
     <string name="dev_esta_versao_tem_suas">这个版本包含你的真实账单。请不要公开发布。</string>
     <string name="dev_copiar">复制</string>
     <string name="dev_compartilhar">分享</string>
@@ -1119,7 +1119,7 @@
     <string name="reminder_toque_para_marcar_como">%1$s · 点一下标为已付</string>
     <string name="backup_avisa_quando_backup_automatico">自动备份保存失败或需要你操作时提醒你</string>
     <string name="backup_backup_automatico_falhou">自动备份（%1$s）失败</string>
-    <string name="backup_cryo_protegeu_seu_backup">Cryo 保护了你的备份（%1$s）</string>
+    <string name="backup_bambua_protegeu_seu_backup">Bambua 保护了你的备份（%1$s）</string>
     <string name="backup_sha_256">SHA-256</string>
     <string name="backup_nao_foi_possivel_abrir">无法打开文件</string>
     <string name="backup_pasta_indisponivel">文件夹不可用</string>
@@ -1128,7 +1128,7 @@
     <string name="backup_nao_foi_possivel_apagar">无法删除</string>
     <string name="backup_arquivo">文件</string>
     <string name="backup_pasta_3">文件夹</string>
-    <string name="backup_cryo_perdeu_permissao_para">Cryo 失去了使用%1$s的权限。请重新选择。</string>
+    <string name="backup_bambua_perdeu_permissao_para">Bambua 失去了使用%1$s的权限。请重新选择。</string>
     <string name="backup_arquivo_nao_existe_mais">文件已不存在，请重新选择。</string>
     <string name="backup_pasta_nao_existe_mais">文件夹已不存在，请换一个。</string>
     <string name="backup_nao_consegui_gravar_sem">无法写入（空间不足或云盘没有响应）。稍后会再试。</string>
@@ -1152,7 +1152,7 @@
     <string name="importer_arquivo_grande_demais_para">文件太大，这台手机处理不了。</string>
     <string name="importer_nao_consegui_ler_esse">无法读取这个文件。</string>
     <string name="importer_arquivo_esta_vazio">文件是空的。</string>
-    <string name="importer_este_arquivo_backup_cryo">这是 Cryo 的备份文件。请到“设置 › 从备份恢复”中使用。</string>
+    <string name="importer_este_arquivo_backup_bambua">这是 Bambua 的备份文件。请到“设置 › 从备份恢复”中使用。</string>
     <string name="importer_esse_arquivo_nao_parece">这个文件不像流水。请使用银行的 OFX、CSV、表格（XLSX）或 PDF。</string>
     <string name="importer_tabela_html_excel_muitos">HTML 表格（很多银行的“Excel”文件）</string>
     <string name="importer_esse_arquivo_pagina_internet">这个文件是没有账单表格的网页。请向银行申请 OFX、CSV 或 XLSX 流水。</string>
@@ -1172,19 +1172,19 @@
     <string name="importer_formato_ofx">OFX 格式\u0020</string>
     <string name="importer_extrato_conta">账户流水</string>
     <string name="importer_extrato_cartao_credito">信用卡账单</string>
-    <string name="importer_para_ler_pdf_cryo">读取 PDF 需要更新版本的 Android。请向银行申请 OFX、CSV 或表格（XLSX）流水。</string>
+    <string name="importer_para_ler_pdf_bambua">读取 PDF 需要更新版本的 Android。请向银行申请 OFX、CSV 或表格（XLSX）流水。</string>
     <string name="importer_nao_consegui_abrir_esse">无法打开这个 PDF，它可能已损坏。</string>
-    <string name="importer_essa_planilha_nao_tem">这个表格中没有 Cryo 能读取的工作表。</string>
+    <string name="importer_essa_planilha_nao_tem">这个表格中没有 Bambua 能读取的工作表。</string>
     <string name="importer_essa_planilha_grande_demais">这个表格太大了。</string>
     <string name="importer_nao_consegui_abrir_essa">无法打开这个表格，它可能已损坏。</string>
     <string name="importer_json_precisa_ter_lista">JSON 中需要有 \"transactions\" 列表。</string>
-    <string name="importer_esse_json_nao_esta">这个 JSON 不是 Cryo 的测试格式。</string>
+    <string name="importer_esse_json_nao_esta">这个 JSON 不是 Bambua 的测试格式。</string>
     <string name="importer_esse_json_versao_mais">这个 JSON 来自更新版本的测试格式。</string>
     <string name="importer_nao_objeto">不是对象</string>
     <string name="importer_date_ausente_ou_invalida">\"date\" 缺失或无效（请用 2026-10-01）</string>
     <string name="importer_amount_ausente_ou_invalido">\"amount\" 缺失或无效</string>
-    <string name="importer_formato_testes_cryo_versao">Cryo 测试格式，版本 %1$s</string>
-    <string name="importer_nao_encontrei_texto_nesse">这个 PDF 里没有找到文字。如果是照片或扫描件，Cryo 无法读取。</string>
+    <string name="importer_formato_testes_bambua_versao">Bambua 测试格式，版本 %1$s</string>
+    <string name="importer_nao_encontrei_texto_nesse">这个 PDF 里没有找到文字。如果是照片或扫描件，Bambua 无法读取。</string>
     <string name="importer_sem_data_antes">前面没有日期</string>
     <string name="importer_valor_sem_descricao">金额没有说明</string>
     <string name="importer_linha_saldo_total_ou">余额、合计或汇总行</string>
@@ -1211,7 +1211,7 @@
     <string name="importer_mes_antes_do_dia">日期中月份在前（美式）</string>
     <string name="importer_centavos_depois_virgula">小数点是逗号</string>
     <string name="importer_parcela">\u0020- 分期 %1$s/%2$s</string>
-    <string name="report_relatorio_leitura_extrato_cryo">流水读取报告 · Cryo %1$s</string>
+    <string name="report_relatorio_leitura_extrato_bambua">流水读取报告 · Bambua %1$s</string>
     <string name="report_gerado">生成于 %1$s</string>
     <string name="report_versao_anonima_letras_viram">匿名版：文字变成 x，数字变成 9；每行的格式不变。</string>
     <string name="report_arquivo_2">文件：%1$s（%2$s）</string>
@@ -1361,27 +1361,27 @@
     <string name="tx_pagamento_divida_registrado">已记录 %1$s 的还款</string>
     <string name="tx_ex_almoco">例如：午饭</string>
     <string name="backup_invalid_file">这不是有效的备份文件。</string>
-    <string name="backup_not_cryo_file">这不是 Cryo 的备份文件。</string>
-    <string name="backup_newer_version">这个备份来自更新版本的 Cryo，请更新 App。</string>
-    <string name="backup_err_foreign">这个文件夹里已有一个不是这台手机生成的 cryo-backup.json。为了不删除它，Cryo 没有替换。请点“更换文件夹”并选同一个文件夹来决定怎么做，或选择“保留多个副本”。</string>
-    <string name="backup_err_changed_folder">上次备份后，文件夹中的 cryo-backup.json 被其他手机或 App 修改过。为了不删除那个版本，Cryo 没有替换。请点“更换文件夹”并选同一个文件夹来决定怎么做。</string>
-    <string name="backup_err_changed_cloud">上次备份后，云盘中的文件被其他手机或 App 修改过。为了不删除那个版本，Cryo 没有替换。请点“更换”并选同一个文件来决定怎么做。</string>
+    <string name="backup_not_bambua_file">这不是 Bambua 的备份文件。</string>
+    <string name="backup_newer_version">这个备份来自更新版本的 Bambua，请更新 App。</string>
+    <string name="backup_err_foreign">这个文件夹里已有一个不是这台手机生成的 bambua-backup.json。为了不删除它，Bambua 没有替换。请点“更换文件夹”并选同一个文件夹来决定怎么做，或选择“保留多个副本”。</string>
+    <string name="backup_err_changed_folder">上次备份后，文件夹中的 bambua-backup.json 被其他手机或 App 修改过。为了不删除那个版本，Bambua 没有替换。请点“更换文件夹”并选同一个文件夹来决定怎么做。</string>
+    <string name="backup_err_changed_cloud">上次备份后，云盘中的文件被其他手机或 App 修改过。为了不删除那个版本，Bambua 没有替换。请点“更换”并选同一个文件来决定怎么做。</string>
     <string name="backup_err_cant_read">无法读取这个位置已有的备份（云盘可能没有联网）。</string>
-    <string name="backup_err_newer">这个位置已有的备份来自更新版本的 Cryo。</string>
+    <string name="backup_err_newer">这个位置已有的备份来自更新版本的 Bambua。</string>
     <string name="backup_err_damaged">这个位置已有的备份似乎已损坏。</string>
-    <string name="backup_err_not_cryo">这个文件夹里已有一个不是 Cryo 备份的 cryo-backup.json。</string>
+    <string name="backup_err_not_bambua">这个文件夹里已有一个不是 Bambua 备份的 bambua-backup.json。</string>
     <string name="backup_err_cant_open_folder">无法打开这个文件夹。请重试或换一个。</string>
-    <string name="backup_err_read_data">现在无法读取 Cryo 的数据，稍后会再试。</string>
+    <string name="backup_err_read_data">现在无法读取 Bambua 的数据，稍后会再试。</string>
     <string name="backup_err_cant_check">写入前无法打开文件进行检查（云盘可能没有联网，或文件已被删除）。稍后会再试；如果一直这样，请重新选择位置。</string>
 
-    <!-- Como usar o Cryo (RF-TOUR) -->
-    <string name="tour_how_to_use">如何使用 Cryo</string>
+    <!-- Como usar o Bambua (RF-TOUR) -->
+    <string name="tour_how_to_use">如何使用 Bambua</string>
     <string name="tour_how_to_use_sub">用动画快速了解这个应用</string>
     <string name="tour_1_title">几秒钟就能记账</string>
-    <string name="tour_1_text">随口写或说。Cryo 能听懂金额、分类和账户，你只需确认并保存。</string>
+    <string name="tour_1_text">随口写或说。Bambua 能听懂金额、分类和账户，你只需确认并保存。</string>
     <string name="tour_1_phrase">午饭 %1$s</string>
     <string name="tour_1_lunch">午饭</string>
-    <string name="tour_2_text">按你现在的花钱速度，Cryo 会显示月底大概还剩多少，以及每天还能花多少。</string>
+    <string name="tour_2_text">按你现在的花钱速度，Bambua 会显示月底大概还剩多少，以及每天还能花多少。</string>
     <string name="tour_2_per_day">每天可以花 %1$s</string>
     <string name="tour_3_title">信用卡和分期，心里有数</string>
     <string name="tour_3_text">分期买的东西？每一期都会记到正确的账单里，还能看到剩余额度。</string>
