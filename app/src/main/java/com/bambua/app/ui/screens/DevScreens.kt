@@ -34,6 +34,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.text.selection.SelectionContainer
@@ -53,6 +54,8 @@ import androidx.compose.material3.AssistChip
 import androidx.compose.material3.Icon
 import androidx.compose.material3.LinearProgressIndicator
 import androidx.compose.material3.ListItem
+import androidx.compose.material3.Button
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Scaffold
@@ -69,6 +72,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
@@ -88,6 +92,7 @@ import com.bambua.app.ui.components.ConfirmDialog
 import com.bambua.app.ui.components.BambuaCard
 import com.bambua.app.ui.components.BambuaTopBar
 import com.bambua.app.ui.components.EmptyState
+import com.bambua.app.ui.components.rememberLedger
 import com.bambua.app.ui.components.LocalContainer
 import com.bambua.app.ui.components.Segmented
 import com.bambua.app.ui.components.SwitchRow
@@ -275,6 +280,104 @@ fun DevScreen() {
                     } else {
                         c.message(Res.s(R.string.dev_modo_desenvolvedor_desligado))
                         nav.back()
+                    }
+                }
+            }
+
+            item { DevHeader(Res.s(R.string.dev_saldito_estados)) }
+            item {
+                BambuaCard {
+                    Column(Modifier.padding(12.dp)) {
+                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            listOf(
+                                com.bambua.app.domain.SalditoState.PODEROSO to R.drawable.ic_saldito_poderoso,
+                                com.bambua.app.domain.SalditoState.SALUDABLE to R.drawable.ic_saldito_saludable,
+                                com.bambua.app.domain.SalditoState.NEUTRAL to R.drawable.ic_saldito_neutral,
+                            ).forEach { (state, drawable) ->
+                                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                    Image(painterResource(drawable), null, Modifier.size(56.dp))
+                                    Text(Res.s(com.bambua.app.ui.screens.estadoName(state)), style = MaterialTheme.typography.labelSmall)
+                                }
+                            }
+                        }
+                        Spacer(Modifier.height(8.dp))
+                        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
+                            listOf(
+                                com.bambua.app.domain.SalditoState.PREOCUPADO to R.drawable.ic_saldito_preocupado,
+                                com.bambua.app.domain.SalditoState.CRISIS to R.drawable.ic_saldito_crisis,
+                                com.bambua.app.domain.SalditoState.CELEBRA to R.drawable.ic_saldito_celebra,
+                            ).forEach { (state, drawable) ->
+                                Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                                    Image(painterResource(drawable), null, Modifier.size(56.dp))
+                                    Text(Res.s(com.bambua.app.ui.screens.estadoName(state)), style = MaterialTheme.typography.labelSmall)
+                                }
+                            }
+                        }
+                        Spacer(Modifier.height(8.dp))
+                        val settings = com.bambua.app.ui.components.LocalSettings.current
+                        val l = rememberLedger()
+                        val state = remember(l) {
+                            if (l == null) com.bambua.app.domain.SalditoState.NEUTRAL
+                            else com.bambua.app.domain.SalditoStateEvaluator.evaluate(
+                                com.bambua.app.domain.SalditoMetricsCalculator.of(l.s, l.today), settings.salditoThresholds,
+                            )
+                        }
+                        Text(Res.s(R.string.dev_estado_actual, Res.s(com.bambua.app.ui.screens.estadoName(state))), style = MaterialTheme.typography.labelLarge)
+                        if (state == com.bambua.app.domain.SalditoState.CRISIS) {
+                            Text(
+                                Res.s(R.string.saldito_dignidad),
+                                style = MaterialTheme.typography.bodySmall,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            )
+                        }
+                    }
+                }
+            }
+            item { DevHeader(Res.s(R.string.dev_umbrales)) }
+            item {
+                val settings = com.bambua.app.ui.components.LocalSettings.current
+                BambuaCard {
+                    var th by remember { mutableStateOf(settings.salditoThresholds) }
+                    Column(Modifier.padding(12.dp), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+                        listOf(
+                            R.string.dev_th_runway_strong to th.runwayStrongMonths,
+                            R.string.dev_th_runway_healthy to th.runwayHealthyMonths,
+                            R.string.dev_th_runway_crisis to th.runwayCrisisMonths,
+                            R.string.dev_th_neutral_band to th.neutralBandShare,
+                        ).forEach { (key, v) ->
+                            OutlinedTextField(
+                                value = v.toString(),
+                                onValueChange = { s -> s.toDoubleOrNull()?.let { d -> th = when (key) {
+                                    R.string.dev_th_runway_strong -> th.copy(runwayStrongMonths = d)
+                                    R.string.dev_th_runway_healthy -> th.copy(runwayHealthyMonths = d)
+                                    R.string.dev_th_runway_crisis -> th.copy(runwayCrisisMonths = d)
+                                    else -> th.copy(neutralBandShare = d)
+                                } } },
+                                label = { Text(Res.s(key)) },
+                                singleLine = true,
+                                modifier = Modifier.fillMaxWidth(),
+                            )
+                        }
+                        listOf(
+                            R.string.dev_th_strong_weeks to th.strongPositiveWeeks,
+                            R.string.dev_th_crisis_weeks to th.crisisNegativeWeeks,
+                            R.string.dev_th_debt_months to th.crisisDebtMonths,
+                        ).forEach { (key, v) ->
+                            OutlinedTextField(
+                                value = v.toString(),
+                                onValueChange = { s -> s.toIntOrNull()?.let { i -> th = when (key) {
+                                    R.string.dev_th_strong_weeks -> th.copy(strongPositiveWeeks = i)
+                                    R.string.dev_th_crisis_weeks -> th.copy(crisisNegativeWeeks = i)
+                                    else -> th.copy(crisisDebtMonths = i)
+                                } } },
+                                label = { Text(Res.s(key)) },
+                                singleLine = true,
+                                modifier = Modifier.fillMaxWidth(),
+                            )
+                        }
+                        Button(onClick = { c.launch { c.settings.setSalditoThresholds(th) } }) {
+                            Text(Res.s(R.string.dev_th_guardar))
+                        }
                     }
                 }
             }

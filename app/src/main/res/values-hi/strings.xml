@@ -1441,4 +1441,33 @@
     <!-- T5.5: estados vacíos ilustrados con Saldito (Coach, v0.2). -->
     <string name="txs_empty_line">अभी कोई आंदोलन नहीं — पहला दर्ज करें</string>
     <string name="wallet_empty_line">अभी कोई खाता नहीं — पहला खाता बनाएं</string>
+
+    <!-- v0.3: fondos seleccionables, estados de Saldito y dignidad (spec §1/§3). -->
+    <string name="settings_fondo">पृष्ठभूमि</string>
+    <string name="theme_oceano">महासागर</string>
+    <string name="theme_selva">जंगल</string>
+    <string name="theme_orquidea">ऑर्किड</string>
+    <string name="theme_carbon">कार्बन</string>
+    <string name="estado_poderoso">मजबूत</string>
+    <string name="estado_saludable">स्वस्थ</string>
+    <string name="estado_neutral">सामान्य</string>
+    <string name="estado_preocupado">चिंतित</string>
+    <string name="estado_crisis">संकट में</string>
+    <string name="estado_celebra">जश्न मना रहे हैं</string>
+    <string name="saldito_abrir">Saldito खोलें</string>
+    <string name="saldito_dignidad">हम इसे कदम दर कदम ठीक करेंगे।</string>
+    <string name="saldito_estado">इस सप्ताह की स्थिति: %1$s</string>
+
+    <!-- v0.3: textos del modo avanzado (estados y umbrales de Saldito). -->
+    <string name="dev_saldito_estados">Saldito — अवस्थाएँ (v0.3)</string>
+    <string name="dev_estado_actual">वर्तमान अवस्था: %1$s</string>
+    <string name="dev_umbrales">Saldito सीमाएँ (v0.3 — संपादनयोग्य)</string>
+    <string name="dev_th_runway_strong">मजबूत रनवे (महीने)</string>
+    <string name="dev_th_runway_healthy">स्वस्थ रनवे (महीने)</string>
+    <string name="dev_th_runway_crisis">संकट रनवे (महीने)</string>
+    <string name="dev_th_neutral_band">तटस्थ बैंड (0-1)</string>
+    <string name="dev_th_strong_weeks">सकारात्मक सप्ताह (मजबूत)</string>
+    <string name="dev_th_crisis_weeks">नकारात्मक सप्ताह (संकट)</string>
+    <string name="dev_th_debt_months">बढ़ता ऋण महीने (संकट)</string>
+    <string name="dev_th_guardar">सीमाएँ सहेजें</string>
 </resources>

@@ -1,0 +1,1 @@
+Bambua 0.3: 4 fundos selecionáveis (Oceano, Selva, Orquídea, Carvão) com gradiente na faixa, superfícies tingidas e transição suave de 300 ms. O Saldito agora mostra sua saúde financeira: 6 estados com avatar no cabeçalho, umbrales editáveis e, na crise, 'vamos ordenar isso passo a passo'. Celebra 24 h ao cumprir uma meta.

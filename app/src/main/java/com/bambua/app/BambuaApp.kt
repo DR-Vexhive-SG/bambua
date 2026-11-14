@@ -40,7 +40,10 @@ data class UiMessage(val text: String, val actionLabel: String? = null, val acti
 class AppContainer(val app: Application, val sandbox: Boolean = false, lockFrom: SettingsRepository? = null) {
     val appScope = CoroutineScope(SupervisorJob() + Dispatchers.Default)
     val db = BambuaDatabase.build(app, if (sandbox) BambuaDatabase.TEST_NAME else BambuaDatabase.NAME)
-    val repo = FinanceRepository(db, appScope)
+    val repo = FinanceRepository(db, appScope) {
+        // CELEBRA: 24h de celebración al cruzar el target de una meta (spec v0.3 §3).
+        settings.setCelebrateUntil(System.currentTimeMillis() + 24 * 60 * 60 * 1000)
+    }
     val settings = SettingsRepository(app, sandbox)
     /** O bloqueio vale para o app inteiro, inclusive no modo de teste. */
     val lockSettings: SettingsRepository = lockFrom ?: settings

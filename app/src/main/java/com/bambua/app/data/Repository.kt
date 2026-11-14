@@ -3,6 +3,7 @@
 package com.bambua.app.data
 
 import com.bambua.app.R
+import com.bambua.app.domain.SalditoThresholds
 import com.bambua.app.domain.Res
 import android.content.Context
 import androidx.datastore.preferences.core.booleanPreferencesKey
@@ -48,6 +49,10 @@ import kotlin.math.roundToInt
 
 enum class ThemeMode { SYSTEM, LIGHT, DARK }
 
+/** Fondos seleccionables (spec v0.3 §1): Océano default, Selva, Orquídea, Carbón. */
+enum class BackgroundTheme { OCEANO, SELVA, ORQUIDEA, CARBON }
+
+
 data class AppSettings(
     val themeMode: ThemeMode = ThemeMode.SYSTEM,
     val dynamicColor: Boolean = false,
@@ -61,6 +66,12 @@ data class AppSettings(
     val consentAccepted: Boolean = false,
     /** Tono colombiano: los textos pueden usar jerga cercana (default: cercano-neutral). */
     val colombianTone: Boolean = false,
+    /** Fondo seleccionable (v0.3): Océano default. */
+    val backgroundTheme: BackgroundTheme = BackgroundTheme.OCEANO,
+    /** Celebración activa hasta este timestamp (meta cumplida, 24h). */
+    val celebrateUntil: Long = 0,
+    /** Umbrales de Saldito (v0.3, editables). */
+    val salditoThresholds: SalditoThresholds = SalditoThresholds(),
 )
 
 private val Context.dataStore by preferencesDataStore("settings")
@@ -82,6 +93,15 @@ class SettingsRepository(context: Context, sandbox: Boolean = false) {
         val reminders = booleanPreferencesKey("reminders")
         val consent = booleanPreferencesKey("consent")
         val tone = booleanPreferencesKey("colombian_tone")
+        val background = stringPreferencesKey("background")
+        val celebrate = longPreferencesKey("celebrate_until")
+        val thRunwayStrong = stringPreferencesKey("th_runway_strong")
+        val thRunwayHealthy = stringPreferencesKey("th_runway_healthy")
+        val thRunwayCrisis = stringPreferencesKey("th_runway_crisis")
+        val thNeutralBand = stringPreferencesKey("th_neutral_band")
+        val thStrongWeeks = stringPreferencesKey("th_strong_weeks")
+        val thCrisisWeeks = stringPreferencesKey("th_crisis_weeks")
+        val thDebtMonths = stringPreferencesKey("th_debt_months")
     }
 
     val flow: Flow<AppSettings> = store.data.map { p ->
@@ -96,6 +116,17 @@ class SettingsRepository(context: Context, sandbox: Boolean = false) {
             remindersEnabled = p[K.reminders] ?: true,
             consentAccepted = p[K.consent] ?: false,
             colombianTone = p[K.tone] ?: false,
+            backgroundTheme = p[K.background]?.let { runCatching { BackgroundTheme.valueOf(it) }.getOrNull() } ?: BackgroundTheme.OCEANO,
+            celebrateUntil = p[K.celebrate] ?: 0L,
+            salditoThresholds = SalditoThresholds(
+                runwayStrongMonths = p[K.thRunwayStrong]?.toDoubleOrNull() ?: 3.0,
+                runwayHealthyMonths = p[K.thRunwayHealthy]?.toDoubleOrNull() ?: 1.0,
+                runwayCrisisMonths = p[K.thRunwayCrisis]?.toDoubleOrNull() ?: 0.5,
+                neutralBandShare = p[K.thNeutralBand]?.toDoubleOrNull() ?: 0.05,
+                strongPositiveWeeks = p[K.thStrongWeeks]?.toIntOrNull() ?: 4,
+                crisisNegativeWeeks = p[K.thCrisisWeeks]?.toIntOrNull() ?: 3,
+                crisisDebtMonths = p[K.thDebtMonths]?.toIntOrNull() ?: 2,
+            ),
         )
     }
 
@@ -107,6 +138,17 @@ class SettingsRepository(context: Context, sandbox: Boolean = false) {
     suspend fun setOnboardingDone(v: Boolean) = store.edit { it[K.onboarding] = v }
     suspend fun setConsent(v: Boolean) = store.edit { it[K.consent] = v }
     suspend fun setColombianTone(v: Boolean) = store.edit { it[K.tone] = v }
+    suspend fun setBackground(t: BackgroundTheme) = store.edit { it[K.background] = t.name }
+    suspend fun setCelebrateUntil(ts: Long) = store.edit { it[K.celebrate] = ts }
+    suspend fun setSalditoThresholds(s: SalditoThresholds) = store.edit {
+        it[K.thRunwayStrong] = s.runwayStrongMonths.toString()
+        it[K.thRunwayHealthy] = s.runwayHealthyMonths.toString()
+        it[K.thRunwayCrisis] = s.runwayCrisisMonths.toString()
+        it[K.thNeutralBand] = s.neutralBandShare.toString()
+        it[K.thStrongWeeks] = s.strongPositiveWeeks.toString()
+        it[K.thCrisisWeeks] = s.crisisNegativeWeeks.toString()
+        it[K.thDebtMonths] = s.crisisDebtMonths.toString()
+    }
     suspend fun setName(v: String) = store.edit { it[K.name] = v.trim() }
     suspend fun setReminders(v: Boolean) = store.edit { it[K.reminders] = v }
     /** Volta todos os ajustes ao padrão. */
@@ -130,7 +172,7 @@ private data class Part2(
 /** O que foi gravado numa ação, para o botão "Desfazer". */
 data class Undo(val txs: List<Tx> = emptyList(), val adjustments: List<DebtAdjustment> = emptyList())
 
-class FinanceRepository(private val db: BambuaDatabase, scope: CoroutineScope) {
+class FinanceRepository(private val db: BambuaDatabase, scope: CoroutineScope, private val onGoalAchieved: (suspend () -> Unit)? = null) {
     private val dao = db.dao()
 
     /** Fotografia sempre atualizada de todos os dados (qualquer gravação dispara uma nova). */
@@ -156,7 +198,21 @@ class FinanceRepository(private val db: BambuaDatabase, scope: CoroutineScope) {
 
     /* ---------------------------- lançamentos ---------------------------- */
 
-    suspend fun saveTx(tx: Tx): Long = dao.putTx(tx)
+    /** CELEBRA (v0.3): al cruzar el target de una meta, dispara la celebración de 24h. */
+    suspend fun saveTx(tx: Tx): Long {
+        val isGoalIn = tx.type == TxType.GOAL_IN && tx.goalId != null
+        val savedBefore = if (isGoalIn) savedOf(tx.goalId!!) else 0L
+        val id = dao.putTx(tx)
+        if (isGoalIn) {
+            val saved = savedOf(tx.goalId!!)
+            val target = loadOnce().goals.find { it.id == tx.goalId }?.target
+            if (target != null && savedBefore < target && saved >= target) onGoalAchieved?.invoke()
+        }
+        return id
+    }
+
+    private suspend fun savedOf(goalId: Long): Long =
+        loadOnce().txs.filter { it.goalId == goalId && it.type == TxType.GOAL_IN }.sumOf { it.amount }
 
     /** Compra no cartão, opcionalmente parcelada: cria uma movimentação por parcela, cada uma na sua fatura. */
     suspend fun saveCardPurchase(base: Tx, card: CreditCard, installments: Int): Tx {

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Saldito estado Saldito poderoso (art/estados/saldito-01-poderoso.svg del Coach, v0.3). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp" android:height="200dp"
+    android:viewportWidth="200" android:viewportHeight="200">
+    <path android:pathData="M100,38.0 a62,62 0 1,0 0.01,0 z" android:strokeColor="#FF0A2540" android:strokeWidth="6" />
+    <path android:pathData="M134,116.0 a18,18 0 1,0 0.01,0 z" android:strokeColor="#FF0A2540" android:strokeWidth="7" />
+    <path android:fillColor="#FF1FA36B" android:pathData="M100,38.0 a62,62 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FF0A2540" android:pathData="M80,70.0 a10,10 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FF0A2540" android:pathData="M120,110.0 a10,10 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FFFFFFFF" android:pathData="M83,79.6 a3.4,3.4 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FFFFFFFF" android:pathData="M123,119.6 a3.4,3.4 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FFF2A900" android:pathData="M134,125.0 a9,9 0 1,0 0.01,0 z" />
+    <path android:pathData="M140,146 L172,174" android:strokeColor="#FF0A2540" android:strokeWidth="8" android:strokeLineCap="round" />
+    <path android:fillColor="#FFF2A900" android:pathData="M70 42 C 82 26, 96 30, 100 40 C 104 30, 118 26, 130 42 C 118 50, 84 52, 70 42 Z" />
+    <path android:fillColor="#FFF2A900" android:pathData="M100 40 C 100 24, 108 14, 122 12 C 122 26, 112 38, 100 40 Z" />
+    <path android:fillColor="#FF0A2540" android:pathData="M100 118 L112 126 L108 144 L100 150 L92 144 L88 126 Z" />
+    <path android:pathData="M76 110 Q100 138 124 110" android:strokeColor="#FF0A2540" android:strokeWidth="6" android:strokeLineCap="round" />
+    <path android:pathData="M94 134 L99 140 L107 128" android:strokeColor="#FFF2A900" android:strokeWidth="4" android:strokeLineCap="round" />
+    <path android:pathData="M130 139 L133 142 L139 135" android:strokeColor="#FF1FA36B" android:strokeWidth="3" android:strokeLineCap="round" />
+    <path android:pathData="M30 60 l5 0 m-2.5 -2.5 l0 5" android:strokeColor="#FFF2A900" android:strokeWidth="2" android:strokeLineCap="round" />
+    <path android:pathData="M170 70 l6 0 m-3 -3 l0 6" android:strokeColor="#FF6A4C93" android:strokeWidth="2" android:strokeLineCap="round" />
+    <path android:pathData="M44 150 l5 0 m-2.5 -2.5 l0 5" android:strokeColor="#FF6A4C93" android:strokeWidth="2" android:strokeLineCap="round" />
+</vector>

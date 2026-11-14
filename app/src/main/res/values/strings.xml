@@ -1566,4 +1566,33 @@
     <!-- T5.5: estados vacíos ilustrados con Saldito (Coach, v0.2). -->
     <string name="txs_empty_line">Ainda não há lançamentos — registre o primeiro</string>
     <string name="wallet_empty_line">Ainda não há contas — crie a primeira</string>
+
+    <!-- v0.3: fondos seleccionables, estados de Saldito y dignidad (spec §1/§3). -->
+    <string name="settings_fondo">Fundo</string>
+    <string name="theme_oceano">Oceano</string>
+    <string name="theme_selva">Selva</string>
+    <string name="theme_orquidea">Orquídea</string>
+    <string name="theme_carbon">Carvão</string>
+    <string name="estado_poderoso">Poderoso</string>
+    <string name="estado_saludable">Saudável</string>
+    <string name="estado_neutral">Neutro</string>
+    <string name="estado_preocupado">Preocupado</string>
+    <string name="estado_crisis">Em crise</string>
+    <string name="estado_celebra">Comemorando</string>
+    <string name="saldito_abrir">Abrir Saldito</string>
+    <string name="saldito_dignidad">Vamos colocar tudo no lugar, passo a passo.</string>
+    <string name="saldito_estado">Estado desta semana: %1$s</string>
+
+    <!-- v0.3: textos del modo avanzado (estados y umbrales de Saldito). -->
+    <string name="dev_saldito_estados">Estados de Saldito (v0.3)</string>
+    <string name="dev_estado_actual">Estado atual: %1$s</string>
+    <string name="dev_umbrales">Limites de Saldito (v0.3 — editáveis)</string>
+    <string name="dev_th_runway_strong">Runway poderoso (meses)</string>
+    <string name="dev_th_runway_healthy">Runway saudável (meses)</string>
+    <string name="dev_th_runway_crisis">Runway crise (meses)</string>
+    <string name="dev_th_neutral_band">Banda neutra (0-1)</string>
+    <string name="dev_th_strong_weeks">Semanas positivas (poderoso)</string>
+    <string name="dev_th_crisis_weeks">Semanas negativas (crise)</string>
+    <string name="dev_th_debt_months">Meses de dívida crescendo (crise)</string>
+    <string name="dev_th_guardar">Salvar limites</string>
 </resources>

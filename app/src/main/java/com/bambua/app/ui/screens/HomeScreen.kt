@@ -2,6 +2,7 @@
 // Copyright (C) 2026 Hanry Franco
 package com.bambua.app.ui.screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
@@ -42,13 +43,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.pluralStringResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.bambua.app.R
 import com.bambua.app.data.db.CategoryKind
@@ -63,6 +67,10 @@ import com.bambua.app.domain.Num
 import com.bambua.app.domain.Res
 import com.bambua.app.domain.forecast
 import com.bambua.app.domain.insights
+import com.bambua.app.domain.SalditoMetricsCalculator
+import com.bambua.app.domain.SalditoState
+import com.bambua.app.domain.SalditoStateEvaluator
+import com.bambua.app.domain.SalditoThresholds
 import com.bambua.app.ui.LocalNav
 import com.bambua.app.ui.Routes
 import com.bambua.app.ui.components.BambuaSection
@@ -108,7 +116,12 @@ fun HomeScreen() {
                     name = settings.userName, subtitle = Dates.longDate(l.today), hideValues = hide,
                     onToggleHide = { c.launch { c.settings.setHideValues(!hide) } },
                     onSettings = { nav.go(Routes.SETTINGS) },
-                ) { BalanceBlock(l, onClick = { nav.go(Routes.WALLET) }) }
+                ) {
+                    Row(verticalAlignment = Alignment.Bottom) {
+                        BalanceBlock(l, onClick = { nav.go(Routes.WALLET) }, modifier = Modifier.weight(1f))
+                        SalditoHeaderAvatar(l, settings.salditoThresholds, settings.celebrateUntil, onClick = { nav.go(Routes.SALDITO) })
+                    }
+                }
             }
 
             item { Shortcuts(homeShortcuts(l, nav), Modifier.padding(top = 16.dp)) }
@@ -340,9 +353,9 @@ fun invoiceStatusText(st: InvoiceStatus, due: java.time.LocalDate, l: Ledger): S
 
 /** RF-INI-02/03: o saldo em contas, o maior número da tela, e o patrimônio logo abaixo (toque leva à Carteira). */
 @Composable
-private fun BalanceBlock(l: Ledger, onClick: () -> Unit) {
+private fun BalanceBlock(l: Ledger, onClick: () -> Unit, modifier: Modifier = Modifier) {
     // Sem recorte de canto: ele cortava a primeira letra de "Saldo" e "Patrimônio", que ficam rente à margem.
-    Column(Modifier.fillMaxWidth().clickable(onClick = onClick)) {
+    Column(modifier.clickable(onClick = onClick)) {
         Text(stringResource(R.string.home_balance), style = MaterialTheme.typography.labelLarge, color = LocalContentColor.current.copy(alpha = 0.85f))
         MoneyText(l.totalBalance, style = MaterialTheme.typography.displaySmall, color = LocalContentColor.current, animate = true)
         Spacer(Modifier.height(4.dp))
@@ -440,4 +453,34 @@ private fun buildAlerts(l: Ledger, hide: Boolean): List<AlertItem> {
         )
     }
     return out
+}
+
+/** T4 (v0.3): avatar de Saldito en la franja del Pulso — el estado semanal evaluado, clickeable. */
+@Composable
+private fun SalditoHeaderAvatar(l: Ledger, thresholds: com.bambua.app.domain.SalditoThresholds, celebrateUntil: Long, onClick: () -> Unit) {
+    val state = remember(l, celebrateUntil) {
+        if (celebrateUntil > System.currentTimeMillis()) SalditoState.CELEBRA
+        else SalditoStateEvaluator.evaluate(
+            SalditoMetricsCalculator.of(l.s, l.today), thresholds,
+        )
+    }
+    val drawable = when (state) {
+        SalditoState.PODEROSO -> R.drawable.ic_saldito_poderoso
+        SalditoState.SALUDABLE -> R.drawable.ic_saldito_saludable
+        SalditoState.NEUTRAL -> R.drawable.ic_saldito_neutral
+        SalditoState.PREOCUPADO -> R.drawable.ic_saldito_preocupado
+        SalditoState.CRISIS -> R.drawable.ic_saldito_crisis
+        SalditoState.CELEBRA -> R.drawable.ic_saldito_celebra
+    }
+    Column(
+        horizontalAlignment = Alignment.End,
+        modifier = Modifier.clip(MaterialTheme.shapes.medium).clickable(onClick = onClick).padding(4.dp),
+    ) {
+        val abrir = stringResource(R.string.saldito_abrir)
+        Image(
+            painterResource(drawable), abrir,
+            Modifier.size(44.dp).semantics { contentDescription = abrir },
+        )
+        Text(stringResource(R.string.saldito_titulo), style = MaterialTheme.typography.labelSmall)
+    }
 }

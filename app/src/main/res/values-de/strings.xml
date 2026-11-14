@@ -1441,4 +1441,33 @@
     <!-- T5.5: estados vacíos ilustrados con Saldito (Coach, v0.2). -->
     <string name="txs_empty_line">Noch keine Buchungen — erfasse die erste</string>
     <string name="wallet_empty_line">Noch keine Konten — lege das erste an</string>
+
+    <!-- v0.3: fondos seleccionables, estados de Saldito y dignidad (spec §1/§3). -->
+    <string name="settings_fondo">Hintergrund</string>
+    <string name="theme_oceano">Ozean</string>
+    <string name="theme_selva">Dschungel</string>
+    <string name="theme_orquidea">Orchidee</string>
+    <string name="theme_carbon">Kohle</string>
+    <string name="estado_poderoso">Stark</string>
+    <string name="estado_saludable">Gesund</string>
+    <string name="estado_neutral">Neutral</string>
+    <string name="estado_preocupado">Besorgt</string>
+    <string name="estado_crisis">In der Krise</string>
+    <string name="estado_celebra">Feiert</string>
+    <string name="saldito_abrir">Saldito öffnen</string>
+    <string name="saldito_dignidad">Wir bringen das Schritt für Schritt in Ordnung.</string>
+    <string name="saldito_estado">Status dieser Woche: %1$s</string>
+
+    <!-- v0.3: textos del modo avanzado (estados y umbrales de Saldito). -->
+    <string name="dev_saldito_estados">Saldito — Zustände (v0.3)</string>
+    <string name="dev_estado_actual">Aktueller Zustand: %1$s</string>
+    <string name="dev_umbrales">Saldito-Schwellen (v0.3 — bearbeitbar)</string>
+    <string name="dev_th_runway_strong">Starker Runway (Monate)</string>
+    <string name="dev_th_runway_healthy">Gesunder Runway (Monate)</string>
+    <string name="dev_th_runway_crisis">Krisen-Runway (Monate)</string>
+    <string name="dev_th_neutral_band">Neutrale Bande (0-1)</string>
+    <string name="dev_th_strong_weeks">Positive Wochen (stark)</string>
+    <string name="dev_th_crisis_weeks">Negative Wochen (Krise)</string>
+    <string name="dev_th_debt_months">Monate wachsende Schulden (Krise)</string>
+    <string name="dev_th_guardar">Schwellen speichern</string>
 </resources>

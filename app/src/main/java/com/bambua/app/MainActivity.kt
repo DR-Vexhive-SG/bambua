@@ -102,7 +102,7 @@ class MainActivity : FragmentActivity() {
             }
             val s = settings
             val mode = s?.themeMode ?: ThemeMode.SYSTEM
-            BambuaTheme(mode = mode, dynamicColor = s?.dynamicColor ?: true) {
+            BambuaTheme(mode = mode, dynamicColor = s?.dynamicColor ?: false, background = s?.backgroundTheme ?: com.bambua.app.data.BackgroundTheme.OCEANO) {
                 val dark = isDarkTheme(mode)
                 DisposableEffect(dark) {
                     enableEdgeToEdge(

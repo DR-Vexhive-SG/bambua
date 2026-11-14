@@ -14,6 +14,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
@@ -21,8 +22,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.bambua.app.R
 import com.bambua.app.domain.Res
+import com.bambua.app.domain.SalditoState
+import com.bambua.app.domain.SalditoStateEvaluator
+import com.bambua.app.domain.SalditoMetricsCalculator
 import com.bambua.app.ui.LocalNav
 import com.bambua.app.ui.components.BambuaTopBar
+import com.bambua.app.ui.components.rememberLedger
 
 /**
  * Saldito v0.1: placeholder de UI (la puerta). Cero lógica, cero red: el motor de IA vive en un
@@ -31,6 +36,7 @@ import com.bambua.app.ui.components.BambuaTopBar
 @Composable
 fun SalditoScreen() {
     val nav = LocalNav.current
+    val c = com.bambua.app.ui.components.LocalContainer.current
     Scaffold(
         topBar = { BambuaTopBar(Res.s(R.string.saldito_titulo), onBack = nav::back) },
         contentWindowInsets = WindowInsets(0, 0, 0, 0),
@@ -52,6 +58,26 @@ fun SalditoScreen() {
                 color = MaterialTheme.colorScheme.secondary,
                 modifier = Modifier.padding(top = 8.dp),
             )
+            // v0.3: el estado semanal evaluado (el placeholder siempre dibuja el personaje normal).
+            val settings = com.bambua.app.ui.components.LocalSettings.current
+            val l = rememberLedger()
+            val state = remember(l, settings.celebrateUntil) {
+                when {
+                    settings.celebrateUntil > System.currentTimeMillis() -> SalditoState.CELEBRA
+                    l != null -> SalditoStateEvaluator.evaluate(
+                        SalditoMetricsCalculator.of(l.s, l.today), settings.salditoThresholds,
+                    )
+                    else -> SalditoState.NEUTRAL
+                }
+            }
+            if (state != SalditoState.CELEBRA) {
+                Text(
+                    Res.s(R.string.saldito_estado, Res.s(estadoName(state))),
+                    style = MaterialTheme.typography.labelLarge,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(top = 8.dp),
+                )
+            }
             Text(
                 Res.s(R.string.saldito_concepto),
                 style = MaterialTheme.typography.bodyMedium,
@@ -61,4 +87,14 @@ fun SalditoScreen() {
             )
         }
     }
+}
+
+/** Nombre localizado del estado para la UI. */
+fun estadoName(s: com.bambua.app.domain.SalditoState): Int = when (s) {
+    com.bambua.app.domain.SalditoState.PODEROSO -> R.string.estado_poderoso
+    com.bambua.app.domain.SalditoState.SALUDABLE -> R.string.estado_saludable
+    SalditoState.NEUTRAL -> R.string.estado_neutral
+    com.bambua.app.domain.SalditoState.PREOCUPADO -> R.string.estado_preocupado
+    com.bambua.app.domain.SalditoState.CRISIS -> R.string.estado_crisis
+    SalditoState.CELEBRA -> R.string.estado_celebra
 }

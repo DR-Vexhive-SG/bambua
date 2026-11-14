@@ -2,6 +2,14 @@
 
 [English](../CHANGELOG.md) · **Português**
 
+## 0.3.0 — temas, profundidad y Saldito estatal
+
+Fase de temas v0.3 (PROMPT-TEMAS): fondos seleccionables, colores con profundidad y el personaje ligado a la salud financiera.
+
+- **4 fondos** (Océano, Selva, Orquídea, Carbón) con gradiente en la franja, superficies tintadas, divisores con alpha y transición de 300 ms.
+- **Saldito estatal**: 6 estados (poderoso, saludable, neutral, preocupado, crisis, celebra) con umbrales editables y avatar en la franja del Pulso. En crisis: "vamos a ordenar esto paso a paso".
+- **Celebra** se dispara al cumplir una meta (24 h).
+
 ## 0.2.0 — marca, moeda COP e acessibilidade
 
 Fase de marca v0.2 (PROMPT-MARCA): identidade visual definitiva do Coach, formato de moeda da Colômbia e localização.

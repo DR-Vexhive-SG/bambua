@@ -1,38 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Saldito estado celebra: MISMO cuerpo del Coach; la lupa se cambia por un badge
-     blanco con check verde-texto #157A52 y destellos ámbar/orquídea alrededor. -->
+<!-- Saldito estado Saldito celebración (art/estados/saldito-06-celebra.svg del Coach, v0.3). -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="200dp" android:height="200dp"
     android:viewportWidth="200" android:viewportHeight="200">
-    <!-- destellos -->
-    <path android:pathData="M28,48 L40,38" android:strokeColor="#FFF2A900"
-        android:strokeWidth="5" android:strokeLineCap="round" />
-    <path android:pathData="M160,42 L172,34" android:strokeColor="#FF6A4C93"
-        android:strokeWidth="5" android:strokeLineCap="round" />
-    <path android:pathData="M24,140 L36,134" android:strokeColor="#FF6A4C93"
-        android:strokeWidth="5" android:strokeLineCap="round" />
-    <path android:pathData="M176,120 L188,116" android:strokeColor="#FFF2A900"
-        android:strokeWidth="5" android:strokeLineCap="round" />
-    <!-- cuerpo -->
-    <path android:fillColor="#FF1FA36B"
-        android:pathData="M100,46 a56,56 0 1,0 0.01,0 z" />
-    <path android:pathData="M100,46 a56,56 0 1,0 0.01,0 z"
-        android:strokeColor="#FF0A2540" android:strokeWidth="5" />
-    <!-- ojos -->
-    <path android:fillColor="#FF0A2540" android:pathData="M82,81 a9,9 0 1,0 0.01,0 z" />
-    <path android:fillColor="#FF0A2540" android:pathData="M118,81 a9,9 0 1,0 0.01,0 z" />
-    <path android:fillColor="#FFFFFFFF" android:pathData="M85,84 a3,3 0 1,0 0.01,0 z" />
-    <path android:fillColor="#FFFFFFFF" android:pathData="M121,84 a3,3 0 1,0 0.01,0 z" />
-    <!-- sonrisa -->
-    <path android:pathData="M84,114 Q100,128 116,114" android:strokeColor="#FF0A2540"
-        android:strokeWidth="5" android:strokeLineCap="round" />
-    <!-- badge check (reemplaza la lupa) -->
-    <path android:fillColor="#FFFFFFFF" android:pathData="M150,138 a22,22 0 1,0 0.01,0 z" />
-    <path android:pathData="M150,138 a22,22 0 1,0 0.01,0 z"
-        android:strokeColor="#FF0A2540" android:strokeWidth="5" />
-    <path android:pathData="M141,161 L150,170 L164,152" android:strokeColor="#FF157A52"
-        android:strokeWidth="6" android:strokeLineCap="round" android:strokeLineJoin="round" />
-    <!-- hoja -->
-    <path android:fillColor="#FFF2A900"
-        android:pathData="M100,42 C114,28 132,30 136,40 C126,50 108,50 100,42 Z" />
+    <path android:pathData="M100,42.0 a58,58 0 1,0 0.01,0 z" android:strokeColor="#FF0A2540" android:strokeWidth="5" />
+    <path android:fillColor="#FF1FA36B" android:pathData="M100,42.0 a58,58 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FF6A4C93" android:pathData="M46,42.0 a4,4 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FFF2A900" android:pathData="M100 46 C 114 32, 132 34, 136 44 C 126 54, 108 54, 100 46 Z" />
+    <path android:fillColor="#FF0A2540" android:pathData="M78 110 Q100 140 122 110 Z" />
+    <path android:pathData="M74 88 Q82 78 90 88" android:strokeColor="#FF0A2540" android:strokeWidth="5" android:strokeLineCap="round" />
+    <path android:pathData="M110 88 Q118 78 126 88" android:strokeColor="#FF0A2540" android:strokeWidth="5" android:strokeLineCap="round" />
+    <path android:pathData="M88 136 L98 148 L114 124" android:strokeColor="#FFF2A900" android:strokeWidth="6" android:strokeLineCap="round" android:strokeLineJoin="round" />
+    <path android:pathData="M38.0,58.2 L36.0,63.8" android:strokeColor="#FFF2A900" android:strokeWidth="6" android:strokeLineCap="round" />
+    <path android:pathData="M161.7,54.3 L164.3,59.7" android:strokeColor="#FF6A4C93" android:strokeWidth="6" android:strokeLineCap="round" />
+    <path android:pathData="M154.9,152.7 L151.1,157.3" android:strokeColor="#FFF2A900" android:strokeWidth="6" android:strokeLineCap="round" />
 </vector>

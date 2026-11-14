@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Saldito estado Saldito saludable (art/estados/saldito-02-saludable.svg del Coach, v0.3). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp" android:height="200dp"
+    android:viewportWidth="200" android:viewportHeight="200">
+    <path android:pathData="M100,44.0 a56,56 0 1,0 0.01,0 z" android:strokeColor="#FF0A2540" android:strokeWidth="5" />
+    <path android:pathData="M136,120.0 a16,16 0 1,0 0.01,0 z" android:strokeColor="#FF0A2540" android:strokeWidth="6" />
+    <path android:fillColor="#FF1FA36B" android:pathData="M100,44.0 a56,56 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FF0A2540" android:pathData="M82,73.0 a9,9 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FF0A2540" android:pathData="M118,109.0 a9,9 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FFFFFFFF" android:pathData="M85,82.0 a3,3 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FFFFFFFF" android:pathData="M121,118.0 a3,3 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FFF2A900" android:pathData="M136,128.0 a8,8 0 1,0 0.01,0 z" />
+    <path android:pathData="M100,120 L100,142" android:strokeColor="#FFF2A900" android:strokeWidth="4.5" android:strokeLineCap="round" />
+    <path android:pathData="M142,142 L170,168" android:strokeColor="#FF0A2540" android:strokeWidth="7" android:strokeLineCap="round" />
+    <path android:fillColor="#FF1FA36B" android:pathData="M100 46 C 114 32, 132 34, 136 44 C 126 54, 108 54, 100 46 Z" />
+    <path android:pathData="M84 114 Q100 128 116 114" android:strokeColor="#FF0A2540" android:strokeWidth="5" android:strokeLineCap="round" />
+    <path android:pathData="M92 132 L100 118 L108 132" android:strokeColor="#FFF2A900" android:strokeWidth="4.5" android:strokeLineCap="round" android:strokeLineJoin="round" />
+    <path android:pathData="M26 64 l5 0 m-2.5 -2.5 l0 5" android:strokeColor="#FFF2A900" android:strokeWidth="2" android:strokeLineCap="round" />
+</vector>

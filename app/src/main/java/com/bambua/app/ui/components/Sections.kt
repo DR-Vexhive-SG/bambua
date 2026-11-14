@@ -6,7 +6,10 @@ import android.app.Activity
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.animateDpAsState
 import androidx.compose.animation.core.tween
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.foundation.background
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -34,10 +37,12 @@ import androidx.compose.material.icons.rounded.VisibilityOff
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
+import androidx.compose.material3.LocalContentColor
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
@@ -61,6 +66,7 @@ import androidx.core.view.WindowCompat
 import com.bambua.app.R
 import com.bambua.app.domain.Res
 import com.bambua.app.ui.theme.BambuaTheme
+import com.bambua.app.ui.theme.palette
 
 /*
  * Design system 2.0 (PRD, seção 9.1): o app organizado como um app de banco, com as cores do Bambua.
@@ -233,8 +239,11 @@ fun HomeHeader(
     content: @Composable ColumnScope.() -> Unit,
 ) {
     val dark = BambuaTheme.colors.isDark
-    val container = if (dark) MaterialTheme.colorScheme.primaryContainer else MaterialTheme.colorScheme.primary
-    val onContainer = if (dark) MaterialTheme.colorScheme.onPrimaryContainer else MaterialTheme.colorScheme.onPrimary
+    // §2.1: gradiente vertical de 2 stops por tema (spec v0.3 §1) — profundidad, no azul plano.
+    val palette = LocalSettings.current.backgroundTheme.palette
+    val container = if (dark) palette.headerTopDark else palette.headerTop
+    val containerBottom = if (dark) palette.headerBottomDark else palette.headerBottom
+    val onContainer = Color.White
     val view = LocalView.current
     DisposableEffect(dark) {
         val window = (view.context as? Activity)?.window
@@ -242,7 +251,8 @@ fun HomeHeader(
         bars?.isAppearanceLightStatusBars = false
         onDispose { bars?.isAppearanceLightStatusBars = !dark }
     }
-    Surface(color = container, contentColor = onContainer, modifier = Modifier.fillMaxWidth()) {
+    Box(Modifier.fillMaxWidth().background(Brush.verticalGradient(listOf(container, containerBottom)))) {
+        CompositionLocalProvider(LocalContentColor provides onContainer) {
         Column(Modifier.statusBarsPadding().padding(start = SectionPadding, end = 8.dp, top = 8.dp, bottom = 24.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Box(
@@ -273,6 +283,7 @@ fun HomeHeader(
             }
             Spacer(Modifier.height(20.dp))
             Column(Modifier.padding(end = 12.dp), content = content)
+        }
         }
     }
 }

@@ -13,9 +13,11 @@ import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.biometric.BiometricManager
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.aspectRatio
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -69,6 +71,8 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.layout.ContentScale
@@ -89,6 +93,7 @@ import com.bambua.app.data.db.Category
 import com.bambua.app.data.db.CategoryKind
 import com.bambua.app.notify.Reminders
 import com.bambua.app.domain.Money
+import com.bambua.app.ui.theme.palette
 import com.bambua.app.ui.LocalNav
 import com.bambua.app.ui.Routes
 import com.bambua.app.ui.components.AccountChips
@@ -180,6 +185,29 @@ fun SettingsScreen() {
 
             item { Header(Res.s(R.string.settings_aparencia)) }
             item {
+                FieldLabel(Res.s(R.string.settings_fondo))
+                com.bambua.app.data.BackgroundTheme.entries.forEach { bg ->
+                    Row(
+                        Modifier.fillMaxWidth().clip(MaterialTheme.shapes.medium).clickable {
+                            c.launch { c.settings.setBackground(bg) }
+                        }.padding(vertical = 6.dp, horizontal = 4.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        // §T1: preview de color, no solo el nombre.
+                        Box(
+                            Modifier.size(56.dp, 32.dp).clip(MaterialTheme.shapes.small)
+                                .background(androidx.compose.ui.graphics.Brush.verticalGradient(listOf(bg.palette.headerTop, bg.palette.headerBottom))),
+                        ) { }
+                        Spacer(Modifier.width(12.dp))
+                        Text(
+                            Res.s(themeName(bg)),
+                            style = MaterialTheme.typography.bodyLarge,
+                            modifier = Modifier.weight(1f),
+                        )
+                        androidx.compose.material3.RadioButton(selected = s.backgroundTheme == bg, onClick = { c.launch { c.settings.setBackground(bg) } })
+                    }
+                }
+                Spacer(Modifier.height(8.dp))
                 FieldLabel(Res.s(R.string.settings_tema))
                 Segmented(
                     listOf(ThemeMode.SYSTEM to Res.s(R.string.settings_automatico), ThemeMode.LIGHT to Res.s(R.string.settings_claro), ThemeMode.DARK to Res.s(R.string.settings_escuro)), s.themeMode,
@@ -392,6 +420,14 @@ fun SettingsScreen() {
 }
 
 const val SOURCE_URL = "https://github.com/DR-Vexhive-SG/bambua"
+
+/** Nombre localizado del fondo (keys theme_*). */
+fun themeName(bg: com.bambua.app.data.BackgroundTheme): Int = when (bg) {
+    com.bambua.app.data.BackgroundTheme.OCEANO -> R.string.theme_oceano
+    com.bambua.app.data.BackgroundTheme.SELVA -> R.string.theme_selva
+    com.bambua.app.data.BackgroundTheme.ORQUIDEA -> R.string.theme_orquidea
+    com.bambua.app.data.BackgroundTheme.CARBON -> R.string.theme_carbon
+}
 
 /** Toques na versão do app para ligar o modo desenvolvedor. */
 private const val DEV_TAPS = 7

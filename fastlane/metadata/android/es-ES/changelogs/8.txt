@@ -1,0 +1,1 @@
+Bambua 0.3: 4 fondos seleccionables (Océano, Selva, Orquídea, Carbón) con gradiente en la franja, superficies tintadas y transición suave de 300 ms. Saldito ahora muestra tu salud financiera: 6 estados con avatar en el encabezado, umbrales editables y, en crisis, "vamos a ordenar esto paso a paso". Celebra 24 h al cumplir una meta.

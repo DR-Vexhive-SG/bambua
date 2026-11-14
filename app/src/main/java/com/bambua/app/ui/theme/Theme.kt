@@ -3,6 +3,8 @@
 package com.bambua.app.ui.theme
 
 import android.os.Build
+import androidx.compose.animation.animateColorAsState
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.ColorScheme
@@ -21,6 +23,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.bambua.app.data.BackgroundTheme
 import com.bambua.app.data.ThemeMode
 
 /* Paleta própria Bambua: primário azul profundo #0A2540, secundário verde bambú #1FA36B,
@@ -138,16 +141,149 @@ fun isDarkTheme(mode: ThemeMode): Boolean = when (mode) {
     ThemeMode.DARK -> true
 }
 
+/* ============================ Fondos seleccionables (v0.3, spec §1) ============================ */
+
+/** Paleta de fondo por tema (tabla §1 de art/temas-fondos.md — valores al carácter). */
+data class ThemePalette(
+    val headerTop: Color, val headerBottom: Color,
+    val headerTopDark: Color, val headerBottomDark: Color,
+    val surface: Color, val surfaceDark: Color,
+    val cardSurface: Color,
+    val accent: Color,
+)
+
+val BackgroundTheme.palette: ThemePalette get() = when (this) {
+    BackgroundTheme.OCEANO -> ThemePalette(
+        Color(0xFF0A2540), Color(0xFF123A5C), Color(0xFF050B14), Color(0xFF0C1B2E),
+        Color(0xFFF7F9FC), Color(0xFF0F1419), Color(0xFFEDF2F7), Color(0xFF1FA36B),
+    )
+    BackgroundTheme.SELVA -> ThemePalette(
+        Color(0xFF0D2B1F), Color(0xFF14532D), Color(0xFF06140D), Color(0xFF0B2417),
+        Color(0xFFF6FAF7), Color(0xFF0F1419), Color(0xFFEAF3EE), Color(0xFF1FA36B),
+    )
+    BackgroundTheme.ORQUIDEA -> ThemePalette(
+        Color(0xFF2B2140), Color(0xFF3B2E5C), Color(0xFF140F20), Color(0xFF1D1730),
+        Color(0xFFFAF8FD), Color(0xFF0F1419), Color(0xFFF1EEF8), Color(0xFF6A4C93),
+    )
+    BackgroundTheme.CARBON -> ThemePalette(
+        Color(0xFF111418), Color(0xFF1F242B), Color(0xFF0A0C0E), Color(0xFF14181E),
+        Color(0xFFF5F5F6), Color(0xFF0F1419), Color(0xFFEFF0F1), Color(0xFFF2A900),
+    )
+}
+
+/** Esquema claro por tema (spec §1 y §2: acento como acción, superficies tintadas, divisores con alpha 8%). */
+private fun lightSchemeFor(p: ThemePalette, accentSecondary: Color): ColorScheme = lightColorScheme(
+    primary = p.accent, onPrimary = Color(0xFFFFFFFF),
+    primaryContainer = when (p.accent) {
+        Color(0xFF1FA36B) -> Color(0xFFBDF2D6)
+        Color(0xFF6A4C93) -> Color(0xFFEADDFF)
+        else -> Color(0xFFFFE3B3)
+    }, onPrimaryContainer = when (p.accent) {
+        Color(0xFF6A4C93) -> Color(0xFF221444)
+        Color(0xFFF2A900) -> Color(0xFF3A2500)
+        else -> Color(0xFF00391E)
+    },
+    secondary = accentSecondary, onSecondary = Color(0xFFFFFFFF),
+    secondaryContainer = when (accentSecondary) {
+        Color(0xFF0D2B1F) -> Color(0xFFDCEEE4)
+        Color(0xFF14532D) -> Color(0xFFDCEEE4)
+        else -> Color(0xFFCFDFF2)
+    }, onSecondaryContainer = Color(0xFF071E26),
+    tertiary = Color(0xFF6A4C93), onTertiary = Color(0xFFFFFFFF),
+    tertiaryContainer = Color(0xFFEADDFF), onTertiaryContainer = Color(0xFF221444),
+    error = Color(0xFFB3261E), onError = Color(0xFFFFFFFF),
+    errorContainer = Color(0xFFFFDAD6), onErrorContainer = Color(0xFF410002),
+    background = p.surface, onBackground = Color(0xFF191C20),
+    surface = p.surface, onSurface = Color(0xFF191C20),
+    surfaceVariant = p.cardSurface, onSurfaceVariant = Color(0xFF43474E),
+    outline = Color(0xFF74777F),
+    // §2.4: divisores teñidos con el primario al 8%.
+    outlineVariant = p.accent.copy(alpha = 0.08f),
+    inverseSurface = Color(0xFF2D3035), inverseOnSurface = Color(0xFFEFF0F4), inversePrimary = Color(0xFFA6C8F5),
+    surfaceContainerLowest = Color(0xFFFFFFFF),
+    surfaceContainerLow = p.cardSurface.copy(alpha = 0.55f).compositeOver(Color(0xFFFFFFFF)),
+    surfaceContainer = p.cardSurface,
+    surfaceContainerHigh = p.cardSurface.copy(alpha = 0.85f).compositeOver(Color(0xFFFFFFFF)),
+    surfaceContainerHighest = p.cardSurface.copy(alpha = 1.1f).compositeOver(Color(0xFFFFFFFF)),
+)
+
+private fun Color.compositeOver(other: Color): Color {
+    val a = alpha
+    return Color(
+        red = red * a + other.red * (1 - a),
+        green = green * a + other.green * (1 - a),
+        blue = blue * a + other.blue * (1 - a),
+        alpha = 1f,
+    )
+}
+
+/** Esquema oscuro espejado por tema (spec §1: franjas #050B14-based, superficies #0F1419-family). */
+private fun darkSchemeFor(p: ThemePalette, accentSecondary: Color): ColorScheme = darkColorScheme(
+    primary = when (p.accent) {
+        Color(0xFF1FA36B) -> Color(0xFF7FD9A9)
+        Color(0xFF6A4C93) -> Color(0xFFD3BBFF)
+        else -> Color(0xFFFFC94D)
+    }, onPrimary = Color(0xFF0A2540),
+    primaryContainer = when (p.accent) {
+        Color(0xFF1FA36B) -> Color(0xFF00522B)
+        Color(0xFF6A4C93) -> Color(0xFF503574)
+        else -> Color(0xFF6E4A00)
+    }, onPrimaryContainer = Color(0xFFBDF2D6),
+    secondary = if (accentSecondary == Color(0xFF0A2540)) Color(0xFFA6C8F5) else Color(0xFFBDF2D6),
+    onSecondary = Color(0xFF0A2540),
+    secondaryContainer = Color(0xFF27476E), onSecondaryContainer = Color(0xFFCFDFF2),
+    tertiary = Color(0xFFD3BBFF), onTertiary = Color(0xFF381E5C),
+    tertiaryContainer = Color(0xFF503574), onTertiaryContainer = Color(0xFFEADDFF),
+    error = Color(0xFFFFB4AB), onError = Color(0xFF690005),
+    errorContainer = Color(0xFF93000A), onErrorContainer = Color(0xFFFFDAD6),
+    background = p.surfaceDark, onBackground = Color(0xFFE1E2E6),
+    surface = p.surfaceDark, onSurface = Color(0xFFE1E2E6),
+    surfaceVariant = Color(0xFF43474E), onSurfaceVariant = Color(0xFFC4C7CF),
+    outline = Color(0xFF8E9199), outlineVariant = Color(0xFF43474E),
+    inverseSurface = Color(0xFFE1E2E6), inverseOnSurface = Color(0xFF2D3035), inversePrimary = Color(0xFF0A2540),
+    surfaceContainerLowest = Color(0xFF0C0E11), surfaceContainerLow = Color(0xFF191C20),
+    surfaceContainer = Color(0xFF1D2024), surfaceContainerHigh = Color(0xFF282A2F),
+    surfaceContainerHighest = Color(0xFF33353A),
+)
+
+/** §2.6: transición de 300ms al cambiar de fondo — los colores se funden, no saltan. */
 @Composable
-fun BambuaTheme(mode: ThemeMode = ThemeMode.SYSTEM, dynamicColor: Boolean = true, content: @Composable () -> Unit) {
+private fun animatedScheme(target: ColorScheme): ColorScheme {
+    @Composable fun a(c: Color) = animateColorAsState(c, tween(300), label = "theme").value
+    return target.copy(
+        primary = a(target.primary), onPrimary = a(target.onPrimary),
+        primaryContainer = a(target.primaryContainer), onPrimaryContainer = a(target.onPrimaryContainer),
+        secondary = a(target.secondary), onSecondary = a(target.onSecondary),
+        secondaryContainer = a(target.secondaryContainer), onSecondaryContainer = a(target.onSecondaryContainer),
+        tertiary = a(target.tertiary), onTertiary = a(target.onTertiary),
+        tertiaryContainer = a(target.tertiaryContainer), onTertiaryContainer = a(target.onTertiaryContainer),
+        background = a(target.background), onBackground = a(target.onBackground),
+        surface = a(target.surface), onSurface = a(target.onSurface),
+        surfaceVariant = a(target.surfaceVariant), onSurfaceVariant = a(target.onSurfaceVariant),
+        outline = a(target.outline), outlineVariant = a(target.outlineVariant),
+        error = a(target.error), onError = a(target.onError),
+        errorContainer = a(target.errorContainer), onErrorContainer = a(target.onErrorContainer),
+        inverseSurface = a(target.inverseSurface), inverseOnSurface = a(target.inverseOnSurface),
+        inversePrimary = a(target.inversePrimary),
+    )
+}
+
+@Composable
+fun BambuaTheme(mode: ThemeMode = ThemeMode.SYSTEM, dynamicColor: Boolean = false, background: BackgroundTheme = BackgroundTheme.OCEANO, content: @Composable () -> Unit) {
     val dark = isDarkTheme(mode)
     val ctx = LocalContext.current
+    val palette = background.palette
+    val accentSecondary = when (background) {
+        BackgroundTheme.OCEANO, BackgroundTheme.ORQUIDEA, BackgroundTheme.CARBON -> Color(0xFF0A2540)
+        BackgroundTheme.SELVA -> Color(0xFF0D2B1F)
+    }
     val scheme: ColorScheme = when {
         dynamicColor && Build.VERSION.SDK_INT >= 31 -> if (dark) dynamicDarkColorScheme(ctx) else dynamicLightColorScheme(ctx)
-        dark -> DarkColors
-        else -> LightColors
+        dark -> darkSchemeFor(palette, accentSecondary)
+        else -> lightSchemeFor(palette, accentSecondary)
     }
+    val finalScheme = if (dynamicColor && Build.VERSION.SDK_INT >= 31) scheme else animatedScheme(scheme)
     CompositionLocalProvider(LocalBambuaColors provides if (dark) DarkExt else LightExt) {
-        MaterialTheme(colorScheme = scheme, typography = BambuaTypography, shapes = BambuaShapes, content = content)
+        MaterialTheme(colorScheme = finalScheme, typography = BambuaTypography, shapes = BambuaShapes, content = content)
     }
 }

@@ -2,6 +2,14 @@
 
 **English** · [Português](docs/CHANGELOG.pt-BR.md)
 
+## 0.3.0 — themes, depth and stateful Saldito
+
+Themes phase v0.3 (PROMPT-TEMAS): selectable backgrounds, colors with depth and the character tied to financial health.
+
+- **4 backgrounds** (Ocean, Jungle, Orchid, Charcoal) with header gradient, tinted surfaces, alpha dividers and a 300 ms transition.
+- **Stateful Saldito**: 6 states (powerful, healthy, neutral, worried, crisis, celebrates) with editable thresholds and an avatar in the Pulse header. In crisis: "we'll sort this out step by step".
+- **Celebrates** fires when a goal is reached (24 h).
+
 ## 0.2.0 — brand, COP currency and accessibility
 
 Brand phase v0.2 (PROMPT-MARCA): the Coach's final visual identity, Colombian currency format and remaining localization.

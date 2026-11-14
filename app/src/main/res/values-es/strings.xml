@@ -1441,4 +1441,33 @@
     <!-- T5.5: estados vacíos ilustrados con Saldito (Coach, v0.2). -->
     <string name="txs_empty_line">Aún no hay movimientos — registra el primero</string>
     <string name="wallet_empty_line">Aún no hay cuentas — crea la primera</string>
+
+    <!-- v0.3: fondos seleccionables, estados de Saldito y dignidad (spec §1/§3). -->
+    <string name="settings_fondo">Fondo</string>
+    <string name="theme_oceano">Océano</string>
+    <string name="theme_selva">Selva</string>
+    <string name="theme_orquidea">Orquídea</string>
+    <string name="theme_carbon">Carbón</string>
+    <string name="estado_poderoso">Poderoso</string>
+    <string name="estado_saludable">Saludable</string>
+    <string name="estado_neutral">Neutral</string>
+    <string name="estado_preocupado">Preocupado</string>
+    <string name="estado_crisis">En crisis</string>
+    <string name="estado_celebra">Celebrando</string>
+    <string name="saldito_abrir">Abrir Saldito</string>
+    <string name="saldito_dignidad">Vamos a ordenar esto paso a paso.</string>
+    <string name="saldito_estado">Estado de esta semana: %1$s</string>
+
+    <!-- v0.3: textos del modo avanzado (estados y umbrales de Saldito). -->
+    <string name="dev_saldito_estados">Saldito — estados (v0.3)</string>
+    <string name="dev_estado_actual">Estado actual: %1$s</string>
+    <string name="dev_umbrales">Umbrales de Saldito (v0.3 — editables)</string>
+    <string name="dev_th_runway_strong">Runway poderoso (meses)</string>
+    <string name="dev_th_runway_healthy">Runway saludable (meses)</string>
+    <string name="dev_th_runway_crisis">Runway crisis (meses)</string>
+    <string name="dev_th_neutral_band">Banda neutral (0-1)</string>
+    <string name="dev_th_strong_weeks">Semanas positivas (poderoso)</string>
+    <string name="dev_th_crisis_weeks">Semanas negativas (crisis)</string>
+    <string name="dev_th_debt_months">Meses deuda creciendo (crisis)</string>
+    <string name="dev_th_guardar">Guardar umbrales</string>
 </resources>

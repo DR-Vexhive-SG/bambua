@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Saldito estado Saldito preocupado (art/estados/saldito-04-preocupado.svg del Coach, v0.3). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp" android:height="200dp"
+    android:viewportWidth="200" android:viewportHeight="200">
+    <path android:pathData="M100,44.0 a56,56 0 1,0 0.01,0 z" android:strokeColor="#FF0A2540" android:strokeWidth="5" />
+    <path android:pathData="M138,123.0 a15,15 0 1,0 0.01,0 z" android:strokeColor="#FF0A2540" android:strokeWidth="6" />
+    <path android:fillColor="#FF3E8E63" android:pathData="M100,44.0 a56,56 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FF0A2540" android:pathData="M82,74.0 a8,8 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FF0A2540" android:pathData="M118,110.0 a8,8 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FFFFFFFF" android:pathData="M84,81.4 a2.6,2.6 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FFFFFFFF" android:pathData="M120,117.4 a2.6,2.6 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FFF2A900" android:pathData="M138,131.0 a7,7 0 1,0 0.01,0 z" />
+    <path android:pathData="M146,146 L170,168" android:strokeColor="#FF0A2540" android:strokeWidth="7" android:strokeLineCap="round" />
+    <path android:fillColor="#FFF2A900" android:pathData="M100 48 C 108 62, 122 68, 134 64 C 130 78, 110 80, 100 70 Z" />
+    <path android:fillColor="#FFF2A900" android:pathData="M158 44 C 164 54, 164 60, 158 62 C 152 60, 152 54, 158 44 Z" />
+    <path android:pathData="M72 76 L92 82" android:strokeColor="#FF0A2540" android:strokeWidth="4" android:strokeLineCap="round" />
+    <path android:pathData="M128 76 L108 82" android:strokeColor="#FF0A2540" android:strokeWidth="4" android:strokeLineCap="round" />
+    <path android:pathData="M86 122 Q100 112 114 122" android:strokeColor="#FF0A2540" android:strokeWidth="5" android:strokeLineCap="round" />
+</vector>

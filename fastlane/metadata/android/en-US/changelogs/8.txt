@@ -1,0 +1,1 @@
+Bambua 0.3: 4 selectable backgrounds (Ocean, Jungle, Orchid, Charcoal) with header gradient, tinted surfaces and a smooth 300 ms transition. Saldito now shows your financial health: 6 states with an avatar in the header, editable thresholds and, in crisis, "we'll sort this out step by step". Celebrates for 24 h when a goal is reached.

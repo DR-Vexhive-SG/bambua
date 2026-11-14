@@ -1415,4 +1415,33 @@
     <!-- T5.5: estados vacíos ilustrados con Saldito (Coach, v0.2). -->
     <string name="txs_empty_line">まだ記録がありません — 最初の1件を登録しましょう</string>
     <string name="wallet_empty_line">まだ口座がありません — 最初の口座を作りましょう</string>
+
+    <!-- v0.3: fondos seleccionables, estados de Saldito y dignidad (spec §1/§3). -->
+    <string name="settings_fondo">背景</string>
+    <string name="theme_oceano">オーシャン</string>
+    <string name="theme_selva">ジャングル</string>
+    <string name="theme_orquidea">オーキッド</string>
+    <string name="theme_carbon">カーボン</string>
+    <string name="estado_poderoso">絶好調</string>
+    <string name="estado_saludable">健康</string>
+    <string name="estado_neutral">普通</string>
+    <string name="estado_preocupado">心配</string>
+    <string name="estado_crisis">危機</string>
+    <string name="estado_celebra">祝っています</string>
+    <string name="saldito_abrir">Salditoを開く</string>
+    <string name="saldito_dignidad">一歩一歩、ちゃんと整理していきましょう。</string>
+    <string name="saldito_estado">今週の状態：%1$s</string>
+
+    <!-- v0.3: textos del modo avanzado (estados y umbrales de Saldito). -->
+    <string name="dev_saldito_estados">Saldito — 状態（v0.3）</string>
+    <string name="dev_estado_actual">現在の状態：%1$s</string>
+    <string name="dev_umbrales">Salditoのしきい値（v0.3 — 調整可能）</string>
+    <string name="dev_th_runway_strong">絶好調のランウェイ（月）</string>
+    <string name="dev_th_runway_healthy">健康のランウェイ（月）</string>
+    <string name="dev_th_runway_crisis">危機のランウェイ（月）</string>
+    <string name="dev_th_neutral_band">中立バンド（0-1）</string>
+    <string name="dev_th_strong_weeks">プラス週（絶好調）</string>
+    <string name="dev_th_crisis_weeks">マイナス週（危機）</string>
+    <string name="dev_th_debt_months">借金増加月（危機）</string>
+    <string name="dev_th_guardar">しきい値を保存</string>
 </resources>

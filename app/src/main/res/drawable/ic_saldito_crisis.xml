@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Saldito estado Saldito en crisis (art/estados/saldito-05-crisis.svg del Coach, v0.3). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp" android:height="200dp"
+    android:viewportWidth="200" android:viewportHeight="200">
+    <path android:pathData="M100,44.0 a56,56 0 1,0 0.01,0 z" android:strokeColor="#FF0A2540" android:strokeWidth="5" />
+    <path android:pathData="M140,126.0 a14,14 0 1,0 0.01,0 z" android:strokeColor="#FF0A2540" android:strokeWidth="6" />
+    <path android:fillColor="#FF2E6B4F" android:pathData="M100,44.0 a56,56 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FF0A2540" android:pathData="M82,74.0 a8,8 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FF0A2540" android:pathData="M118,110.0 a8,8 0 1,0 0.01,0 z" />
+    <path android:pathData="M150,160 L170,176" android:strokeColor="#FF0A2540" android:strokeWidth="7" android:strokeLineCap="round" />
+    <path android:fillColor="#FF8A6D1F" android:pathData="M100 50 C 102 66, 108 78, 118 86 C 104 88, 96 74, 96 60 Z" />
+    <path android:pathData="M72 82 L90 86" android:strokeColor="#FF0A2540" android:strokeWidth="4" android:strokeLineCap="round" />
+    <path android:pathData="M128 82 L110 86" android:strokeColor="#FF0A2540" android:strokeWidth="4" android:strokeLineCap="round" />
+    <path android:pathData="M88 126 Q100 116 112 126" android:strokeColor="#FF0A2540" android:strokeWidth="5" android:strokeLineCap="round" />
+    <!-- lluvia fina (líneas sin atributos en el SVG: stroke 1px) -->
+    <path android:pathData="M56,40 L52,50" android:strokeColor="#FF0A2540" android:strokeWidth="2" android:strokeLineCap="round" />
+    <path android:pathData="M100,30 L96,40" android:strokeColor="#FF0A2540" android:strokeWidth="2" android:strokeLineCap="round" />
+    <path android:pathData="M144,38 L140,48" android:strokeColor="#FF0A2540" android:strokeWidth="2" android:strokeLineCap="round" />
+</vector>
