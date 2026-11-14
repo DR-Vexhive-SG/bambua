@@ -2,6 +2,15 @@
 
 [English](../CHANGELOG.md) · **Português**
 
+## 0.2.0 — marca, moeda COP e acessibilidade
+
+Fase de marca v0.2 (PROMPT-MARCA): identidade visual definitiva do Coach, formato de moeda da Colômbia e localização.
+
+- **Ícone adaptativo** (cañas com a mais alta em âmbar + folha orquídea), **wordmark** no Sobre e o **personagem Saldito** na tela placeholder, no onboarding e nos estados vazios (normal, alerta, celebra).
+- **Formato COP**: "$1.000" (sem centavos, símbolo antes, ponto de milhar); as outras moedas seguem o ISO (USD com centavos).
+- **Acessibilidade**: verde de texto #157A52 (AA 5,3) para textos pequenos; o #1FA36B fica para íconos/rellos; erro em vermelho M3; âmbar só em alertas.
+- **Repositório público**: github.com/DR-Vexhive-SG/bambua (SOURCE_URL, NOTICE e Sobre).
+
 ## 0.1.0 — fork Bambua Base
 
 Fork do Cryo 1.4 renomeado para **Bambua** (marca, pacote `com.bambua.app`, tema visual e ícone próprios). Novo neste fork:

@@ -1,0 +1,1 @@
+Bambua 0.2: identità visiva del Coach (icona adattiva, wordmark e il personaggio Saldito in 3 stati). Formato del peso colombiano: $1.000 senza centesimi; le altre valute seguono lo standard ISO. Verde testo accessibile, errore in rosso M3 e stati vuoti illustrati. Repository pubblico in Informazioni.

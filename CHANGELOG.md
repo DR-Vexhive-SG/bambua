@@ -2,6 +2,15 @@
 
 **English** · [Português](docs/CHANGELOG.pt-BR.md)
 
+## 0.2.0 — brand, COP currency and accessibility
+
+Brand phase v0.2 (PROMPT-MARCA): the Coach's final visual identity, Colombian currency format and remaining localization.
+
+- **Adaptive icon** (canes with the tallest one in amber + orchid leaf), **wordmark** in About and the **Saldito character** on the placeholder screen, onboarding and empty states (normal, alert, celebrates).
+- **COP format**: "$1.000" (no cents, symbol first, thousands dot); other currencies follow ISO (USD keeps cents).
+- **Accessibility**: green text #157A52 (AA 5.3) for small text; #1FA36B stays for icons/fills; error in M3 red; amber only for warnings.
+- **Public repo**: github.com/DR-Vexhive-SG/bambua (SOURCE_URL, NOTICE and About).
+
 ## 0.1.0 — fork Bambua Base
 
 Fork de Cryo 1.4 renombrado a **Bambua** (marca, package `com.bambua.app`, tema visual e ícono

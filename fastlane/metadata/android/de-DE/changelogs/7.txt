@@ -1,0 +1,1 @@
+Bambua 0.2: visuelle Identität des Coach (adaptives Icon, Wordmark und der Charakter Saldito in 3 Zuständen). Format des kolumbianischen Pesos: $1.000 ohne Centavos; andere Währungen folgen ISO. Zugängliches Grün für Text, Fehler in M3-Rot und illustrierte Leerzustände. Öffentliches Repo unter Info.

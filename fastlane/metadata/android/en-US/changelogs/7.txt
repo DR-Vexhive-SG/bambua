@@ -1,0 +1,1 @@
+Bambua 0.2: the Coach's visual identity (adaptive icon, wordmark and the Saldito character in 3 states). Colombian peso format: $1.000 without cents; other currencies follow ISO. Accessible green text, M3 red errors and illustrated empty states. Public repository in About.
