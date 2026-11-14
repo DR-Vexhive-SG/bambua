@@ -69,8 +69,12 @@ object AppLocale {
         this.currency = runCatching { Currency.getInstance(currencyCode) }.getOrDefault(Currency.getInstance(language.defaultCurrency))
     }
 
-    /** Casas decimais da moeda (iene e won: 0). */
-    val fractionDigits: Int get() = currency.defaultFractionDigits.coerceAtLeast(0)
+    /**
+     * Casas decimais da moeda (iene e won: 0). Regla de Colombia (operador, v0.2): el peso COP
+     * se muestra SIN centavos ("$1.000"); las demás monedas siguen su estándar ISO (USD: 2).
+     * El valor guardado sigue en centavos: solo cambia el display.
+     */
+    val fractionDigits: Int get() = if (currency.currencyCode == "COP") 0 else currency.defaultFractionDigits.coerceAtLeast(0)
 
     /** Volta ao padrão (português e real): para testes. */
     fun reset() = set(AppLanguage.PT_BR, LocaleBR, "BRL")

@@ -39,7 +39,19 @@ object Money {
             maximumFractionDigits = digits
             roundingMode = RoundingMode.HALF_UP
         }
-        val withSymbol = NumberFormat.getCurrencyInstance(l).apply { currency = c }.setup()
+        // Colombia: símbolo "$" pegado antes del número ("$1.000"), nunca "COP" ni espacio.
+        val withSymbol = NumberFormat.getCurrencyInstance(l).apply {
+            currency = c
+            if (c.currencyCode == "COP") {
+                (this as? java.text.DecimalFormat)?.let { df ->
+                    df.decimalFormatSymbols = df.decimalFormatSymbols.apply { currencySymbol = "$" }
+                    // Regla del operador: símbolo "$" ANTES del número y pegado ("$1.000").
+                    // Algunos locales (es-CO) ponen la moneda como sufijo: se reconstruye el patrón.
+                    val num = df.toPattern().split(";").first().replace("¤", "").replace(" ", "").replace("\u00A0", "")
+                    df.applyPattern("¤$num")
+                }
+            }
+        }.setup()
         val plain = NumberFormat.getNumberInstance(l).setup()
         return Formats(l, c, withSymbol, plain).also { cache = it }
     }
