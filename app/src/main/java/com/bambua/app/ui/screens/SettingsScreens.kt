@@ -12,8 +12,10 @@ import android.os.Build
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.biometric.BiometricManager
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
@@ -69,7 +71,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.input.KeyboardCapitalization
@@ -306,6 +310,11 @@ fun SettingsScreen() {
                         }
                     },
                 ) {
+                    // Encabezado de marca v0.2: wordmark del Coach.
+                    Image(
+                        painterResource(R.drawable.bambua_logo), null,
+                        Modifier.fillMaxWidth().aspectRatio(4f).padding(vertical = 8.dp),
+                    )
                     Text(Res.s(R.string.settings_bambua, BuildConfig.VERSION_NAME), style = MaterialTheme.typography.titleSmall)
                     if (!devMode && versionTaps >= 3) {
                         Text(
@@ -382,7 +391,7 @@ fun SettingsScreen() {
     }
 }
 
-const val SOURCE_URL = "https://github.com/H3yK0/cryo"
+const val SOURCE_URL = "https://github.com/DR-Vexhive-SG/bambua"
 
 /** Toques na versão do app para ligar o modo desenvolvedor. */
 private const val DEV_TAPS = 7
