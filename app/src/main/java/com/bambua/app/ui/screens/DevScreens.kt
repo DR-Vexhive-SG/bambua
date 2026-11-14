@@ -290,9 +290,9 @@ fun DevScreen() {
                     Column(Modifier.padding(12.dp)) {
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             listOf(
-                                com.bambua.app.domain.SalditoState.PODEROSO to R.drawable.ic_saldito_poderoso,
-                                com.bambua.app.domain.SalditoState.SALUDABLE to R.drawable.ic_saldito_saludable,
-                                com.bambua.app.domain.SalditoState.NEUTRAL to R.drawable.ic_saldito_neutral,
+                                com.bambua.app.domain.SalditoState.PODEROSO to R.drawable.saldito_furry_poderoso,
+                                com.bambua.app.domain.SalditoState.SALUDABLE to R.drawable.saldito_furry_saludable,
+                                com.bambua.app.domain.SalditoState.NEUTRAL to R.drawable.saldito_furry_neutral,
                             ).forEach { (state, drawable) ->
                                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                                     Image(painterResource(drawable), null, Modifier.size(56.dp))
@@ -303,9 +303,9 @@ fun DevScreen() {
                         Spacer(Modifier.height(8.dp))
                         Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
                             listOf(
-                                com.bambua.app.domain.SalditoState.PREOCUPADO to R.drawable.ic_saldito_preocupado,
-                                com.bambua.app.domain.SalditoState.CRISIS to R.drawable.ic_saldito_crisis,
-                                com.bambua.app.domain.SalditoState.CELEBRA to R.drawable.ic_saldito_celebra,
+                                com.bambua.app.domain.SalditoState.PREOCUPADO to R.drawable.saldito_furry_preocupado,
+                                com.bambua.app.domain.SalditoState.CRISIS to R.drawable.saldito_furry_crisis,
+                                com.bambua.app.domain.SalditoState.CELEBRA to R.drawable.saldito_furry_celebra,
                             ).forEach { (state, drawable) ->
                                 Column(horizontalAlignment = Alignment.CenterHorizontally) {
                                     Image(painterResource(drawable), null, Modifier.size(56.dp))

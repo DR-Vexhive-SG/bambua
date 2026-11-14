@@ -465,12 +465,12 @@ private fun SalditoHeaderAvatar(l: Ledger, thresholds: com.bambua.app.domain.Sal
         )
     }
     val drawable = when (state) {
-        SalditoState.PODEROSO -> R.drawable.ic_saldito_poderoso
-        SalditoState.SALUDABLE -> R.drawable.ic_saldito_saludable
-        SalditoState.NEUTRAL -> R.drawable.ic_saldito_neutral
-        SalditoState.PREOCUPADO -> R.drawable.ic_saldito_preocupado
-        SalditoState.CRISIS -> R.drawable.ic_saldito_crisis
-        SalditoState.CELEBRA -> R.drawable.ic_saldito_celebra
+        SalditoState.PODEROSO -> R.drawable.saldito_furry_poderoso
+        SalditoState.SALUDABLE -> R.drawable.saldito_furry_saludable
+        SalditoState.NEUTRAL -> R.drawable.saldito_furry_neutral
+        SalditoState.PREOCUPADO -> R.drawable.saldito_furry_preocupado
+        SalditoState.CRISIS -> R.drawable.saldito_furry_crisis
+        SalditoState.CELEBRA -> R.drawable.saldito_furry_celebra
     }
     Column(
         horizontalAlignment = Alignment.End,

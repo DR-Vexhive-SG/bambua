@@ -48,7 +48,7 @@ fun SalditoScreen() {
         ) {
             // El personaje Saldito v0.2 (asset del Coach) con su estado normal.
             Image(
-                painterResource(R.drawable.ic_saldito_normal), null,
+                painterResource(R.drawable.saldito_furry_neutral), null,
                 Modifier.size(180.dp).padding(top = 8.dp),
             )
             Text(Res.s(R.string.saldito_titulo), style = MaterialTheme.typography.headlineMedium, modifier = Modifier.padding(top = 12.dp))
@@ -76,6 +76,16 @@ fun SalditoScreen() {
                     style = MaterialTheme.typography.labelLarge,
                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                     modifier = Modifier.padding(top = 8.dp),
+                )
+            }
+            // Regla de dignidad (pre-registro): en CRISIS, la línea acompaña — jamás humillación.
+            if (state == SalditoState.CRISIS) {
+                Text(
+                    Res.s(R.string.saldito_dignidad),
+                    style = MaterialTheme.typography.titleSmall,
+                    color = MaterialTheme.colorScheme.secondary,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.padding(top = 12.dp),
                 )
             }
             Text(
