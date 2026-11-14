@@ -39,6 +39,10 @@ class AppFlowTest {
     @Test fun primeiroUsoERegistroRapido() {
         // Os ajustes ficam num DataStore que o Robolectric não zera entre testes: começa do zero de propósito.
         runBlocking { (rule.activity.application as BambuaApp).real.settings.clear() }
+        // Fork Bambua: el paso 0 es el consentimiento (Ley 1581): aceptar y continuar.
+        waitText("Seus dados, suas regras")
+        rule.onNodeWithText("Aceito que o Bambua", substring = true).performClick()
+        rule.onNodeWithText("Continuar").performClick()
         waitText("Bem-vindo ao Bambua")
         rule.onNodeWithText("Começar").performClick()
         // RF-TOUR-02, RF-TOUR-05: o passeio vem depois das boas-vindas; o Voltar do celular volta uma página e, na

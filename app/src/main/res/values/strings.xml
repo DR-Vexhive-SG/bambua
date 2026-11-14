@@ -1549,11 +1549,17 @@
     <string name="tour_start">Vamos lá</string>
     <string name="tour_page">Página %1$d de %2$d</string>
 
-    <!-- Consentimiento de datos (Ley 1581) y tono colombiano, paso 0 del onboarding. -->
-    <string name="onboarding_consent_titulo">Tus datos, tus reglas</string>
-    <string name="onboarding_consent_texto">Bambua guarda tus movimientos, cuentas, tarjetas y saldos únicamente en este teléfono. Sin nube automática, sin registro, sin analítica y sin permiso de internet. Puedes hacer copia de seguridad cuando quieras, en tu propia carpeta o nube.</string>
-    <string name="onboarding_consent_disclaimer">Bambua organiza, analiza y recomienda hábitos. No otorga crédito ni reemplaza a un contador o asesor financiero.</string>
-    <string name="onboarding_consent_acepto">Acepto que Bambua guarde estos datos en este teléfono</string>
-    <string name="onboarding_consent_tono">Tono colombiano</string>
-    <string name="onboarding_consent_tono_hint">Permite palabras cercanas como “parce” o “plata”. Si lo dejas apagado, el tono es cercano-neutral.</string>
+    <!-- Consentimento de dados (Lei 1581) e tom colombiano, passo 0 do onboarding. -->
+    <string name="onboarding_consent_titulo">Seus dados, suas regras</string>
+    <string name="onboarding_consent_texto">O Bambua guarda seus lançamentos, contas, cartões e saldos apenas neste celular. Sem nuvem automática, sem cadastro, sem análise e sem permissão de internet. Você pode fazer backup quando quiser, na sua própria pasta ou nuvem.</string>
+    <string name="onboarding_consent_disclaimer">O Bambua organiza, analisa e recomenda hábitos. Não concede crédito nem substitui um contador ou consultor financeiro.</string>
+    <string name="onboarding_consent_acepto">Aceito que o Bambua guarde esses dados neste celular</string>
+    <string name="onboarding_consent_tono">Tom colombiano</string>
+    <string name="onboarding_consent_tono_hint">Permite palavras próximas como “parce” ou “plata”. Desligado, o tom é próximo-neutro.</string>
+
+    <!-- Fork Bambua v0.1: Saldito (placeholder) e atribuição no Sobre. -->
+    <string name="saldito_titulo">Saldito</string>
+    <string name="saldito_proximamente">Em breve</string>
+    <string name="saldito_concepto">A bússola que mostra para onde seu dinheiro vai e como melhorar seus hábitos. Vai chegar junto com o sistema Coach.</string>
+    <string name="settings_basado_en_cryo">Baseado em Cryo, de Hanry Franco (H3yK0). Licença GNU AGPL-3.0.</string>
 </resources>
