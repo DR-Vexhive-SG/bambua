@@ -1437,4 +1437,8 @@
     <string name="saldito_proximamente">Coming soon</string>
     <string name="saldito_concepto">The compass that shows where your money goes and how to improve your habits. It will arrive together with the Coach system.</string>
     <string name="settings_basado_en_cryo">Based on Cryo, by Hanry Franco (H3yK0). GNU AGPL-3.0 license.</string>
+
+    <!-- T5.5: estados vacíos ilustrados con Saldito (Coach, v0.2). -->
+    <string name="txs_empty_line">No transactions yet — add the first one</string>
+    <string name="wallet_empty_line">No accounts yet — create the first one</string>
 </resources>

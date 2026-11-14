@@ -1437,4 +1437,8 @@
     <string name="saldito_proximamente">Bald</string>
     <string name="saldito_concepto">Der Kompass, der zeigt, wohin dein Geld geht und wie du deine Gewohnheiten verbesserst. Er kommt zusammen mit dem Coach-System.</string>
     <string name="settings_basado_en_cryo">Basierend auf Cryo von Hanry Franco (H3yK0). GNU-AGPL-3.0-Lizenz.</string>
+
+    <!-- T5.5: estados vacíos ilustrados con Saldito (Coach, v0.2). -->
+    <string name="txs_empty_line">Noch keine Buchungen — erfasse die erste</string>
+    <string name="wallet_empty_line">Noch keine Konten — lege das erste an</string>
 </resources>

@@ -130,7 +130,7 @@ import com.bambua.app.ui.components.Segmented
 import com.bambua.app.ui.components.Source
 import com.bambua.app.ui.components.SourceChips
 import com.bambua.app.ui.components.categoryIcon
-import com.bambua.app.ui.components.incomeColor
+import com.bambua.app.ui.components.incomeTextColor
 import com.bambua.app.ui.components.rememberLedger
 import com.bambua.app.ui.components.typeIcon
 import com.bambua.app.ui.theme.BambuaTheme
@@ -561,7 +561,7 @@ private fun PreviewLine(line: StatementLine) {
         Spacer(Modifier.width(8.dp))
         MoneyText(
             line.amount, signed = true, style = MaterialTheme.typography.titleSmall,
-            color = if (line.amount > 0) incomeColor() else MaterialTheme.colorScheme.onSurface,
+            color = if (line.amount > 0) incomeTextColor() else MaterialTheme.colorScheme.onSurface,
         )
     }
 }
@@ -770,7 +770,7 @@ private fun Totals(rows: List<ImportRow>) {
             Res.s(R.string.import_marcadas, sel.size, rows.size), style = MaterialTheme.typography.titleSmall,
             modifier = Modifier.weight(1f),
         )
-        if (income > 0) MoneyText(income, signed = true, style = MaterialTheme.typography.bodyMedium, color = incomeColor())
+        if (income > 0) MoneyText(income, signed = true, style = MaterialTheme.typography.bodyMedium, color = incomeTextColor())
         if (income > 0 && expense > 0) Spacer(Modifier.width(12.dp))
         if (expense > 0) MoneyText(-expense, signed = true, style = MaterialTheme.typography.bodyMedium)
     }
@@ -824,7 +824,7 @@ private fun ReviewRow(r: ImportRow, l: Ledger, t: ImportTarget, onToggle: () -> 
             Spacer(Modifier.width(8.dp))
             MoneyText(
                 r.signed, signed = true, style = MaterialTheme.typography.titleSmall,
-                color = if (r.type == TxType.INCOME) incomeColor() else MaterialTheme.colorScheme.onSurface,
+                color = if (r.type == TxType.INCOME) incomeTextColor() else MaterialTheme.colorScheme.onSurface,
             )
         }
     }
@@ -857,7 +857,7 @@ private fun RowEditor(
                 )
                 MoneyText(
                     r.signed, signed = true, style = MaterialTheme.typography.bodyMedium,
-                    color = if (r.type == TxType.INCOME) incomeColor() else MaterialTheme.colorScheme.onSurfaceVariant,
+                    color = if (r.type == TxType.INCOME) incomeTextColor() else MaterialTheme.colorScheme.onSurfaceVariant,
                 )
             }
             explanation(r, t, l)?.let {

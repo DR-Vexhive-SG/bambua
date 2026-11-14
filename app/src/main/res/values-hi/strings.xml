@@ -1437,4 +1437,8 @@
     <string name="saldito_proximamente">जल्द आ रहा है</string>
     <string name="saldito_concepto">वह कम्पास जो दिखाता है कि आपका पैसा कहाँ जाता है और आदतें कैसे सुधरें। यह Coach सिस्टम के साथ आएगा।</string>
     <string name="settings_basado_en_cryo">Hanry Franco (H3yK0) के Cryo पर आधारित। लाइसेंस: GNU AGPL-3.0।</string>
+
+    <!-- T5.5: estados vacíos ilustrados con Saldito (Coach, v0.2). -->
+    <string name="txs_empty_line">अभी कोई आंदोलन नहीं — पहला दर्ज करें</string>
+    <string name="wallet_empty_line">अभी कोई खाता नहीं — पहला खाता बनाएं</string>
 </resources>

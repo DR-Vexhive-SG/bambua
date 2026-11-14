@@ -1437,4 +1437,8 @@
     <string name="saldito_proximamente">Bientôt</string>
     <string name="saldito_concepto">La boussole qui montre où va ton argent et comment améliorer tes habitudes. Elle arrivera avec le système Coach.</string>
     <string name="settings_basado_en_cryo">Basé sur Cryo, de Hanry Franco (H3yK0). Licence GNU AGPL-3.0.</string>
+
+    <!-- T5.5: estados vacíos ilustrados con Saldito (Coach, v0.2). -->
+    <string name="txs_empty_line">Pas encore de mouvements — enregistre le premier</string>
+    <string name="wallet_empty_line">Pas encore de comptes — crée le premier</string>
 </resources>

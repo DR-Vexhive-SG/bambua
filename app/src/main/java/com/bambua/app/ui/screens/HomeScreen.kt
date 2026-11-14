@@ -203,7 +203,7 @@ fun HomeScreen() {
                                 Text(stringResource(R.string.home_yield), style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                                 MoneyText(
                                     l.totalYield, signed = true, style = MaterialTheme.typography.titleMedium,
-                                    color = if (l.totalYield >= 0) BambuaTheme.colors.income else BambuaTheme.colors.expense,
+                                    color = if (l.totalYield >= 0) BambuaTheme.colors.incomeText else BambuaTheme.colors.expense,
                                 )
                             }
                         }
@@ -360,11 +360,11 @@ private fun BalanceBlock(l: Ledger, onClick: () -> Unit) {
 private fun MonthContent(income: Long, expense: Long, projected: Long, allowance: Long, remainingDays: Int, hide: Boolean) {
     Column {
         Row(Modifier.fillMaxWidth()) {
-            Stat(stringResource(R.string.month_in), income, BambuaTheme.colors.income, Icons.AutoMirrored.Rounded.TrendingUp, Modifier.weight(1f))
+            Stat(stringResource(R.string.month_in), income, BambuaTheme.colors.incomeText, Icons.AutoMirrored.Rounded.TrendingUp, Modifier.weight(1f))
             Stat(stringResource(R.string.month_out), expense, BambuaTheme.colors.expense, Icons.AutoMirrored.Rounded.TrendingDown, Modifier.weight(1f))
             Stat(
                 stringResource(R.string.month_end), projected,
-                if (projected >= 0) BambuaTheme.colors.income else BambuaTheme.colors.expense,
+                if (projected >= 0) BambuaTheme.colors.incomeText else BambuaTheme.colors.expense,
                 Icons.Rounded.AutoAwesome, Modifier.weight(1f),
             )
         }

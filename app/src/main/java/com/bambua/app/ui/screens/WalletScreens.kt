@@ -4,6 +4,7 @@ package com.bambua.app.ui.screens
 
 import com.bambua.app.R
 import com.bambua.app.domain.Res
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.FlowRow
@@ -62,6 +63,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.ui.text.style.TextOverflow
@@ -144,7 +146,17 @@ fun WalletScreen() {
             item {
                 BambuaSection(Res.s(R.string.home_accounts), action = { AddButton(Res.s(R.string.wallet_nova)) { nav.go(Routes.accountEdit()) } }) {
                     if (l.activeAccounts.isEmpty()) {
-                        Text(Res.s(R.string.wallet_nenhuma_conta_ainda), color = MaterialTheme.colorScheme.onSurfaceVariant)
+                        // T5.5: Cartera sin datos, ilustrada con Saldito.
+                        Column(Modifier.fillMaxWidth().padding(vertical = 16.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+                            Image(painterResource(R.drawable.ic_saldito_normal), null, Modifier.size(120.dp))
+                            Spacer(Modifier.height(12.dp))
+                            Text(
+                                Res.s(R.string.wallet_empty_line),
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                            )
+                        }
                     }
                     l.activeAccounts.forEach { a ->
                         val b = l.balance(a.id)

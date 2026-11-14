@@ -117,7 +117,7 @@ fun InsightsScreen() {
                     FlatItem {
                         Text(Res.s(R.string.insights_resultado_mes), style = MaterialTheme.typography.titleMedium)
                         Spacer(Modifier.height(8.dp))
-                        Line(Res.s(R.string.month_in), summary.income, BambuaTheme.colors.income)
+                        Line(Res.s(R.string.month_in), summary.income, BambuaTheme.colors.incomeText)
                         Line(Res.s(R.string.month_out), -summary.expense, BambuaTheme.colors.expense)
                         if (summary.invested != 0L) Line(Res.s(R.string.insights_investido), -summary.invested, MaterialTheme.colorScheme.onSurface)
                         if (summary.saved != 0L) Line(Res.s(R.string.plan_guardado_metas), -summary.saved, MaterialTheme.colorScheme.onSurface)

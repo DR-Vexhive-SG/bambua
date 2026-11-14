@@ -5,13 +5,16 @@ package com.bambua.app.ui.screens
 import com.bambua.app.R
 import com.bambua.app.domain.Res
 import androidx.compose.foundation.background
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.WindowInsets
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.horizontalScroll
@@ -42,6 +45,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
@@ -213,11 +217,22 @@ fun TransactionsScreen(categoryFilter: Long?) {
                 }
                 if (txs.isEmpty()) {
                     item {
-                        EmptyState(
-                            Icons.AutoMirrored.Rounded.ReceiptLong,
-                            if (query.isNotBlank()) Res.s(R.string.txs_nada_encontrado) else Res.s(R.string.txs_nenhuma_movimentacao),
-                            if (query.isNotBlank()) Res.s(R.string.txs_tente_outra_palavra) else Res.s(R.string.txs_use_botao_lancar_ou),
-                        )
+                        if (query.isNotBlank()) {
+                            EmptyState(
+                                Icons.AutoMirrored.Rounded.ReceiptLong,
+                                Res.s(R.string.txs_nada_encontrado),
+                                Res.s(R.string.txs_tente_outra_palavra),
+                            )
+                        } else {
+                            // T5.5: estado vacío ilustrado con Saldito.
+                            EmptyState(
+                                Icons.AutoMirrored.Rounded.ReceiptLong,
+                                Res.s(R.string.txs_empty_line),
+                                Res.s(R.string.txs_use_botao_lancar_ou),
+                            ) {
+                                Image(painterResource(R.drawable.ic_saldito_normal), null, Modifier.size(140.dp))
+                            }
+                        }
                     }
                 } else {
                     val groups = txs.groupBy { it.date }.toSortedMap(compareByDescending { it })

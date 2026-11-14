@@ -1411,4 +1411,8 @@
     <string name="saldito_proximamente">곧 만나요</string>
     <string name="saldito_concepto">돈이 어디로 가는지와 습관 개선 방법을 보여주는 나침반입니다. Coach 시스템과 함께 찾아옵니다.</string>
     <string name="settings_basado_en_cryo">Hanry Franco(H3yK0)의 Cryo 기반. 라이선스: GNU AGPL-3.0.</string>
+
+    <!-- T5.5: estados vacíos ilustrados con Saldito (Coach, v0.2). -->
+    <string name="txs_empty_line">아직 내역이 없어요 — 첫 기록을 남겨 보세요</string>
+    <string name="wallet_empty_line">아직 계좌가 없어요 — 첫 계좌를 만들어 보세요</string>
 </resources>

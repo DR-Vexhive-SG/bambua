@@ -1411,4 +1411,8 @@
     <string name="saldito_proximamente">近日公開</string>
     <string name="saldito_concepto">お金の行き先と習慣の改善を示すコンパス。Coachシステムとともに登場予定です。</string>
     <string name="settings_basado_en_cryo">Hanry Franco（H3yK0）のCryoをベースにしています。ライセンスはGNU AGPL-3.0。</string>
+
+    <!-- T5.5: estados vacíos ilustrados con Saldito (Coach, v0.2). -->
+    <string name="txs_empty_line">まだ記録がありません — 最初の1件を登録しましょう</string>
+    <string name="wallet_empty_line">まだ口座がありません — 最初の口座を作りましょう</string>
 </resources>

@@ -33,8 +33,10 @@ private val LightColors = lightColorScheme(
     secondaryContainer = Color(0xFFBDF2D6), onSecondaryContainer = Color(0xFF00391E),
     tertiary = Color(0xFF6A4C93), onTertiary = Color(0xFFFFFFFF),
     tertiaryContainer = Color(0xFFEADDFF), onTertiaryContainer = Color(0xFF221444),
-    error = Color(0xFFF2A900), onError = Color(0xFF4A3400),
-    errorContainer = Color(0xFFFFE08D), onErrorContainer = Color(0xFF4A3400),
+    // v0.2 (T5.4): el error vuelve al rojo M3 accesible (6.54 AA); el ámbar #F2A900 queda
+    // solo para advertencias e iconos de alerta (BambuaColors.warning / warningContainer).
+    error = Color(0xFFB3261E), onError = Color(0xFFFFFFFF),
+    errorContainer = Color(0xFFFFDAD6), onErrorContainer = Color(0xFF410002),
     background = Color(0xFFF7F9FC), onBackground = Color(0xFF191C20),
     surface = Color(0xFFF7F9FC), onSurface = Color(0xFF191C20),
     surfaceVariant = Color(0xFFDFE4EC), onSurfaceVariant = Color(0xFF43474E),
@@ -52,8 +54,8 @@ private val DarkColors = darkColorScheme(
     secondaryContainer = Color(0xFF00522B), onSecondaryContainer = Color(0xFFBDF2D6),
     tertiary = Color(0xFFD3BBFF), onTertiary = Color(0xFF381E5C),
     tertiaryContainer = Color(0xFF503574), onTertiaryContainer = Color(0xFFEADDFF),
-    error = Color(0xFFF2A900), onError = Color(0xFF4A3400),
-    errorContainer = Color(0xFF6E4A00), onErrorContainer = Color(0xFFFFDEAB),
+    error = Color(0xFFFFB4AB), onError = Color(0xFF690005),
+    errorContainer = Color(0xFF93000A), onErrorContainer = Color(0xFFFFDAD6),
     background = Color(0xFF111417), onBackground = Color(0xFFE1E2E6),
     surface = Color(0xFF111417), onSurface = Color(0xFFE1E2E6),
     surfaceVariant = Color(0xFF43474E), onSurfaceVariant = Color(0xFFC4C7CF),
@@ -68,6 +70,8 @@ private val DarkColors = darkColorScheme(
 @Immutable
 data class BambuaColors(
     val income: Color,
+    /** Verde para TEXTO pequeño (AA 5.33 sobre blanco); [income] queda para iconos/rellenos/barras (T5.2). */
+    val incomeText: Color,
     val incomeContainer: Color,
     val onIncomeContainer: Color,
     val expense: Color,
@@ -80,14 +84,16 @@ data class BambuaColors(
 )
 
 private val LightExt = BambuaColors(
-    income = Color(0xFF1FA36B), incomeContainer = Color(0xFFBDF2D6), onIncomeContainer = Color(0xFF00391E),
+    income = Color(0xFF1FA36B), incomeText = Color(0xFF157A52),
+    incomeContainer = Color(0xFFBDF2D6), onIncomeContainer = Color(0xFF00391E),
     expense = Color(0xFFB3261E), expenseContainer = Color(0xFFFFDAD6), onExpenseContainer = Color(0xFF410002),
     warning = Color(0xFF8A5100), warningContainer = Color(0xFFFFE3B3), onWarningContainer = Color(0xFF3A2500),
     isDark = false,
 )
 
 private val DarkExt = BambuaColors(
-    income = Color(0xFF8FDDB2), incomeContainer = Color(0xFF00522B), onIncomeContainer = Color(0xFFBDF2D6),
+    income = Color(0xFF1FA36B), incomeText = Color(0xFF8FDDB2),
+    incomeContainer = Color(0xFF00522B), onIncomeContainer = Color(0xFFBDF2D6),
     expense = Color(0xFFFFB4AB), expenseContainer = Color(0xFF93000A), onExpenseContainer = Color(0xFFFFDAD6),
     warning = Color(0xFFFFC94D), warningContainer = Color(0xFF6E4A00), onWarningContainer = Color(0xFFFFDEAB),
     isDark = true,

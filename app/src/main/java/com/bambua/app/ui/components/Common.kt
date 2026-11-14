@@ -273,7 +273,8 @@ fun MoneyText(
 }
 
 @Composable
-fun incomeColor() = BambuaTheme.colors.income
+/** Verde para TEXTO pequeño (T5.2): #157A52 en claro, AA 5.33; el relleno verde queda para iconos/barras. */
+fun incomeTextColor() = BambuaTheme.colors.incomeText
 
 @Composable
 fun expenseColor() = BambuaTheme.colors.expense
@@ -350,7 +351,7 @@ fun TxRow(t: Tx, l: Ledger, onClick: () -> Unit, modifier: Modifier = Modifier, 
     val future = t.date.isAfter(l.today)
     val datePart = if (!showDate) "" else (if (t.date.year == l.today.year) Dates.short(t.date) else Dates.full(t.date)) + " · "
     val amountColor = when {
-        signed > 0 -> incomeColor()
+        signed > 0 -> incomeTextColor()
         signed < 0 -> MaterialTheme.colorScheme.onSurface
         else -> MaterialTheme.colorScheme.onSurfaceVariant
     }
@@ -418,15 +419,24 @@ fun BambuaCard(
 }
 
 @Composable
-fun EmptyState(icon: ImageVector, title: String, message: String, modifier: Modifier = Modifier, action: (@Composable () -> Unit)? = null) {
+fun EmptyState(
+    icon: ImageVector, title: String, message: String, modifier: Modifier = Modifier,
+    action: (@Composable () -> Unit)? = null,
+    /** Ilustración Saldito (T5.5): si se pasa, reemplaza el círculo con icono. */
+    illustration: (@Composable () -> Unit)? = null,
+) {
     Column(
         modifier.fillMaxWidth().padding(horizontal = 32.dp, vertical = 32.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Box(
-            Modifier.size(72.dp).clip(CircleShape).background(MaterialTheme.colorScheme.secondaryContainer),
-            contentAlignment = Alignment.Center,
-        ) { Icon(icon, null, tint = MaterialTheme.colorScheme.onSecondaryContainer, modifier = Modifier.size(36.dp)) }
+        if (illustration != null) {
+            illustration()
+        } else {
+            Box(
+                Modifier.size(72.dp).clip(CircleShape).background(MaterialTheme.colorScheme.secondaryContainer),
+                contentAlignment = Alignment.Center,
+            ) { Icon(icon, null, tint = MaterialTheme.colorScheme.onSecondaryContainer, modifier = Modifier.size(36.dp)) }
+        }
         Spacer(Modifier.height(16.dp))
         Text(title, style = MaterialTheme.typography.titleMedium, textAlign = TextAlign.Center)
         Spacer(Modifier.height(6.dp))
