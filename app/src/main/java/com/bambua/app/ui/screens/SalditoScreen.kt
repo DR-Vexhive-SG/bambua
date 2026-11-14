@@ -3,25 +3,20 @@
 // Modificaciones © 2026 operador Bambua: placeholder de Saldito (la puerta, PROMPT-FORK §3 Paso 4).
 package com.bambua.app.ui.screens
 
-import androidx.compose.foundation.background
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.Explore
-import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.bambua.app.R
@@ -45,11 +40,12 @@ fun SalditoScreen() {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
         ) {
-            Box(
-                Modifier.size(104.dp).clip(CircleShape).background(MaterialTheme.colorScheme.tertiaryContainer),
-                contentAlignment = Alignment.Center,
-            ) { Icon(Icons.Rounded.Explore, null, Modifier.size(56.dp), tint = MaterialTheme.colorScheme.onTertiaryContainer) }
-            Text(Res.s(R.string.saldito_titulo), style = MaterialTheme.typography.headlineMedium, modifier = Modifier.padding(top = 24.dp))
+            // El personaje Saldito v0.2 (asset del Coach) con su estado normal.
+            Image(
+                painterResource(R.drawable.ic_saldito_normal), null,
+                Modifier.size(180.dp).padding(top = 8.dp),
+            )
+            Text(Res.s(R.string.saldito_titulo), style = MaterialTheme.typography.headlineMedium, modifier = Modifier.padding(top = 12.dp))
             Text(
                 Res.s(R.string.saldito_proximamente),
                 style = MaterialTheme.typography.titleMedium,

@@ -15,6 +15,7 @@ import androidx.compose.animation.expandVertically
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -63,6 +64,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.heading
@@ -287,6 +289,12 @@ fun OnboardingScreen() {
                     }
                     else -> {
                         Spacer(Modifier.height(24.dp))
+                        // El personaje celebra el onboarding completado (v0.2, asset del Coach).
+                        Image(
+                            painterResource(R.drawable.ic_saldito_celebra), null,
+                            Modifier.fillMaxWidth().height(140.dp),
+                        )
+                        Spacer(Modifier.height(8.dp))
                         Text(Res.s(R.string.onboarding_tudo_pronto), style = MaterialTheme.typography.headlineMedium, modifier = Modifier.semantics { heading() })
                         Spacer(Modifier.height(12.dp))
                         Feature(Icons.Rounded.Mic, Res.s(R.string.onboarding_experimente_registro_rapido), Res.s(R.string.onboarding_tela_inicial_toque_microfone))

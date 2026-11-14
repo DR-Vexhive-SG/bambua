@@ -1,25 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Bambua: tres cañas de bambú ascendentes (brote + barras de crecimiento). -->
+<!-- Bambua v0.2: ícono del Coach (art/icon.svg): tres cañas ascendentes (la más alta
+     en ámbar #F2A900) + hoja orquídea #6A4C93, sobre azul profundo. Zona segura 66/108dp. -->
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="108dp" android:height="108dp"
     android:viewportWidth="108" android:viewportHeight="108">
-    <!-- cañas -->
-    <path android:pathData="M41,63 L41,75" android:strokeColor="#FF1FA36B"
-        android:strokeWidth="11" android:strokeLineCap="round" />
-    <path android:pathData="M54,55 L54,75" android:strokeColor="#FF1FA36B"
-        android:strokeWidth="11" android:strokeLineCap="round" />
-    <path android:pathData="M67,45 L67,75" android:strokeColor="#FF1FA36B"
-        android:strokeWidth="11" android:strokeLineCap="round" />
-    <!-- nodos -->
-    <path android:pathData="M35.5,69 L46.5,69" android:strokeColor="#FF0A2540"
-        android:strokeWidth="2.4" />
-    <path android:pathData="M48.5,62 L59.5,62" android:strokeColor="#FF0A2540"
-        android:strokeWidth="2.4" />
-    <path android:pathData="M61.5,53 L72.5,53" android:strokeColor="#FF0A2540"
-        android:strokeWidth="2.4" />
-    <path android:pathData="M61.5,63 L72.5,63" android:strokeColor="#FF0A2540"
-        android:strokeWidth="2.4" />
-    <!-- hoja -->
-    <path android:fillColor="#FF7BD8A8"
-        android:pathData="M67,44 C69.5,38.5 75.5,35.5 80,37.5 C79,42.5 73.5,46 67,44 Z" />
+    <!-- caña 1 (corta, verde) -->
+    <path android:pathData="M35,63 L35,79" android:strokeColor="#FF1FA36B"
+        android:strokeWidth="10" android:strokeLineCap="round" />
+    <!-- caña 2 (media, verde) -->
+    <path android:pathData="M51,49 L51,79" android:strokeColor="#FF1FA36B"
+        android:strokeWidth="10" android:strokeLineCap="round" />
+    <!-- caña 3 (alta, ámbar) -->
+    <path android:pathData="M67,35 L67,79" android:strokeColor="#FFF2A900"
+        android:strokeWidth="10" android:strokeLineCap="round" />
+    <!-- hoja orquídea -->
+    <path android:fillColor="#FF6A4C93"
+        android:pathData="M67,30 C78,20 90,22 92,30 C84,38 72,38 67,30 Z" />
 </vector>

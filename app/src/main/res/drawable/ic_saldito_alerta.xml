@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Saldito estado alerta: MISMO cuerpo del Coach + cejas ámbar #F2A900 (la lupa ya
+     lleva el centro ámbar). El personaje es uno con tres caras. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp" android:height="200dp"
+    android:viewportWidth="200" android:viewportHeight="200">
+    <!-- cuerpo -->
+    <path android:fillColor="#FF1FA36B"
+        android:pathData="M100,46 a56,56 0 1,0 0.01,0 z" />
+    <path android:pathData="M100,46 a56,56 0 1,0 0.01,0 z"
+        android:strokeColor="#FF0A2540" android:strokeWidth="5" />
+    <!-- cejas (alerta, ámbar) -->
+    <path android:pathData="M72,78 Q83,69 94,75" android:strokeColor="#FFF2A900"
+        android:strokeWidth="5" android:strokeLineCap="round" />
+    <path android:pathData="M106,75 Q117,69 128,78" android:strokeColor="#FFF2A900"
+        android:strokeWidth="5" android:strokeLineCap="round" />
+    <!-- ojos -->
+    <path android:fillColor="#FF0A2540" android:pathData="M82,81 a9,9 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FF0A2540" android:pathData="M118,81 a9,9 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FFFFFFFF" android:pathData="M85,84 a3,3 0 1,0 0.01,0 z" />
+    <path android:fillColor="#FFFFFFFF" android:pathData="M121,84 a3,3 0 1,0 0.01,0 z" />
+    <!-- sonrisa -->
+    <path android:pathData="M84,114 Q100,128 116,114" android:strokeColor="#FF0A2540"
+        android:strokeWidth="5" android:strokeLineCap="round" />
+    <!-- lupa -->
+    <path android:pathData="M138,140 L172,168" android:strokeColor="#FF0A2540"
+        android:strokeWidth="8" android:strokeLineCap="round" />
+    <path android:pathData="M132,116 a17,17 0 1,0 0.01,0 z"
+        android:strokeColor="#FF0A2540" android:strokeWidth="7" />
+    <path android:fillColor="#FFF2A900" android:pathData="M132,124 a9,9 0 1,0 0.01,0 z" />
+    <!-- hoja -->
+    <path android:fillColor="#FFF2A900"
+        android:pathData="M100,42 C114,28 132,30 136,40 C126,50 108,50 100,42 Z" />
+</vector>
