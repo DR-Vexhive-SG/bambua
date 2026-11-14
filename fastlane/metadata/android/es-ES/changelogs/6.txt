@@ -1,0 +1,1 @@
+Bambua 0.1: fork de Cryo con nueva marca (com.bambua.app). Consentimiento de datos (Ley 1581) en la primera apertura, con opción de tono colombiano. Exportación CSV en formato fijo para el sistema Coach, pantalla Saldito (próximamente) y pantalla Acerca de con atribución y aviso de no-asesoría. Base: Cryo 1.4.

@@ -173,7 +173,7 @@ DS-PAD-03 e são citados no requisito da tela.
 
 ## 6. Requisitos funcionais (RF)
 
-Formato: **ID · requisito · critério de aceite · status**. Os testes citados ficam em `app/src/test/java/io/github/h3yk0/cryo/`.
+Formato: **ID · requisito · critério de aceite · status**. Os testes citados ficam em `app/src/test/java/com/bambua/app/`.
 
 ### 6.1 Início — RF-INI (TELA-INICIO)
 
@@ -765,7 +765,7 @@ Todo defeito corrigido ganha um teste que falha no código anterior e, se for re
 
 ### 11.9 Conformidade automática (PRC-09)
 
-`app/src/test/java/io/github/h3yk0/cryo/PrdConformanceTest.kt` confere, a cada `testDebugUnitTest`, as regras que dá para
+`app/src/test/java/com/bambua/app/PrdConformanceTest.kt` confere, a cada `testDebugUnitTest`, as regras que dá para
 conferir sozinho:
 
 | Confere | Regra |

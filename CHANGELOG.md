@@ -2,7 +2,7 @@
 
 **English** · [Português](docs/CHANGELOG.pt-BR.md)
 
-## 0.1.0-bambua — fork Bambua Base
+## 0.1.0 — fork Bambua Base
 
 Fork de Cryo 1.4 renombrado a **Bambua** (marca, package `com.bambua.app`, tema visual e ícono
 propios). Nuevo en este fork:
