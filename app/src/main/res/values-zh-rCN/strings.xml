@@ -1397,4 +1397,12 @@
     <string name="tour_done">知道了</string>
     <string name="tour_start">开始吧</string>
     <string name="tour_page">第 %1$d 页，共 %2$d 页</string>
+
+    <!-- 数据同意（第 1581 号法律）与哥伦比亚语调，引导第 0 步。 -->
+    <string name="onboarding_consent_titulo">数据由你做主</string>
+    <string name="onboarding_consent_texto">Bambua 只在这部手机上保存你的收支、账户、卡片和余额。没有自动云端，无需注册，没有分析，也不申请互联网权限。你可以随时在自己的文件夹或云端做备份。</string>
+    <string name="onboarding_consent_disclaimer">Bambua 负责整理、分析并建议习惯。不发放信贷，也不替代会计或理财顾问。</string>
+    <string name="onboarding_consent_acepto">我同意 Bambua 在这部手机上保存这些数据</string>
+    <string name="onboarding_consent_tono">哥伦比亚语调</string>
+    <string name="onboarding_consent_tono_hint">允许使用“parce”“plata”等亲近词汇。保持关闭则为亲近中性的语调。</string>
 </resources>

@@ -1423,4 +1423,12 @@
     <string name="tour_done">Ho capito</string>
     <string name="tour_start">Iniziamo</string>
     <string name="tour_page">Pagina %1$d di %2$d</string>
+
+    <!-- Consenso dati (legge 1581) e tono colombiano, passaggio 0 dell'onboarding. -->
+    <string name="onboarding_consent_titulo">I tuoi dati, le tue regole</string>
+    <string name="onboarding_consent_texto">Bambua conserva movimenti, conti, carte e saldi solo su questo telefono. Niente cloud automatico, registrazione, analisi o permesso internet. Puoi fare un backup quando vuoi, nella tua cartella o nel tuo cloud.</string>
+    <string name="onboarding_consent_disclaimer">Bambua organizza, analizza e consiglia abitudini. Non concede credito e non sostituisce un contabile o un consulente finanziario.</string>
+    <string name="onboarding_consent_acepto">Accetto che Bambua conservi questi dati su questo telefono</string>
+    <string name="onboarding_consent_tono">Tono colombiano</string>
+    <string name="onboarding_consent_tono_hint">Permette parole vicine come “parce” o “plata”. Se lo lasci spento, il tono è vicino-neutro.</string>
 </resources>

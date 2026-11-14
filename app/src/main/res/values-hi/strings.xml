@@ -1423,4 +1423,12 @@
     <string name="tour_done">ठीक है</string>
     <string name="tour_start">चलें</string>
     <string name="tour_page">पेज %1$d / %2$d</string>
+
+    <!-- डेटा सहमति (क़ानून 1581) और कोलंबियाई टोन, ऑनबोर्डिंग चरण 0. -->
+    <string name="onboarding_consent_titulo">आपका डेटा, आपके नियम</string>
+    <string name="onboarding_consent_texto">Bambua आपकी आय-व्यय, खाते, कार्ड और शेष राशि केवल इसी फ़ोन पर रखता है। कोई स्वतः क्लाउड नहीं, पंजीकरण नहीं, विश्लेषण नहीं और इंटरनेट अनुमति नहीं। आप कभी भी अपने फ़ोल्डर या क्लाउड में बैकअप बना सकते हैं।</string>
+    <string name="onboarding_consent_disclaimer">Bambua रिकॉर्ड व्यवस्थित करता है, विश्लेषण करता है और आदतें सुझाता है। यह क्रेडिट नहीं देता और किसी लेखकर या वित्तीय सलाहकार का विकल्प नहीं है।</string>
+    <string name="onboarding_consent_acepto">मैं स्वीकार करता/करती हूँ कि Bambua यह डेटा इसी फ़ोन पर रखे</string>
+    <string name="onboarding_consent_tono">कोलंबियाई टोन</string>
+    <string name="onboarding_consent_tono_hint">“parce”, “plata” जैसे सहज शब्द इस्तेमाल हो सकते हैं। बंद रखने पर टोन सहज-तटस्थ रहता है।</string>
 </resources>

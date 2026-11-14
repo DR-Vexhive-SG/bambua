@@ -207,6 +207,7 @@ fun SettingsScreen() {
                     Res.s(R.string.settings_pede_desbloqueio_ao_abrir),
                 )
                 SwitchRow(Res.s(R.string.hide_values), s.hideValues, { v -> c.launch { c.settings.setHideValues(v) } }, Res.s(R.string.settings_hide_values_hint, Money.HIDDEN))
+                SwitchRow(Res.s(R.string.onboarding_consent_tono), s.colombianTone, { v -> c.launch { c.settings.setColombianTone(v) } }, Res.s(R.string.onboarding_consent_tono_hint))
             }
 
             item { Header(Res.s(R.string.settings_lembretes)) }

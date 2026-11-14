@@ -1397,4 +1397,12 @@
     <string name="tour_done">알겠어요</string>
     <string name="tour_start">시작하기</string>
     <string name="tour_page">%2$d페이지 중 %1$d페이지</string>
+
+    <!-- 데이터 동의(법률 1581)와 콜롬비아 톤, 온보딩 0단계. -->
+    <string name="onboarding_consent_titulo">내 데이터, 내 규칙</string>
+    <string name="onboarding_consent_texto">Bambua는 수입 지출, 계좌, 카드, 잔액을 이 전화기에만 저장합니다. 자동 클라우드 없음, 가입 없음, 분석 없음, 인터넷 권한 없음. 백업은 언제든 자신의 폴더나 클라우드로 만들 수 있습니다.</string>
+    <string name="onboarding_consent_disclaimer">Bambua는 기록을 정리·분석하고 습관을 제안합니다. 대출을 제공하지 않으며 회계사나 재무 상담사를 대신하지 않습니다.</string>
+    <string name="onboarding_consent_acepto">Bambua가 이 전화기에 데이터를 저장하는 것에 동의합니다</string>
+    <string name="onboarding_consent_tono">콜롬비아 톤</string>
+    <string name="onboarding_consent_tono_hint">“parce”, “plata” 같은 친근한 표현을 사용합니다. 끄면 다정한 표준 톤을 사용합니다.</string>
 </resources>

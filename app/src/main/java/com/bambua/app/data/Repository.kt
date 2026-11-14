@@ -50,13 +50,17 @@ enum class ThemeMode { SYSTEM, LIGHT, DARK }
 
 data class AppSettings(
     val themeMode: ThemeMode = ThemeMode.SYSTEM,
-    val dynamicColor: Boolean = true,
+    val dynamicColor: Boolean = false,
     val lockEnabled: Boolean = false,
     val hideValues: Boolean = false,
     val defaultAccountId: Long? = null,
     val onboardingDone: Boolean = false,
     val userName: String = "",
     val remindersEnabled: Boolean = true,
+    /** Consentimiento de datos (Ley 1581), pedido en el onboarding. */
+    val consentAccepted: Boolean = false,
+    /** Tono colombiano: los textos pueden usar jerga cercana (default: cercano-neutral). */
+    val colombianTone: Boolean = false,
 )
 
 private val Context.dataStore by preferencesDataStore("settings")
@@ -76,18 +80,22 @@ class SettingsRepository(context: Context, sandbox: Boolean = false) {
         val onboarding = booleanPreferencesKey("onboarding")
         val name = stringPreferencesKey("name")
         val reminders = booleanPreferencesKey("reminders")
+        val consent = booleanPreferencesKey("consent")
+        val tone = booleanPreferencesKey("colombian_tone")
     }
 
     val flow: Flow<AppSettings> = store.data.map { p ->
         AppSettings(
             themeMode = p[K.theme]?.let { runCatching { ThemeMode.valueOf(it) }.getOrNull() } ?: ThemeMode.SYSTEM,
-            dynamicColor = p[K.dynamic] ?: true,
+            dynamicColor = p[K.dynamic] ?: false,
             lockEnabled = p[K.lock] ?: false,
             hideValues = p[K.hide] ?: false,
             defaultAccountId = p[K.defaultAccount],
             onboardingDone = p[K.onboarding] ?: false,
             userName = p[K.name] ?: "",
             remindersEnabled = p[K.reminders] ?: true,
+            consentAccepted = p[K.consent] ?: false,
+            colombianTone = p[K.tone] ?: false,
         )
     }
 
@@ -97,6 +105,8 @@ class SettingsRepository(context: Context, sandbox: Boolean = false) {
     suspend fun setLock(v: Boolean) = store.edit { it[K.lock] = v }
     suspend fun setHideValues(v: Boolean) = store.edit { it[K.hide] = v }
     suspend fun setOnboardingDone(v: Boolean) = store.edit { it[K.onboarding] = v }
+    suspend fun setConsent(v: Boolean) = store.edit { it[K.consent] = v }
+    suspend fun setColombianTone(v: Boolean) = store.edit { it[K.tone] = v }
     suspend fun setName(v: String) = store.edit { it[K.name] = v.trim() }
     suspend fun setReminders(v: Boolean) = store.edit { it[K.reminders] = v }
     /** Volta todos os ajustes ao padrão. */

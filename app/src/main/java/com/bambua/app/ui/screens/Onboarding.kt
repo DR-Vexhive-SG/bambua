@@ -90,14 +90,15 @@ import com.bambua.app.ui.components.SwitchRow
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-/** Passos da apresentação (RF-BOA-08). */
+/** Passos da apresentação (RF-BOA-08). El paso 0 es el consentimiento de datos (Ley 1581). */
 private object Step {
-    const val WELCOME = 0
-    const val TOUR = 1
-    const val ACCOUNT = 2
-    const val CARD = 3
-    const val DONE = 4
-    const val COUNT = 5
+    const val CONSENT = 0
+    const val WELCOME = 1
+    const val TOUR = 2
+    const val ACCOUNT = 3
+    const val CARD = 4
+    const val DONE = 5
+    const val COUNT = 6
 }
 
 /**
@@ -109,6 +110,8 @@ fun OnboardingScreen() {
     val c = LocalContainer.current
     val ctx = LocalContext.current
     var step by rememberSaveable { mutableIntStateOf(0) }
+    var consent by rememberSaveable { mutableStateOf(false) }
+    var tone by rememberSaveable { mutableStateOf(false) }
     var name by rememberSaveable { mutableStateOf("") }
     var accName by rememberSaveable { mutableStateOf(Res.s(R.string.wallet_conta_principal)) }
     var balance by rememberSaveable { mutableLongStateOf(0L) }
@@ -142,6 +145,8 @@ fun OnboardingScreen() {
 
     fun finish() {
         c.launch {
+            c.settings.setConsent(consent)
+            c.settings.setColombianTone(tone)
             c.settings.setName(name)
             val accId = c.repo.saveAccount(
                 Account(name = accName.ifBlank { Res.s(R.string.wallet_conta_principal) }.trim(), type = AccountType.CHECKING, initialBalance = if (negative) -balance else balance, color = Palette.pick(5)),
@@ -174,6 +179,29 @@ fun OnboardingScreen() {
             }
             Column(Modifier.fillMaxSize().verticalScroll(rememberScrollState()).padding(horizontal = 24.dp, vertical = 8.dp)) {
                 when (s) {
+                    // Ley 1581: qué datos maneja la app (todo local), consentimiento explícito y tono colombiano.
+                    Step.CONSENT -> {
+                        Text(Res.s(R.string.onboarding_consent_titulo), style = MaterialTheme.typography.headlineSmall, modifier = Modifier.semantics { heading() })
+                        Spacer(Modifier.height(12.dp))
+                        Text(Res.s(R.string.onboarding_consent_texto), style = MaterialTheme.typography.bodyMedium)
+                        Spacer(Modifier.height(12.dp))
+                        Text(
+                            Res.s(R.string.onboarding_consent_disclaimer),
+                            style = MaterialTheme.typography.bodySmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .clip(MaterialTheme.shapes.medium)
+                                .background(MaterialTheme.colorScheme.surfaceVariant)
+                                .padding(12.dp),
+                        )
+                        Spacer(Modifier.height(12.dp))
+                        SwitchRow(Res.s(R.string.onboarding_consent_acepto), consent, { consent = it })
+                        SwitchRow(
+                            Res.s(R.string.onboarding_consent_tono), tone, { tone = it },
+                            Res.s(R.string.onboarding_consent_tono_hint),
+                        )
+                    }
                     Step.WELCOME -> {
                         Spacer(Modifier.height(32.dp))
                         // RF-BOA-01: a marca chega girando de leve e crescendo; o texto vem logo depois.
@@ -277,8 +305,12 @@ fun OnboardingScreen() {
         if (step != Step.TOUR) Row(Modifier.fillMaxWidth().padding(24.dp), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
             if (step > Step.WELCOME) TextButton(onClick = { step-- }, modifier = Modifier.height(56.dp)) { Text(Res.s(R.string.onboarding_voltar)) }
             Button(
-                onClick = { if (step < Step.DONE) step++ else finish() },
-                enabled = step != Step.CARD || !hasCard || (cardName.isNotBlank() && limit > 0),
+                onClick = {
+                    // El consentimiento se guarda en cuanto se acepta y se avanza (además del finish, por robustez).
+                    if (step == Step.CONSENT) c.launch { c.settings.setConsent(consent); c.settings.setColombianTone(tone) }
+                    if (step < Step.DONE) step++ else finish()
+                },
+                enabled = (step != Step.CONSENT || consent) && (step != Step.CARD || !hasCard || (cardName.isNotBlank() && limit > 0)),
                 modifier = Modifier.weight(1f).height(56.dp),
             ) {
                 Text(

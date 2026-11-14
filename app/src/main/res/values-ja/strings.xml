@@ -1397,4 +1397,12 @@
     <string name="tour_done">わかりました</string>
     <string name="tour_start">はじめる</string>
     <string name="tour_page">%2$dページ中%1$dページ目</string>
+
+    <!-- データ同意（法律1581）とコロンビア風トーン、オンボーディングのステップ0。 -->
+    <string name="onboarding_consent_titulo">データはあなたのルールで</string>
+    <string name="onboarding_consent_texto">Bambuaは収支・口座・カード・残高をこの端末だけに保存します。自動クラウドなし、登録なし、分析なし、インターネット権限なし。バックアップはいつでも自分のフォルダーやクラウドに作れます。</string>
+    <string name="onboarding_consent_disclaimer">Bambuaは記録の整理・分析・習慣の提案をします。融資は行わず、会計士やファイナンシャルアドバイザーの代わりにはなりません。</string>
+    <string name="onboarding_consent_acepto">Bambuaがこの端末にデータを保存することに同意する</string>
+    <string name="onboarding_consent_tono">コロンビア風トーン</string>
+    <string name="onboarding_consent_tono_hint">「parce」「plata」など親しみやすい言葉を使います。オフのままなら、落ち着いた標準トーンです。</string>
 </resources>
