@@ -1,5 +1,0 @@
-Fecha;Tipo;Descripción;Categoría;Cuenta;Destino;Tarjeta;Cuota;Importe;Nota;Deuda
-2026-11-14;Ingreso;Other expenses;;Main account;;;;3000,00;;
-2026-11-14;Egreso;Other expenses;Other expenses;Main account;;;;250,00;;
-2026-11-14;Egreso;Recarga;;Main account;Cartera;;;500,00;;
-2026-11-14;Ingreso;Recarga;;Cartera;Main account;;;500,00;;

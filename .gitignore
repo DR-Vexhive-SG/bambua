@@ -19,3 +19,4 @@ keystore/
 # Capturas geradas pelos testes (as imagens da loja ficam em fastlane/)
 /screenshots/
 /app/screenshots/
+csv-evidencia/
