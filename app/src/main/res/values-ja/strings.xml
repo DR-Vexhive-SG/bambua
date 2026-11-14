@@ -1444,4 +1444,16 @@
     <string name="dev_th_crisis_weeks">マイナス週（危機）</string>
     <string name="dev_th_debt_months">借金増加月（危機）</string>
     <string name="dev_th_guardar">しきい値を保存</string>
+
+    <!-- v0.4: racha y Balance semanal (Hábito y cosecha). -->
+    <plurals name="habit_racha">
+        <item quantity="one">連続記録：%1$d日 🔥</item>
+        <item quantity="other">連続記録：%1$d日 🔥</item>
+    </plurals>
+    <string name="habit_semana_verde">今週はプラス</string>
+    <string name="habit_semana_roja">今週はマイナス：分析を見よう</string>
+    <string name="habit_vacia">最初の1件を記録して連続記録を始めよう</string>
+    <string name="habit_delta">先週比：%1$s</string>
+    <string name="habit_balance_titulo">今週の収支</string>
+    <string name="habit_export">CSVを書き出す</string>
 </resources>

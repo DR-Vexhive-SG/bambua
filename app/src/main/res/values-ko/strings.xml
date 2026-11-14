@@ -1444,4 +1444,16 @@
     <string name="dev_th_crisis_weeks">마이너스 주 (위기)</string>
     <string name="dev_th_debt_months">부채 증가 개월 (위기)</string>
     <string name="dev_th_guardar">임계값 저장</string>
+
+    <!-- v0.4: racha y Balance semanal (Hábito y cosecha). -->
+    <plurals name="habit_racha">
+        <item quantity="one">연속 기록: %1$d일 🔥</item>
+        <item quantity="other">연속 기록: %1$d일 🔥</item>
+    </plurals>
+    <string name="habit_semana_verde">이번 주는 흑자</string>
+    <string name="habit_semana_roja">이번 주는 적자: 분석을 보자</string>
+    <string name="habit_vacia">첫 기록을 남겨 연속 기록을 시작해 보자</string>
+    <string name="habit_delta">지난주 대비: %1$s</string>
+    <string name="habit_balance_titulo">주간 수지</string>
+    <string name="habit_export">CSV 내보내기</string>
 </resources>

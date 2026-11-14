@@ -1470,4 +1470,16 @@
     <string name="dev_th_crisis_weeks">नकारात्मक सप्ताह (संकट)</string>
     <string name="dev_th_debt_months">बढ़ता ऋण महीने (संकट)</string>
     <string name="dev_th_guardar">सीमाएँ सहेजें</string>
+
+    <!-- v0.4: racha y Balance semanal (Hábito y cosecha). -->
+    <plurals name="habit_racha">
+        <item quantity="one">स्ट्रीक: %1$d दिन 🔥</item>
+        <item quantity="other">स्ट्रीक: %1$d दिन 🔥</item>
+    </plurals>
+    <string name="habit_semana_verde">हफ़्ता हरे में</string>
+    <string name="habit_semana_roja">हफ़्ता लाल में: विश्लेषण देखें</string>
+    <string name="habit_vacia">पहला रिकॉर्ड जोड़ें और स्ट्रीक शुरू करें</string>
+    <string name="habit_delta">पिछले हफ़्ते से: %1$s</string>
+    <string name="habit_balance_titulo">साप्ताहिक संतुलन</string>
+    <string name="habit_export">CSV निर्यात करें</string>
 </resources>

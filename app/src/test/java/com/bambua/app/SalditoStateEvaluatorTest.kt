@@ -119,3 +119,49 @@ class SalditoStateEvaluatorTest {
         )
     }
 }
+
+/* -------- B2 (v0.4): balance semanal lunes-domingo, delta y cruce de domingo -------- */
+
+class WeeklyBalanceTest {
+
+    private fun tx(date: java.time.LocalDate, amount: Long, type: com.bambua.app.data.db.TxType) =
+        com.bambua.app.data.db.Tx(id = 0, type = type, amount = amount, date = date)
+
+    /** Miércoles 11 nov 2026: la semana actual es lunes 9 → domingo 15; la anterior: lunes 2 → domingo 8. */
+    private val miercoles = java.time.LocalDate.of(2026, 11, 11)
+
+    @Test fun balanceSemanalCruzaDomingo() {
+        // El domingo 8 pertenece a la SEMANA ANTERIOR; el lunes 9 a la actual.
+        val s = com.bambua.app.domain.Snapshot(
+            txs = listOf(
+                tx(java.time.LocalDate.of(2026, 11, 8), 50000L, com.bambua.app.data.db.TxType.INCOME), // domingo anterior
+                tx(java.time.LocalDate.of(2026, 11, 9), 20000L, com.bambua.app.data.db.TxType.INCOME), // lunes actual
+            ),
+        )
+        val m = com.bambua.app.domain.SalditoMetricsCalculator.of(s, miercoles)
+        assertEquals(20000L, m.weeklyBalance)          // solo la semana actual
+        assertEquals(50000L, m.lastWeeksBalances[1])   // la anterior con el domingo
+    }
+
+    @Test fun deltaEntreSemanas() {
+        val s = com.bambua.app.domain.Snapshot(
+            txs = listOf(
+                tx(java.time.LocalDate.of(2026, 11, 2), 100000L, com.bambua.app.data.db.TxType.INCOME), // sem anterior: +1000
+                tx(java.time.LocalDate.of(2026, 11, 3), 30000L, com.bambua.app.data.db.TxType.EXPENSE), // sem anterior: −300
+                tx(java.time.LocalDate.of(2026, 11, 9), 80000L, com.bambua.app.data.db.TxType.INCOME),  // actual: +800
+                tx(java.time.LocalDate.of(2026, 11, 10), 20000L, com.bambua.app.data.db.TxType.EXPENSE), // actual: −200
+            ),
+        )
+        val m = com.bambua.app.domain.SalditoMetricsCalculator.of(s, miercoles)
+        assertEquals(60000L, m.weeklyBalance)          // +800 −200 = +600
+        assertEquals(70000L, m.lastWeeksBalances[1])   // +1000 −300 = +700
+        // Delta = actual − anterior = −100 (peor que la semana pasada)
+        assertEquals(-10000L, m.weeklyBalance - m.lastWeeksBalances[1])
+    }
+
+    @Test fun semanasVaciasDanCero() {
+        val m = com.bambua.app.domain.SalditoMetricsCalculator.of(com.bambua.app.domain.Snapshot(), miercoles)
+        assertEquals(0L, m.weeklyBalance)
+        assertEquals(0L, m.lastWeeksBalances.getOrElse(1) { 0L })
+    }
+}

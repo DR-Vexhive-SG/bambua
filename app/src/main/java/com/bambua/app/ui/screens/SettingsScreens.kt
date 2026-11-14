@@ -467,6 +467,11 @@ private suspend fun writeText(ctx: Context, uri: Uri, text: String): Boolean = w
     runCatching { SafFiles.write(ctx.contentResolver, uri, text) }.isSuccess
 }
 
+/** B4: export CSV desde el Pulso — misma escritura que el de Ajustes. */
+suspend fun writePublicCsv(ctx: Context, uri: Uri, text: String): Boolean = withContext(Dispatchers.IO) {
+    runCatching { SafFiles.write(ctx.contentResolver, uri, text) }.isSuccess
+}
+
 @Composable
 private fun Header(text: String) {
     Text(

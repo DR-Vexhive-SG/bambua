@@ -1470,4 +1470,16 @@
     <string name="dev_th_crisis_weeks">Semaines négatives (crise)</string>
     <string name="dev_th_debt_months">Mois de dette croissante (crise)</string>
     <string name="dev_th_guardar">Enregistrer les seuils</string>
+
+    <!-- v0.4: racha y Balance semanal (Hábito y cosecha). -->
+    <plurals name="habit_racha">
+        <item quantity="one">Série : %1$d jour 🔥</item>
+        <item quantity="other">Série : %1$d jours 🔥</item>
+    </plurals>
+    <string name="habit_semana_verde">Semaine dans le vert</string>
+    <string name="habit_semana_roja">Semaine dans le rouge : voir Analyses</string>
+    <string name="habit_vacia">Enregistre le premier pour lancer la série</string>
+    <string name="habit_delta">vs. semaine précédente : %1$s</string>
+    <string name="habit_balance_titulo">Balance de la semaine</string>
+    <string name="habit_export">Exporter CSV</string>
 </resources>

@@ -1595,4 +1595,16 @@
     <string name="dev_th_crisis_weeks">Semanas negativas (crise)</string>
     <string name="dev_th_debt_months">Meses de dívida crescendo (crise)</string>
     <string name="dev_th_guardar">Salvar limites</string>
+
+    <!-- v0.4: racha y Balance semanal (Hábito y cosecha). -->
+    <plurals name="habit_racha">
+        <item quantity="one">Racha: %1$d día 🔥</item>
+        <item quantity="other">Racha: %1$d días 🔥</item>
+    </plurals>
+    <string name="habit_semana_verde">Semana en verde</string>
+    <string name="habit_semana_roja">Semana en rojo: mira Análisis</string>
+    <string name="habit_vacia">Registra el primero para encender la racha</string>
+    <string name="habit_delta">vs. semana anterior: %1$s</string>
+    <string name="habit_balance_titulo">Balance de la semana</string>
+    <string name="habit_export">Exportar CSV</string>
 </resources>

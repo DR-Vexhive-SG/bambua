@@ -1444,4 +1444,16 @@
     <string name="dev_th_crisis_weeks">负增长周（危机）</string>
     <string name="dev_th_debt_months">债务增长月（危机）</string>
     <string name="dev_th_guardar">保存阈值</string>
+
+    <!-- v0.4: racha y Balance semanal (Hábito y cosecha). -->
+    <plurals name="habit_racha">
+        <item quantity="one">连续记录：%1$d 天 🔥</item>
+        <item quantity="other">连续记录：%1$d 天 🔥</item>
+    </plurals>
+    <string name="habit_semana_verde">本周收绿</string>
+    <string name="habit_semana_roja">本周收红：看看分析</string>
+    <string name="habit_vacia">记下第一笔，点亮连续记录</string>
+    <string name="habit_delta">对比上周：%1$s</string>
+    <string name="habit_balance_titulo">本周收支</string>
+    <string name="habit_export">导出 CSV</string>
 </resources>

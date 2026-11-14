@@ -35,7 +35,9 @@ import androidx.compose.material.icons.rounded.UploadFile
 import androidx.compose.material.icons.rounded.Warning
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
 import androidx.compose.material3.LocalContentColor
+import androidx.compose.material3.Surface
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -52,7 +54,9 @@ import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.heading
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import com.bambua.app.R
 import com.bambua.app.data.db.CategoryKind
@@ -73,6 +77,7 @@ import com.bambua.app.domain.SalditoStateEvaluator
 import com.bambua.app.domain.SalditoThresholds
 import com.bambua.app.ui.LocalNav
 import com.bambua.app.ui.Routes
+import com.bambua.app.ui.components.BambuaCard
 import com.bambua.app.ui.components.BambuaSection
 import com.bambua.app.ui.components.HomeHeader
 import com.bambua.app.ui.components.IconBadge
@@ -107,6 +112,14 @@ fun HomeScreen() {
     val forecast = remember(l) { l.forecast() }
     val month = remember(l) { l.monthSummary(l.today.ym()) }
     val insights = remember(l) { l.insights() }
+    // B4: el export CSV también desde el Pulso — el puente con el sistema Coach.
+    val ctx = LocalContext.current
+    val exportCsv = androidx.activity.compose.rememberLauncherForActivityResult(androidx.activity.result.contract.ActivityResultContracts.CreateDocument("text/csv")) { uri ->
+        if (uri != null) c.launch {
+            val ok = com.bambua.app.ui.screens.writePublicCsv(ctx, uri, com.bambua.app.domain.CoachCsv.csv(c.repo.loadOnce()))
+            c.message(if (ok) Res.s(R.string.settings_planilha_exportada) else Res.s(R.string.settings_nao_foi_possivel_salvar))
+        }
+    }
 
     // RF-INI-16: sem botão flutuante; "Lançar" é o primeiro atalho.
     Scaffold(contentWindowInsets = WindowInsets(0, 0, 0, 0)) { pad ->
@@ -157,8 +170,30 @@ fun HomeScreen() {
 
             item {
                 BambuaSection(Dates.monthName(l.today.ym()), onClick = { nav.tab(Routes.INSIGHTS) }) {
+                    // B1: racha de registro diario (contador simple, sin gamificación).
+                    val racha = com.bambua.app.domain.HabitStreak.streakOf(l.s.txs, l.today)
+                    if (racha > 0) {
+                        Row(Modifier.padding(bottom = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+                            Surface(
+                                color = MaterialTheme.colorScheme.secondaryContainer,
+                                contentColor = MaterialTheme.colorScheme.onSecondaryContainer,
+                                shape = MaterialTheme.shapes.small,
+                            ) {
+                                Text(
+                                    Res.p(R.plurals.habit_racha, racha, racha),
+                                    style = MaterialTheme.typography.labelLarge,
+                                    modifier = Modifier.padding(horizontal = 10.dp, vertical = 4.dp),
+                                )
+                            }
+                        }
+                    }
                     MonthContent(month.income, month.expense, forecast.projectedResult, forecast.dailyAllowance, forecast.remainingDays, hide)
                 }
+            }
+
+            // B2: tarjeta Balance semanal (KPI #1 del operador).
+            item {
+                WeeklyBalanceCard(l, hide, onExport = { exportCsv.launch("bambua-movimientos-" + l.today + ".csv") })
             }
 
             items(l.activeCards, key = { "card${it.id}" }) { card ->
@@ -482,5 +517,65 @@ private fun SalditoHeaderAvatar(l: Ledger, thresholds: com.bambua.app.domain.Sal
             Modifier.size(44.dp).semantics { contentDescription = abrir },
         )
         Text(stringResource(R.string.saldito_titulo), style = MaterialTheme.typography.labelSmall)
+    }
+}
+
+/** B2 (v0.4): Balance de la semana en curso + delta vs. la anterior. Vacía → Saldito neutral. */
+@Composable
+private fun WeeklyBalanceCard(l: Ledger, hide: Boolean, onExport: () -> Unit) {
+    val metrics = remember(l) { com.bambua.app.domain.SalditoMetricsCalculator.of(l.s, l.today) }
+    val balance = metrics.lastWeeksBalances.getOrElse(0) { 0L }
+    val previous = metrics.lastWeeksBalances.getOrElse(1) { 0L }
+    // La semana en curso: lunes de esta semana hasta hoy, sin transferencias internas.
+    val weekStart = l.today.with(java.time.DayOfWeek.MONDAY)
+    val weekHasTxs = l.s.txs.any {
+        !it.date.isBefore(weekStart) && !it.date.isAfter(l.today) &&
+            it.type != com.bambua.app.data.db.TxType.TRANSFER
+    }
+    BambuaCard(Modifier.padding(horizontal = SectionPadding, vertical = 4.dp)) {
+        Column(Modifier.fillMaxWidth().padding(14.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Text(
+                    stringResource(R.string.habit_balance_titulo),
+                    style = MaterialTheme.typography.titleSmall,
+                    modifier = Modifier.weight(1f),
+                )
+                IconButton(onClick = onExport, modifier = Modifier.size(28.dp)) {
+                    Icon(Icons.Rounded.UploadFile, stringResource(R.string.habit_export), Modifier.size(20.dp))
+                }
+            }
+            if (!weekHasTxs) {
+                // Estado vacío ilustrado (T5.5): Saldito neutral + invitación.
+                Column(
+                    Modifier.fillMaxWidth().padding(vertical = 8.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally,
+                ) {
+                    Image(painterResource(R.drawable.saldito_furry_neutral), null, Modifier.size(96.dp))
+                    Text(
+                        stringResource(R.string.habit_vacia),
+                        style = MaterialTheme.typography.bodyMedium,
+                        textAlign = TextAlign.Center,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            } else {
+                val positivo = balance >= 0
+                MoneyText(
+                    balance, signed = true, style = MaterialTheme.typography.headlineSmall,
+                    color = if (positivo) BambuaTheme.colors.incomeText else BambuaTheme.colors.expense,
+                )
+                Text(
+                    stringResource(if (positivo) R.string.habit_semana_verde else R.string.habit_semana_roja),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = if (positivo) BambuaTheme.colors.incomeText else BambuaTheme.colors.expense,
+                )
+                Text(
+                    stringResource(R.string.habit_delta, com.bambua.app.domain.Money.signed(balance - previous)),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    modifier = Modifier.padding(top = 4.dp),
+                )
+            }
+        }
     }
 }

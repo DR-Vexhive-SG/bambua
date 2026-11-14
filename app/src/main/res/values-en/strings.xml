@@ -1470,4 +1470,16 @@
     <string name="dev_th_crisis_weeks">Negative weeks (crisis)</string>
     <string name="dev_th_debt_months">Debt growing months (crisis)</string>
     <string name="dev_th_guardar">Save thresholds</string>
+
+    <!-- v0.4: racha y Balance semanal (Hábito y cosecha). -->
+    <plurals name="habit_racha">
+        <item quantity="one">Streak: %1$d day 🔥</item>
+        <item quantity="other">Streak: %1$d days 🔥</item>
+    </plurals>
+    <string name="habit_semana_verde">Week in the green</string>
+    <string name="habit_semana_roja">Week in the red: check Insights</string>
+    <string name="habit_vacia">Add the first one to start the streak</string>
+    <string name="habit_delta">vs. previous week: %1$s</string>
+    <string name="habit_balance_titulo">Weekly balance</string>
+    <string name="habit_export">Export CSV</string>
 </resources>

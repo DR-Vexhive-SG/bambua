@@ -8,7 +8,8 @@ plugins {
 }
 
 val keystoreProps = Properties().apply {
-    val f = rootProject.file("keystore/keystore.properties")
+    // B3 (v0.4): el keystore vive FUERA del repo (../keystore/ del operador) — nunca en el git.
+    val f = rootProject.projectDir.parentFile.resolve("keystore/keystore.properties")
     if (f.exists()) f.inputStream().use { load(it) }
 }
 
