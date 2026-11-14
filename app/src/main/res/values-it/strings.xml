@@ -1431,4 +1431,10 @@
     <string name="onboarding_consent_acepto">Accetto che Bambua conservi questi dati su questo telefono</string>
     <string name="onboarding_consent_tono">Tono colombiano</string>
     <string name="onboarding_consent_tono_hint">Permette parole vicine come “parce” o “plata”. Se lo lasci spento, il tono è vicino-neutro.</string>
+
+    <!-- Fork Bambua v0.1: Saldito (placeholder) e attribuzione in Informazioni. -->
+    <string name="saldito_titulo">Saldito</string>
+    <string name="saldito_proximamente">In arrivo</string>
+    <string name="saldito_concepto">La bussola che mostra dove vanno i tuoi soldi e come migliorare le tue abitudini. Arriverà insieme al sistema Coach.</string>
+    <string name="settings_basado_en_cryo">Basato su Cryo, di Hanry Franco (H3yK0). Licenza GNU AGPL-3.0.</string>
 </resources>

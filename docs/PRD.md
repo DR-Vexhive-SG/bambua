@@ -163,6 +163,7 @@ Toda rota de `ui/Nav.kt` (`Routes`) está aqui. Tela nova = linha nova nesta tab
 | TELA-CATEGORIAS | Categorias | `categories` | `ui/screens/SettingsScreens.kt` |
 | TELA-CATEGORIA-EDITAR | Nova/editar categoria | `category/edit/{id}?kind={kind}` | `ui/screens/SettingsScreens.kt` |
 | TELA-TOUR | Como usar o Cryo (passeio animado, aberto pelos Ajustes) | `tour` | `ui/screens/Tour.kt` |
+| TELA-SALDITO | Saldito (placeholder del fork Bambua: sin lógica ni red, v0.1) | `settings/saldito` | `ui/screens/SalditoScreen.kt` |
 | TELA-BOAS-VINDAS | Apresentação inicial (sem rota: antes do app); inclui o passeio (RF-TOUR-02) | — | `ui/screens/Onboarding.kt`, `ui/screens/Tour.kt` |
 | TELA-BLOQUEIO | Cryo bloqueado (sem rota: no lugar do app) | — | `ui/screens/Onboarding.kt` (`LockScreen`) |
 

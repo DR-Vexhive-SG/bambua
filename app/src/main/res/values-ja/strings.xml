@@ -1405,4 +1405,10 @@
     <string name="onboarding_consent_acepto">Bambuaがこの端末にデータを保存することに同意する</string>
     <string name="onboarding_consent_tono">コロンビア風トーン</string>
     <string name="onboarding_consent_tono_hint">「parce」「plata」など親しみやすい言葉を使います。オフのままなら、落ち着いた標準トーンです。</string>
+
+    <!-- Bambuaフォーク v0.1: Saldito（プレースホルダー）と「情報」の出典表記。 -->
+    <string name="saldito_titulo">Saldito</string>
+    <string name="saldito_proximamente">近日公開</string>
+    <string name="saldito_concepto">お金の行き先と習慣の改善を示すコンパス。Coachシステムとともに登場予定です。</string>
+    <string name="settings_basado_en_cryo">Hanry Franco（H3yK0）のCryoをベースにしています。ライセンスはGNU AGPL-3.0。</string>
 </resources>

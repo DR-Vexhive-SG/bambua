@@ -75,6 +75,7 @@ import com.bambua.app.ui.screens.InvestmentEditorScreen
 import com.bambua.app.ui.screens.PlanScreen
 import com.bambua.app.ui.screens.SettingsScreen
 import com.bambua.app.ui.screens.TourScreen
+import com.bambua.app.ui.screens.SalditoScreen
 import com.bambua.app.ui.screens.TransactionsScreen
 import com.bambua.app.ui.screens.WalletScreen
 import com.bambua.app.ui.tx.TxEditorScreen
@@ -108,6 +109,7 @@ object Routes {
     const val CATEGORIES = "categories"
     const val CATEGORY_EDIT = "category/edit/{id}?kind={kind}"
     const val TOUR = "tour"
+    const val SALDITO = "settings/saldito"
 
     fun txs(category: Long = 0) = "txs?category=$category"
     fun plan(tab: Int = 0) = "plan?tab=$tab"
@@ -334,6 +336,7 @@ fun BambuaRoot(openOnStart: String?) {
                 composable(Routes.DEV) { DevScreen() }
                 composable(Routes.CATEGORIES) { CategoriesScreen() }
                 composable(Routes.TOUR) { TourScreen() }
+                composable(Routes.SALDITO) { SalditoScreen() }
                 composable(
                     Routes.CATEGORY_EDIT,
                     arguments = listOf(

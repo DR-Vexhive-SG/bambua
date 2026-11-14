@@ -1431,4 +1431,10 @@
     <string name="onboarding_consent_acepto">मैं स्वीकार करता/करती हूँ कि Bambua यह डेटा इसी फ़ोन पर रखे</string>
     <string name="onboarding_consent_tono">कोलंबियाई टोन</string>
     <string name="onboarding_consent_tono_hint">“parce”, “plata” जैसे सहज शब्द इस्तेमाल हो सकते हैं। बंद रखने पर टोन सहज-तटस्थ रहता है।</string>
+
+    <!-- Bambua फोर्क v0.1: Saldito (प्लेसहोल्डर) और जानकारी में एट्रिब्यूशन. -->
+    <string name="saldito_titulo">Saldito</string>
+    <string name="saldito_proximamente">जल्द आ रहा है</string>
+    <string name="saldito_concepto">वह कम्पास जो दिखाता है कि आपका पैसा कहाँ जाता है और आदतें कैसे सुधरें। यह Coach सिस्टम के साथ आएगा।</string>
+    <string name="settings_basado_en_cryo">Hanry Franco (H3yK0) के Cryo पर आधारित। लाइसेंस: GNU AGPL-3.0।</string>
 </resources>

@@ -76,6 +76,7 @@ import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.unit.dp
 import com.bambua.app.BuildConfig
 import com.bambua.app.data.Backup
+import com.bambua.app.domain.CoachCsv
 import com.bambua.app.data.DefaultData
 import com.bambua.app.data.Palette
 import com.bambua.app.data.SafFiles
@@ -136,8 +137,9 @@ fun SettingsScreen() {
     }
     val exportCsv = rememberLauncherForActivityResult(ActivityResultContracts.CreateDocument("text/csv")) { uri ->
         if (uri != null) c.launch {
-            val ok = writeText(ctx, uri, Backup.csv(c.repo.loadOnce(), LocalDate.now()))
-            c.message(if (ok) Res.s(R.string.settings_planilha_exportada) else Res.s(R.string.settings_nao_foi_possivel_salvar))
+            // Formato EXACTO del Coach (PROMPT-FORK §4) y opción de compartir el archivo.
+            val ok = writeText(ctx, uri, CoachCsv.csv(c.repo.loadOnce()))
+            if (ok) shareFile(ctx, uri, "text/csv") else c.message(Res.s(R.string.settings_nao_foi_possivel_salvar))
         }
     }
     val importJson = rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri ->
@@ -280,6 +282,7 @@ fun SettingsScreen() {
             item { Header(Res.s(R.string.settings_sobre)) }
             item {
                 // RF-AJU-11, RF-TOUR-03: o passeio animado, para ver de novo quando quiser.
+                SettingLink(Icons.Rounded.Explore, Res.s(R.string.saldito_titulo), Res.s(R.string.saldito_proximamente)) { nav.go(Routes.SALDITO) }
                 SettingLink(Icons.Rounded.Explore, Res.s(R.string.tour_how_to_use), Res.s(R.string.tour_how_to_use_sub)) { nav.go(Routes.TOUR) }
                 SettingLink(Icons.Rounded.Code, Res.s(R.string.settings_codigo_fonte), Res.s(R.string.settings_github_com_h3yk0_bambua)) {
                     openLink(ctx, SOURCE_URL)
@@ -315,7 +318,12 @@ fun SettingsScreen() {
                         style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant,
                     )
                     Text(
-                        Res.s(R.string.settings_2026_hanry_franco_este),
+                        Res.s(R.string.settings_basado_en_cryo),
+                        style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        modifier = Modifier.padding(top = 8.dp),
+                    )
+                    Text(
+                        Res.s(R.string.onboarding_consent_disclaimer),
                         style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurfaceVariant,
                         modifier = Modifier.padding(top = 8.dp),
                     )
@@ -389,6 +397,20 @@ private fun TestModeNote(text: String) {
 }
 
 /** Abre um link no navegador (o Bambua não tem permissão de internet: quem abre é o navegador). */
+/** Comparte un archivo ya creado (SAF) con el chooser del sistema. */
+fun shareFile(ctx: Context, uri: Uri, mime: String) {
+    try {
+        ctx.startActivity(
+            Intent.createChooser(
+                Intent(Intent.ACTION_SEND).setType(mime).putExtra(Intent.EXTRA_STREAM, uri)
+                    .addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION),
+                null,
+            ).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK),
+        )
+    } catch (_: ActivityNotFoundException) {
+    }
+}
+
 fun openLink(ctx: Context, url: String) {
     try {
         ctx.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse(url)).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))

@@ -1405,4 +1405,10 @@
     <string name="onboarding_consent_acepto">我同意 Bambua 在这部手机上保存这些数据</string>
     <string name="onboarding_consent_tono">哥伦比亚语调</string>
     <string name="onboarding_consent_tono_hint">允许使用“parce”“plata”等亲近词汇。保持关闭则为亲近中性的语调。</string>
+
+    <!-- Bambua 分支 v0.1：Saldito（占位）与“关于”中的署名。 -->
+    <string name="saldito_titulo">Saldito</string>
+    <string name="saldito_proximamente">即将推出</string>
+    <string name="saldito_concepto">这只指南针会告诉你钱花到了哪里、如何改善你的习惯。它将随 Coach 系统一同到来。</string>
+    <string name="settings_basado_en_cryo">基于 Hanry Franco（H3yK0）的 Cryo。许可证：GNU AGPL-3.0。</string>
 </resources>
